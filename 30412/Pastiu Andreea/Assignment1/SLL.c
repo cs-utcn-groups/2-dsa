@@ -60,7 +60,6 @@ void deleteLast()
 }
 void doomTheList()
 {
-    nodeT* currentElement = first;
     while(first != NULL)
         deleteFirst();
 }
@@ -68,7 +67,7 @@ void deleteElement(int x)
 {
     nodeT* currentElement = first;
     nodeT* oldCurrentElement;
-    nodeT* previousElement;
+    nodeT* previousElement = first;
     while(currentElement != NULL)
     {
         if(currentElement -> value == x)
@@ -94,7 +93,10 @@ void deleteElement(int x)
                 }
         }
         else
+        {
+            previousElement = currentElement;
             currentElement = currentElement->next;
+        }
     }
 }
 void printAll(FILE* ofptr)

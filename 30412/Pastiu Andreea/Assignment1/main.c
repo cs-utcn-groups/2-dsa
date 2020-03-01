@@ -8,15 +8,15 @@ int main()
     FILE *ifptr, *ofptr;
     ifptr = fopen("input.dat", "r");
     ofptr = fopen("output.dat", "w");
-    char line[20], *instruction, *param;
+    char line[20], *instruction, *restOfString;
     int x;
     initializeList();
+    if(ifptr == NULL)
+        fprintf(ofptr, "No input file");
     while(fgets(line, 20, ifptr) != NULL)
     {
         instruction = strtok(line, " \n");
-        param = strtok(NULL, " ");
-        x = atoi(param);
-        //x = atoi(strtok(NULL, ' '));
+        x = strtol(strtok(NULL, " "), &restOfString, 10);
         if(stricmp(instruction, "AF") == 0)
             addFirst(x);
         else
