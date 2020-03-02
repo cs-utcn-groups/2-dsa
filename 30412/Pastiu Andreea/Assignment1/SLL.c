@@ -23,10 +23,17 @@ void addLast(int x)
     nodeT *element = (nodeT *) malloc(sizeof(nodeT));
     element->value = x;
     if (first == NULL)
+    {
+        element->next = NULL;
         first = element;
-    last->next = element;
-    last = element;
-    last->next = NULL;
+        last = element;
+    }
+    else
+    {
+        last->next = element;
+        last = element;
+        last->next = NULL;
+    }
 }
 void deleteFirst()
 {
