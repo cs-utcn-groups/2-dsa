@@ -3,4 +3,4 @@ project(Extra C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Extra main.c)
+add_executable(Extra main.c SLL.c Solve.h Solve.c)
