@@ -32,7 +32,7 @@ void addSentinel(int lifePoints)
         lastSentinel->next = NULL;
     }
 }
-void addCountry(char name[])
+void addCountry(char *name)
 {
     country *element = (country*)malloc(sizeof(country));
     strcpy(element->name, name);
@@ -70,60 +70,31 @@ void addWave(int damage, country* currentCountry)
         currentCountry->last->next = NULL;
     }
 }
-void deleteCountry(char name[])
+void deleteCountry(country *deletedCountry)
 {
-    country* currentElement = firstCountry;
-    country* oldCurrentElement;
-    country* previousElement = firstCountry;
-    while(currentElement != NULL)
+    if(deletedCountry == firstCountry)
     {
-        if(strcmp(currentElement->name, name) == 0)
+        country *tempNext = deletedCountry->next;
+        free(deletedCountry);
+        firstCountry = tempNext;
+        if(firstCountry == NULL)
         {
-            if(currentElement == firstCountry)
-            {
-                country* oldFirst = firstCountry;
-                if(firstCountry != NULL)
-                {
-                    firstCountry = firstCountry->next;
-                    free(oldFirst);
-                }
-                if(firstCountry == NULL)
-                    lastCountry = NULL;
-                currentElement = firstCountry;
-            }
-            else
-            if(currentElement == lastCountry)
-            {
-                country* oldLast = lastCountry, *currentElementTemp = firstCountry;
-                if(firstCountry == lastCountry)
-                {
-                    free(firstCountry);
-                    firstCountry = NULL;
-                    lastCountry = NULL;
-                }
-                else
-                if (lastCountry != NULL)
-                {
-                    while(currentElementTemp->next != lastCountry)
-                        currentElementTemp = currentElementTemp->next;
-                    currentElementTemp->next = NULL;
-                    lastCountry = currentElementTemp;
-                    free(oldLast);
-                }
-            }
-            else
-            {
-                oldCurrentElement = currentElement;
-                previousElement->next = currentElement ->next;
-                free(oldCurrentElement);
-                previousElement = currentElement;
-                currentElement = currentElement->next;
-            }
+            lastCountry = NULL;
         }
-        else
+    }
+    else
+    {
+        country *currentElement = firstCountry;
+        while(currentElement-> next != deletedCountry)
         {
-            previousElement = currentElement;
             currentElement = currentElement->next;
+        }
+        country *tempNext = deletedCountry->next;
+        free(deletedCountry);
+        currentElement->next = tempNext;
+        if(currentElement->next == NULL)
+        {
+            lastCountry = currentElement;
         }
     }
 }
@@ -138,6 +109,6 @@ void deleteWave(country *currentCountry)
     if(currentCountry->first == NULL)
     {
         currentCountry->last = NULL;
-        deleteCountry(currentCountry->name);
+        deleteCountry(currentCountry);
     }
 }
