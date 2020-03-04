@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1583273805 source:c:\users\utilizator\desktop\2-dsa-master\assigment1\assig1.c
+	"assig1.h"
+
+1583273707 c:\users\utilizator\desktop\2-dsa-master\assigment1\assig1.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583275103 source:c:\users\utilizator\desktop\2-dsa-master\assigment1\main.c
+	"list.h"
+
+1583275098 c:\users\utilizator\desktop\2-dsa-master\assigment1\list.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583276041 source:c:\users\utilizator\desktop\2-dsa-master\assigment1\list.c
+	"list.h"
+
