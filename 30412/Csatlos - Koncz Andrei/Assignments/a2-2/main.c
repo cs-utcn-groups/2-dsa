@@ -37,7 +37,7 @@ int main() {
     //Compute how much money a cashier has at each different time
     FILE *outF = fopen(OUTPUT_FILE_PATH,"w");
     NodeT *currentTime = time;
-    NodeQ *queueNode = queue;
+    NodeQ *queueNode;
     while(currentTime!=NULL)
     {
         queueNode = queue;
@@ -54,8 +54,7 @@ int main() {
 
 void SeparateLine(char line[100], int *rubles, int *seconds)
 {
-    char *p;
-    p = strtok(line," \n");
+    char *p = strtok(line," \n");
     p = strtok(NULL," \n");
     *rubles = strtol(p,NULL,10);
     p = strtok(NULL," \n");
