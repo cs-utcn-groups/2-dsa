@@ -3,11 +3,12 @@
 #include <string.h>
 
 
-typedef struct node{
+typedef struct node
+{
     int data;
     struct node * next;
 
-}ListNode;
+} ListNode;
 
 ListNode *first, *last;
 
@@ -23,7 +24,8 @@ void initial()
 void AF (int x)
 {
     if(first == NULL)
-    {   first=(ListNode *) malloc (sizeof(ListNode));
+    {
+        first=(ListNode *) malloc (sizeof(ListNode));
         first->data=x;
         first->next=last;
         last=first;
@@ -64,10 +66,12 @@ void DF (FILE *g)
         first=copy;
 
     }
-    else fprintf(g,"Impossible to perform the function. Reason: List is empty \n");
+    else
+        fprintf(g,"Impossible to perform the function. Reason: List is empty \n");
 }
 void DL (FILE*g)
-{   if(first!=NULL)
+{
+    if(first!=NULL)
     {
         ListNode *Element = (ListNode *) malloc (sizeof(ListNode));
         Element=first;
@@ -79,7 +83,8 @@ void DL (FILE*g)
         last=Element;
         last->next=NULL;
     }
-    else fprintf(g,"Impossible to perform the function. Reason: List is empty \n");
+    else
+        fprintf(g,"Impossible to perform the function. Reason: List is empty \n");
 
 }
 void DOOM_THE_LIST()
@@ -114,7 +119,9 @@ void DE (int x,FILE *g)
                 DF(g);
             else if(CurrentElement==last)
                 DL(g);
-            else {PreviousElement->next=CurrentElement->next;
+            else
+            {
+                PreviousElement->next=CurrentElement->next;
                 free(CurrentElement);
             }
 
@@ -124,7 +131,8 @@ void DE (int x,FILE *g)
 }
 
 void PRINT_ALL(FILE *g)
-{   if (first==NULL)
+{
+    if (first==NULL)
         printf("The list is empty");
     else
     {
@@ -152,7 +160,8 @@ void PRINT_F (int x,FILE*g)
     fprintf(g,"\n");
 }
 void PRINT_L (int x,FILE *g)
-{   //Tricky because we have to search in the list 2 times;
+{
+    //Tricky because we have to search in the list 2 times;
     int i=0,j;
     ListNode *Element= (ListNode *) malloc(sizeof(ListNode));
     Element=first;
@@ -161,7 +170,8 @@ void PRINT_L (int x,FILE *g)
         Element=Element->next;
         i++;
     }
-    if(i<=x)  PRINT_ALL(g);
+    if(i<=x)
+        PRINT_ALL(g);
     else
     {
         j=0;
@@ -179,10 +189,12 @@ void PRINT_L (int x,FILE *g)
             Element=Element->next;
             j++;
         }
-    }fprintf(g,"\n");
+    }
+    fprintf(g,"\n");
 }
 void readInstructions(FILE *f,FILE *g)
-{   int i,nr;
+{
+    int i,nr;
     char *s=(char *) malloc(sizeof(char)*MAXLENGHT);
     char *p;
     while(fgets(s,MAXLENGHT,f)!=NULL)
@@ -193,7 +205,7 @@ void readInstructions(FILE *f,FILE *g)
         {
             p=strtok(NULL," \n");
             nr=0;
-            for(i=0;i<strlen(p);i++)
+            for(i=0; i<strlen(p); i++)
                 nr=nr*10+p[i]-'0';
 
             AF(nr);
@@ -203,7 +215,7 @@ void readInstructions(FILE *f,FILE *g)
         {
             p=strtok(NULL," \n");
             nr=0;
-            for(i=0;i<strlen(p);i++)
+            for(i=0; i<strlen(p); i++)
                 nr=nr*10+p[i]-'0';
             AL(nr);
 
@@ -229,7 +241,7 @@ void readInstructions(FILE *f,FILE *g)
         {
             p=strtok(NULL," \n");
             nr=0;
-            for(i=0;i<strlen(p);i++)
+            for(i=0; i<strlen(p); i++)
                 nr=nr*10+p[i]-'0';
             DE(nr,g);
 
@@ -242,7 +254,7 @@ void readInstructions(FILE *f,FILE *g)
         {
             p=strtok(NULL," \n");
             nr=0;
-            for(i=0;i<strlen(p);i++)
+            for(i=0; i<strlen(p); i++)
                 nr=nr*10+p[i]-'0';
             PRINT_F(nr,g);
         }
@@ -250,7 +262,7 @@ void readInstructions(FILE *f,FILE *g)
         {
             p=strtok(NULL," \n");
             nr=0;
-            for(i=0;i<strlen(p);i++)
+            for(i=0; i<strlen(p); i++)
                 nr=nr*10+p[i]-'0';
             PRINT_L(nr,g);
         }
