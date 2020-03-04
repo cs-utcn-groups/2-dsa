@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1583358966 source:c:\users\tudor\onedrive\desktop\lap cp\assignment_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
