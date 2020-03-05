@@ -50,21 +50,39 @@ void AF(int data)
 }
 void DF()
 {
-    NodeT * currentNode=first;
-    first=first->next;
-    free(currentNode);
+    if(first==last)
+    {
+        free(first);
+        initializeSll();
+    }
+    else
+    {
+        NodeT * currentNode=first;
+        first=first->next;
+        free(currentNode);
+
+    }
 
 }
 void DL()
 {
     NodeT * previousNode=first;
-    while(previousNode->next != last)
+    if(first==last)
     {
-        previousNode=previousNode->next;
+        free(first);
+        initializeSll();
     }
-    free(last);
-    last=previousNode;
-    last->next=NULL;
+    else
+    {
+        while(previousNode->next != last)
+        {
+            previousNode=previousNode->next;
+        }
+        free(last);
+        last=previousNode;
+        last->next=NULL;
+    }
+
 
 }
 void PRINT_ALL(FILE *f)
@@ -84,6 +102,23 @@ void PRINT_ALL(FILE *f)
         fprintf(f,"\n");
     }
 }
+void PRINT_CONSOLE()
+{
+    if(first==NULL)
+    {
+        printf("List is empty\n");
+    }
+    else
+    {
+        NodeT * currentNode = first;
+        while(currentNode != NULL)
+        {
+            printf("%d ",currentNode->data);
+            currentNode = currentNode->next;
+        }
+        printf("\n");
+    }
+}
 void DOOM_THE_LIST()
 {
     NodeT *currentNode=first;
@@ -93,6 +128,7 @@ void DOOM_THE_LIST()
         free(currentNode);
         currentNode=first;
     }
+    last=NULL;
 }
 void DE (int data)
 {
@@ -184,44 +220,45 @@ void  instructiuni (FILE *f,FILE *g)
     while(fgets(strbuf,20,f))
     {
         sscanf(strbuf,"%s %d",instruc,&execut);
-         for(int i=0; i<9; i++)
-         {
-             if(strcmp(instruc,instrList[i])==0)
-             {
-                 instrNr=i;
+        for(int i=0; i<9; i++)
+        {
+            if(strcmp(instruc,instrList[i])==0)
+            {
+                instrNr=i;
 
-             }
-         }
-         switch(instrNr)
-         {
-         case 0:
-             AF(execut);
-             break;
-         case 1:
-             AL(execut);
-             break;
-         case 2:
-             DF();
-             break;
-         case 3:
-             //DL();
-             break;
-         case 4:
-             DOOM_THE_LIST();
-             break;
-         case 5:
-             DE(execut);
-             break;
-         case 6:
-             PRINT_ALL(g);
-             break;
-         case 7:
-             PRINT_F(execut,g);
-             break;
-         case 8:
-             PRINT_L(execut,g);
-             break;
-         }
+            }
+        }
+        switch(instrNr)
+        {
+        case 0:
+            AF(execut);
+            break;
+        case 1:
+            AL(execut);
+            break;
+        case 2:
+            DF();
+            break;
+        case 3:
+            DL();
+            break;
+        case 4:
+            DOOM_THE_LIST();
+            break;
+        case 5:
+            DE(execut);
+            break;
+        case 6:
+            PRINT_ALL(g);
+            break;
+        case 7:
+            PRINT_F(execut,g);
+            break;
+        case 8:
+            PRINT_L(execut,g);
+            break;
+        }
+        PRINT_CONSOLE();
     }
 }
 int main()
