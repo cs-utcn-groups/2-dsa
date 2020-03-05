@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/An 1 Sem 2/DSA-Git/30413/Boga Titus - Nicolae/Basic Operation on a Singly Linked List/main.c
+stdio.h
+-
+stdlib.h
+-
+strings.h
+-
+

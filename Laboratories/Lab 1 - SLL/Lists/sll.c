@@ -17,66 +17,60 @@ void addElement(int data)
     }
     else
     {
-        NodeT * newElement = (NodeT*)malloc(sizeof(NodeT));
-        last->next = newElement;
-        newElement->next = NULL;
-        newElement->data = data;
-        last = newElement;
+        NodeT * newE1 = (NodeT*)malloc(sizeof(NodeT));
+        last->next = newE1;
+        newE1->next = Null;
+        newE1->data = data;
+        last = newE1;
     }
 }
 
 void removeElement(int data)
 {
-    NodeT * currentElement = first;
-    NodeT * previousElement= first;
-    while(currentElement != NULL)
+    NodeT*currentNode = first;
+    NodeT*previousNode = first;
+    while(currentNode != Null)
     {
-        if(currentElement->data == data)
+        if(currentNode->data == data)
         {
-            if(currentElement == first)
+            if(currentNode = first)
             {
-                first = first->next;
+                first = currentNode->next;
+                free(currentNode);
+                currentNode = first;
+                previousNode = first;
             }
-            else if(currentElement == last)
+            else if(currentNode = last)
             {
-                last = previousElement;
-                last->next = NULL;
+                free(currentNode);
+                last = previousNode;
+                last->next = Null;
+                currentNode = Null;
             }
             else
             {
-                previousElement->next = currentElement->next;
+                previousNode->next = currentNode->next;
+                free(currentNode);
+                currentNode = previousNode->next;
             }
-            previousElement = currentElement;
-            currentElement = currentElement->next;
-            free(previousElement);
-            previousElement = currentElement;
         }
         else
         {
-            previousElement = currentElement;
-            currentElement = currentElement->next;
+            previousNode = currentNode;
+            currentNode = currentNode->next;
         }
-
     }
 }
 
 void printSllData()
 {
-    if(first == NULL)
+    NodeT*currentNode = first;
+    while(currentNode != Null)
     {
-        printf("List is empty!\n");
+        printf("%d", currentNode->data);
+        currentNode = currentNode->next;
     }
-    else
-    {
-        NodeT * currentElement = first;
-        while(currentElement != NULL)
-        {
-            printf("%d ", currentElement->data);
-            currentElement = currentElement->next;
-        }
-        printf("\n");
-    }
-
+    printf("\n");
 }
 
 void removeAll()
@@ -88,5 +82,5 @@ void removeAll()
         free(currentElement);
         currentElement = first;
     }
+    printf("List have been cleared");
 }
-

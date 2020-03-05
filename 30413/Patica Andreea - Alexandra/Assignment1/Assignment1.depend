@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1583284070 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment1\list.c
+	"list.h"
+	<string.h>
+
+1583279026 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment1\list.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583279026 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"list.h"
+

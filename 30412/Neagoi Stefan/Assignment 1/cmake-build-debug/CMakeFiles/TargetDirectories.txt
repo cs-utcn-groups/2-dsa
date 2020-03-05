@@ -1,0 +1,3 @@
+F:/CP/Programare sem I/car-shop2/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/CP/Programare sem I/car-shop2/cmake-build-debug/CMakeFiles/dummy_repo.dir
+F:/CP/Programare sem I/car-shop2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

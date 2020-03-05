@@ -1,0 +1,3 @@
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 1/cmake-build-debug/CMakeFiles/CLion.dir
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

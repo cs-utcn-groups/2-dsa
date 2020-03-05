@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1583299959 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\dsaassignment1\sll.c
+	"head.h"
+
+1583299828 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\dsaassignment1\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1583298974 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\dsaassignment1\main.c
+	"head.h"
+

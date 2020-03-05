@@ -1,0 +1,3 @@
+D:/Facultate/Semestru 2/Data Structures and Algorithms/2-dsa/30412/Stoica Irina/assignment1/cmake-build-debug/CMakeFiles/assignment1.dir
+D:/Facultate/Semestru 2/Data Structures and Algorithms/2-dsa/30412/Stoica Irina/assignment1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Facultate/Semestru 2/Data Structures and Algorithms/2-dsa/30412/Stoica Irina/assignment1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

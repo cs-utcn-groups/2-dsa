@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc lib1_dsa.a  CMakeFiles/1_dsa.dir/library.c.obj
+C:\MinGW\bin\ranlib.exe lib1_dsa.a

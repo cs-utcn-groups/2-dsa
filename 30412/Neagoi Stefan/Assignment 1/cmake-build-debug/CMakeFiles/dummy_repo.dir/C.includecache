@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/CP/Programare sem I/car-shop2/sll.c
+stdio.h
+-
+stdlib.h
+-
+sll.h
+F:/CP/Programare sem I/car-shop2/sll.h
+
+F:/CP/Programare sem I/car-shop2/sll.h
+

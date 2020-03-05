@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_1/alloc.c
+alloc.h
+E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_1/alloc.h
+
+E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_1/alloc.h
+stdlib.h
+-
+stdio.h
+-
+
+E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_1/main.c
+stdio.h
+-
+stdlib.h
+-
+alloc.h
+E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_1/alloc.h
+string.h
+-
+
