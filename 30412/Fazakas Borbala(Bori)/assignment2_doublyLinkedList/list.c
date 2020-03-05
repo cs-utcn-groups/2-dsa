@@ -16,24 +16,32 @@ void addFirst(dlList *mydlList, int value) {
     node *newNode = createNode(value, mydlList->sentinel, mydlList->sentinel->next);
     mydlList->sentinel->next->prev = newNode;
     mydlList->sentinel->next = newNode;
-    if (mydlList->sentinel->prev == mydlList->sentinel) mydlList->sentinel->prev = newNode; //if list was empty
+    if (mydlList->sentinel->prev == mydlList->sentinel) {
+        mydlList->sentinel->prev = newNode; //if list was empty
+    }
 }
 
 void addLast(dlList *mydlList, int value) {
     node *newNode = createNode(value, mydlList->sentinel->prev, mydlList->sentinel);
     mydlList->sentinel->prev->next = newNode;
     mydlList->sentinel->prev = newNode;
-    if (mydlList->sentinel->next == mydlList->sentinel) mydlList->sentinel->next = newNode; //if list was empty
+    if (mydlList->sentinel->next == mydlList->sentinel) {
+        mydlList->sentinel->next = newNode; //if list was empty
+    }
 }
 
 void deleteFirst(dlList *mydlList) {
     mydlList->sentinel->next = mydlList->sentinel->next->next;
-    if (mydlList->sentinel->next == mydlList->sentinel) mydlList->sentinel->prev = mydlList->sentinel;
+    if (mydlList->sentinel->next == mydlList->sentinel) {
+        mydlList->sentinel->prev = mydlList->sentinel;
+    }
 }
 
 void deleteLast(dlList *mydlList) {
     mydlList->sentinel->prev = mydlList->sentinel->prev->prev;
-    if (mydlList->sentinel->prev == mydlList->sentinel) mydlList->sentinel->next = mydlList->sentinel;
+    if (mydlList->sentinel->prev == mydlList->sentinel) {
+        mydlList->sentinel->next = mydlList->sentinel;
+    }
 }
 
 void deleteAll(dlList *mydlList) {
@@ -93,8 +101,9 @@ void printFirstX(dlList *mydlList, int x, FILE *outFile) {
 
 static void printLastX_recusive(node *curNode, node *sentinel, int x, FILE *outfile) {
     if (curNode != sentinel) {
-        if (x == 1) fprintf(outfile, "%d ", curNode->data);
-        else {
+        if (x == 1) {
+            fprintf(outfile, "%d ", curNode->data);
+        } else {
             printLastX_recusive(curNode->prev, sentinel, x - 1, outfile);
             fprintf(outfile, "%d ", curNode->data);
         }
@@ -102,8 +111,9 @@ static void printLastX_recusive(node *curNode, node *sentinel, int x, FILE *outf
 }
 
 void printLastX(dlList *mydlList, int x, FILE *outFile) {
-    if (mydlList->sentinel->prev == mydlList->sentinel) fprintf(outFile, "List is empty\n");
-    else {
+    if (mydlList->sentinel->prev == mydlList->sentinel) {
+        fprintf(outFile, "List is empty\n");
+    } else {
         printLastX_recusive(mydlList->sentinel->prev, mydlList->sentinel, x, outFile);
         fprintf(outFile, "\n");
     }
