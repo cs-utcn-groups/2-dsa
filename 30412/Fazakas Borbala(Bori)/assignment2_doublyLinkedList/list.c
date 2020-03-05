@@ -15,25 +15,25 @@ dlList createDLList() {
 void addFirst(dlList *mydlList, int value) {
     node *newNode = createNode(value, mydlList->sentinel, mydlList->sentinel->next);
     mydlList->sentinel->next->prev = newNode;
-    mydlList->sentinel->next=newNode;
-    if(mydlList->sentinel->prev==mydlList->sentinel) mydlList->sentinel->prev=newNode; //if list was empty
+    mydlList->sentinel->next = newNode;
+    if (mydlList->sentinel->prev == mydlList->sentinel) mydlList->sentinel->prev = newNode; //if list was empty
 }
 
 void addLast(dlList *mydlList, int value) {
     node *newNode = createNode(value, mydlList->sentinel->prev, mydlList->sentinel);
-    mydlList->sentinel->prev->next=newNode;
-    mydlList->sentinel->prev=newNode;
-    if(mydlList->sentinel->next==mydlList->sentinel) mydlList->sentinel->next=newNode; //if list was empty
+    mydlList->sentinel->prev->next = newNode;
+    mydlList->sentinel->prev = newNode;
+    if (mydlList->sentinel->next == mydlList->sentinel) mydlList->sentinel->next = newNode; //if list was empty
 }
 
 void deleteFirst(dlList *mydlList) {
-    mydlList->sentinel->next=mydlList->sentinel->next->next;
-    if(mydlList->sentinel->next==mydlList->sentinel) mydlList->sentinel->prev=mydlList->sentinel;
+    mydlList->sentinel->next = mydlList->sentinel->next->next;
+    if (mydlList->sentinel->next == mydlList->sentinel) mydlList->sentinel->prev = mydlList->sentinel;
 }
 
 void deleteLast(dlList *mydlList) {
-    mydlList->sentinel->prev=mydlList->sentinel->prev->prev;
-    if(mydlList->sentinel->prev==mydlList->sentinel) mydlList->sentinel->next=mydlList->sentinel;
+    mydlList->sentinel->prev = mydlList->sentinel->prev->prev;
+    if (mydlList->sentinel->prev == mydlList->sentinel) mydlList->sentinel->next = mydlList->sentinel;
 }
 
 void deleteAll(dlList *mydlList) {
@@ -50,12 +50,13 @@ void deleteValue(dlList *mydlList, int value) {
     node *curNode = mydlList->sentinel->next;
     node *prevNode = mydlList->sentinel;
     while (curNode != mydlList->sentinel) {
-        if (curNode->data == value) //remark that in all of the 3 cases prevNode is constant/it's value doesn't matter anymore
+        if (curNode->data ==
+            value) //remark that in all of the 3 cases prevNode is constant/it's value doesn't matter anymore
         {
             prevNode->next = curNode->next;
             curNode->next->prev = prevNode;
             free(curNode);
-            curNode = prevNode -> next;
+            curNode = prevNode->next;
         } else {
             prevNode = curNode;
             curNode = curNode->next;
@@ -90,9 +91,8 @@ void printFirstX(dlList *mydlList, int x, FILE *outFile) {
 }
 
 
-static void printLastX_recusive(node* curNode, node* sentinel, int x, FILE* outfile)
-{
-    if(curNode!=sentinel) {
+static void printLastX_recusive(node *curNode, node *sentinel, int x, FILE *outfile) {
+    if (curNode != sentinel) {
         if (x == 1) fprintf(outfile, "%d ", curNode->data);
         else {
             printLastX_recusive(curNode->prev, sentinel, x - 1, outfile);
