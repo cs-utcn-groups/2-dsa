@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include "list.h"
 
-dlList createList() {
+dlList createDLList() {
     dlList newdlList;
     newdlList.sentinel = createNodeWithSelfReference(0);
     return newdlList;
@@ -76,7 +76,7 @@ void printAll(dlList *mydlList, FILE *outFile) {
 }
 
 void printFirstX(dlList *mydlList, int x, FILE *outFile) {
-    if (mydlList->sentinel->next == mydlList->sentinel) fprintf(outFile, "dlList is empty\n");
+    if (mydlList->sentinel->next == mydlList->sentinel) fprintf(outFile, "List is empty\n");
     else {
         int countPrintedElem = 0;
         node *curNode = mydlList->sentinel->next;
@@ -102,7 +102,7 @@ static void printLastX_recusive(node* curNode, node* sentinel, int x, FILE* outf
 }
 
 void printLastX(dlList *mydlList, int x, FILE *outFile) {
-    if (mydlList->sentinel->prev == mydlList->sentinel) fprintf(outFile, "dlList is empty\n");
+    if (mydlList->sentinel->prev == mydlList->sentinel) fprintf(outFile, "List is empty\n");
     else {
         printLastX_recusive(mydlList->sentinel->prev, mydlList->sentinel, x, outFile);
         fprintf(outFile, "\n");

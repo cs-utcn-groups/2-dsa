@@ -18,7 +18,7 @@ FILE *openFile(char *name, char *mode) {
 
 
 int main() {
-    dlList myList = createList();
+    dlList myList = createDLList();
     char *command = (char *) malloc(sizeof(char) * MAX_COMMAND_LENGTH);
     int x;
 

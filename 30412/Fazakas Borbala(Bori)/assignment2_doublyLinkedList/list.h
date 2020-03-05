@@ -11,7 +11,7 @@ typedef struct {
     node *sentinel;
 } dlList;
 
-dlList createList();
+dlList createDLList();
 
 void addFirst(dlList *mydlList, int value);
 
