@@ -18,7 +18,7 @@ typedef struct node {
 } Node;
 
 typedef struct list {
-    Node *first, *last;
+    Node *sentinel;
 } List;
 
 void initList(List *list);

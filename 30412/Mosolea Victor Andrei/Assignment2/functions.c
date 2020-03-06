@@ -5,69 +5,74 @@
 
 
 void initList(List *list) {
-    list->first = NULL;
-    list->last = NULL;
+    list->sentinel = NULL;
 }
 
 void addFirst(List *list, int data) {
     Node *newNode = (Node *) malloc(sizeof(Node));
     newNode->data = data;
-    newNode->next = list->first;
-    if (list->first != NULL)
-        list->first->previous = newNode;
-    list->first = newNode;
-    if (list->last == NULL) {
-        list->last = list->first;
+    if (list->sentinel == NULL) {
+        list->sentinel = newNode;
+        list->sentinel->next = list->sentinel;
+        list->sentinel->previous = list->sentinel;
+    } else {
+        newNode->next = list->sentinel->next;
+        list->sentinel->next->previous = newNode;
+        list->sentinel->next = newNode;
+        list->sentinel->next->previous = list->sentinel;
     }
 }
 
+
 void addLast(List *list, int data) {
-    if (list->first == NULL) {
+    if (list->sentinel == NULL) {
         addFirst(list, data);
     } else {
         Node *newNode = (Node *) malloc(sizeof(Node));
         newNode->data = data;
-        newNode->next = NULL;
-        newNode->previous = list->last;
-        list->last->next = newNode;
-        list->last = newNode;
+        newNode->previous = list->sentinel;
+        newNode->next = list->sentinel->next;
+        list->sentinel = newNode;
+        list->sentinel->previous->next = list->sentinel;
     }
 }
 
 void deleteFirst(List *list) {
-    if (list->first != NULL) {
-        Node *aux = list->first;
-        list->first = list->first->next;
+    if (list->sentinel != NULL) {
+        Node *aux = list->sentinel->next;
+        list->sentinel->next = list->sentinel->next->next;
+        list->sentinel->next->previous = list->sentinel;
         free(aux);
     }
 }
 
 void deleteLast(List *list) {
-    if (list->first != NULL) {
-        Node *aux = list->last;
-        list->last = list->last->previous;
-        list->last->next = NULL;
+    if (list->sentinel != NULL) {
+        Node *aux = list->sentinel;
+        list->sentinel->previous->next = list->sentinel->next;
+        list->sentinel = list->sentinel->previous;
         free(aux);
     }
 }
 
 void removeAll(List *list) {
-    while (list->first != NULL)
+    while (list->sentinel != list->sentinel->next)
         deleteFirst(list);
+    free(list->sentinel);
     initList(list);
 }
 
 void deleteX(List *list, int data) {
-    Node *currentNode = list->first;
-    Node *previousNode = list->first;
-    while (currentNode != NULL) {
-        if (currentNode == list->first && currentNode->data == data) {
+    Node *currentNode = list->sentinel->next;
+    Node *previousNode = list->sentinel;
+    do {
+        if (currentNode == list->sentinel->next && currentNode->data == data) {
             deleteFirst(list);
-            currentNode = list->first;
-            previousNode = list->first;
-        } else if (currentNode == list->last && currentNode->data == data) {
+            currentNode = list->sentinel->next;
+            previousNode = list->sentinel;
+        } else if (currentNode == list->sentinel && currentNode->data == data) {
             deleteLast(list);
-            currentNode = NULL;
+            currentNode = list->sentinel->next;
         } else if (currentNode->data == data) {
             Node *aux = currentNode;
             previousNode->next = currentNode->next;
@@ -79,39 +84,41 @@ void deleteX(List *list, int data) {
             previousNode = currentNode;
             currentNode = currentNode->next;
         }
-    }
+
+    } while (currentNode != list->sentinel->next);
 }
 
+
 void printList(List list, FILE *g) {
-    if (list.first == NULL)
-        printf("List is empty\n");
+    if (list.sentinel == NULL)
+        fprintf(g, "List is empty\n");
     else {
-        Node *currentNode = list.first;
-        while (currentNode != NULL) {
+        Node *currentNode = list.sentinel->next;
+        do {
             fprintf(g, "%d ", currentNode->data);
             currentNode = currentNode->next;
-        }
+        } while (currentNode != list.sentinel->next);
     }
     fprintf(g, "\n");
 }
 
 void printFirstN(List list, int n, FILE *g) {
-    Node *currentNode = list.first;
-    while (n) {
+    Node *currentNode = list.sentinel->next;
+    do {
         fprintf(g, "%d ", currentNode->data);
         currentNode = currentNode->next;
         n--;
-    }
+    } while (n && currentNode != list.sentinel->next);
     fprintf(g, "\n");
 }
 
 void printLastN(List list, int n, FILE *g) {
-    Node *currentNode = list.last;
-    while (n) {
+    Node *currentNode = list.sentinel;
+    do {
         fprintf(g, "%d ", currentNode->data);
         currentNode = currentNode->previous;
         n--;
-    }
+    } while (n && currentNode != list.sentinel);
     fprintf(g, "\n");
 }
 
