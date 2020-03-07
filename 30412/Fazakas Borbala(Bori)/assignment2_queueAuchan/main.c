@@ -27,6 +27,8 @@ int main() {
     readCostumersData(&costumers, inFile);
 
     simulateQueue(&costumers, &moments, outFile);
+    fclose(inFile);
+    fclose(outFile);
     return 0;
 }
 
@@ -51,6 +53,7 @@ void readMoments(intQueue *moments, FILE *inFile) {
             pushInt(moments, atoi(nextMoment_string));
         }
     }
+    free(line);
 }
 
 void readCostumersData(costumerQueue *costumers, FILE *inFile) {
@@ -60,6 +63,7 @@ void readCostumersData(costumerQueue *costumers, FILE *inFile) {
         fscanf(inFile, "%s %d %d", name, &newCostumer.amount, &newCostumer.time);
         pushCostumer(costumers, &newCostumer);
     }
+    free(name);
 }
 
 void simulateQueue(costumerQueue *costumers, intQueue *moments, FILE *outFile) {
@@ -74,5 +78,8 @@ void simulateQueue(costumerQueue *costumers, intQueue *moments, FILE *outFile) {
         }
         fprintf(outFile, "After %d seconds: %d\n", frontInt(moments), ownedAmount);
         popInt(moments);
+    }
+    while (!costumerQueueIsEmpty(costumers)) {
+        popCostumer(costumers);
     }
 }
