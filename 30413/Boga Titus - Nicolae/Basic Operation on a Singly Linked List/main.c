@@ -8,6 +8,7 @@ typedef struct _LIST{
 }LIST;
 
 LIST *prim=NULL,*last=NULL;
+FILE *g;
 
 void AF(int data)
 {
@@ -146,10 +147,10 @@ void PRINT_ALL()
     LIST * p=prim;
     while (p)
     {
-        printf("%d ",p->data);
+        fprintf(g,"%d ",p->data);
         p=p->next;
     }
-    printf("\n");
+    fprintf(g,"\n");
 }
 
 void PRINT_F(int data)
@@ -157,10 +158,10 @@ void PRINT_F(int data)
     LIST *p=prim;
     while (p && data--)
     {
-       printf("%d ",p->data);
+       fprintf(g,"%d ",p->data);
        p=p->next;
     }
-    printf("\n");
+    fprintf(g,"\n");
 }
 
 int ElCount()
@@ -190,19 +191,19 @@ void PRINT_L(int data)
         }
         while(p)
         {
-            printf("%d ",p->data);
+            fprintf(g,"%d ",p->data);
             p=p->next;
 
         }
     }
-    printf("\n");
+    fprintf(g,"\n");
 
 }
 
 int main() {
 
     FILE *f=fopen("input.dat","r");
-
+    g=fopen("output.dat","w");
     char *s1=(char*)malloc(sizeof(char)*256);
     char *s2=(char*)malloc(sizeof(char)*256);
     while(fscanf(f,"%s",s1)!=EOF)
