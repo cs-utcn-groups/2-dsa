@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1583358966 source:c:\users\tudor\onedrive\desktop\lap cp\assignment_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583391677 source:c:\users\tudor\onedrive\desktop\dsa lab me\2-dsa\30413\chindea tudor - eugen\assignment_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
