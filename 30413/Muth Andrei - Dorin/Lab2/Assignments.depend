@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1583272663 source:c:\labcp\1-cp-master\muth andrei dorin\assignments\instructions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583310818 source:c:\labcp\1-cp-master\muth andrei dorin\assignments\kimjongun.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1583343017 source:c:\labcp\2-dsa\30413\muth andrei - dorin\lab2\instructions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583349859 source:c:\labcp\2-dsa\30413\muth andrei - dorin\lab2\kimjongun.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
