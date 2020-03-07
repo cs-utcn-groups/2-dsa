@@ -38,7 +38,7 @@ int charToInt(char *string)
     int number = 0,lastDigit,i;
     int length = strlen(string);
 
-    for(i=0; i<length-1; i++)
+    for(i=0; i<length; i++)
     {
         lastDigit = (int)string[i] - '0';
         number = number*10 + lastDigit;
@@ -209,75 +209,27 @@ void printLast(int nr, FILE *g)
     fprintf(g,"\n");
 }
 
-void recognizeFunction(char *strbuf, FILE *g)
+void recognizeFunctionUpdated(char *strbuf, FILE *g)
 {
-    ///AddFirst
-    if(strbuf[0] == 'A' && strbuf[1] == 'F')
-    {
-        char *number = (char*)malloc(sizeof(char)*10);
-        number = createStringNumber(strbuf,3);
+    int number;
+    char *p = (char*)malloc(sizeof(char)*20);
+    char *functionName = (char*)malloc(sizeof(char)*20);
 
-        int x;
-        x = charToInt(number);
+    p = strtok(strbuf," \n");
+    strcpy(functionName,p);
 
-        AddFirst(x);
-    }
+    p = strtok(NULL,"\n");
+    if(p)number = charToInt(p);
 
-    ///AddLast
-    if(strbuf[0] == 'A' && strbuf[1] == 'L')
-    {
-        char *number = (char*)malloc(sizeof(char)*10);
-        number = createStringNumber(strbuf,3);
-
-        int x;
-        x = charToInt(number);
-
-        AddLast(x);
-    }
-
-    if(strbuf[0] == 'D' && strbuf[1] == 'F')deleteFirst();
-
-    if(strbuf[0] == 'D' && strbuf[1] == 'L')deleteLast();
-
-    if(strbuf[0] == 'D' && strbuf[1] == 'O')doomTheList();
-
-    ///deleteElement
-    if(strbuf[0] == 'D' && strbuf[1] == 'E')
-    {
-        char *number = (char*)malloc(sizeof(char)*10);
-        number = createStringNumber(strbuf,3);
-
-        int x;
-        x = charToInt(number);
-
-        deleteElement(x);
-    }
-
-    if(strbuf[0] == 'P' && strbuf[6] == 'A')printAll(g);
-
-    ///printFirst
-    if(strbuf[0] == 'P' && strbuf[6] == 'F')
-    {
-        char *number = (char*)malloc(sizeof(char)*10);
-        number = createStringNumber(strbuf,8);
-
-        int x;
-        x = charToInt(number);
-
-        printFirst(x,g);
-    }
-
-    ///printLast
-    if(strbuf[0] == 'P' && strbuf[6] == 'L')
-    {
-        char *number = (char*)malloc(sizeof(char)*10);
-        number = createStringNumber(strbuf,8);
-
-        int x;
-        x = charToInt(number);
-
-        printLast(x,g);
-    }
+    if(strcmp(functionName,"AF") == 0)AddFirst(number);
+    if(strcmp(functionName,"AL") == 0)AddLast(number);
+    if(strcmp(functionName,"DF") == 0)deleteFirst();
+    if(strcmp(functionName,"DL") == 0)deleteLast();
+    if(strcmp(functionName,"DE") == 0)deleteElement(number);
+    if(strcmp(functionName,"PRINT_L") == 0)printLast(number,g);
+    if(strcmp(functionName,"PRINT_F") == 0)printFirst(number,g);
+    if(strcmp(functionName,"PRINT_ALL") == 0)printAll(g);
+    if(strcmp(functionName,"DOOM_THE_LIST") == 0)doomTheList();
 }
 
 int main()
@@ -291,7 +243,7 @@ int main()
 
     while(fgets(strbuf,20,f) != NULL)
     {
-        recognizeFunction(strbuf,g);
+        recognizeFunctionUpdated(strbuf,g);
     }
 
     return 0;
