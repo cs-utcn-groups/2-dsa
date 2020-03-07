@@ -16,6 +16,10 @@ typedef struct node {
     struct node *next;
     struct node *prev;
 } Node;
+typedef struct _list{
+    Node *first;
+    Node *last;
+}List;
 
 #define MAX_CMD_LINE 100
 

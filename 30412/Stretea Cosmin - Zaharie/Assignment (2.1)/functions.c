@@ -4,88 +4,89 @@
 #include "head.h"
 
 
-Node *first, *last;
+List *list;
 
 void init() {
-    first = NULL;
-    last = NULL;
+    list = (List *)malloc(sizeof(List));
+    list->first = NULL;
+    list->last = NULL;
 }
 
 void AF(int x) {
-    if (first == NULL) {
-        first = (Node *) malloc(sizeof(Node));
-        first->data = x;
-        first->next = NULL;
-        first->prev = NULL;
-        last = first;
+    if (list->first == NULL) {
+        list->first = (Node *) malloc(sizeof(Node));
+        list->first->data = x;
+        list->first->next = NULL;
+        list->first->prev = NULL;
+        list->last = list->first;
     } else {
         Node *newNode = (Node *) malloc(sizeof(Node));
         newNode->data = x;
-        newNode->next = first;
+        newNode->next = list->first;
         newNode->prev = NULL;
-        first->prev = newNode;
-        first = newNode;
+        list->first->prev = newNode;
+        list->first = newNode;
     }
 
 }
 
 void AL(int x) {
-    if (last == NULL) {
-        last = (Node *) malloc(sizeof(Node));
-        last->data = x;
-        last->next = NULL;
-        last->prev = NULL;
-        first = last;
+    if (list->last == NULL) {
+        list->last = (Node *) malloc(sizeof(Node));
+        list->last->data = x;
+        list->last->next = NULL;
+        list->last->prev = NULL;
+        list->first = list->last;
     } else {
         Node *newNode = (Node *) malloc(sizeof(Node));
         newNode->data = x;
         newNode->next = NULL;
-        newNode->prev = last;
-        last->next = newNode;
-        last = newNode;
+        newNode->prev = list->last;
+        list->last->next = newNode;
+        list->last = newNode;
     }
 
 }
 
 void DF() {
-    if (first) {
-        Node *currentNode = first;
-        first = first->next;
-        first->prev = NULL;
+    if (list->first) {
+        Node *currentNode = list->first;
+        list->first = list->first->next;
+        list->first->prev = NULL;
         free(currentNode);
     }
 }
 
 void DL() {
-    if (last) {
-        Node *currentNode = last;
-        last = last->prev;
-        last->next = NULL;
+    if (list->last) {
+        Node *currentNode = list->last;
+        list->last = list->last->prev;
+        list->last->next = NULL;
         free(currentNode);
     }
 }
 
 void DOOM_THE_LIST() {
     Node *currentNode;
-    while (first != NULL) {
-        currentNode = first;
-        first = first->next;
+    while (list->first != NULL) {
+        currentNode = list->first;
+        list->first = list->first->next;
         free(currentNode);
     }
-    last = NULL;
+    list->last = NULL;
 }
 
 void DE(int x) {
-    Node *currentNode = first;
-    Node *previousNode = first;
+    Node *currentNode = list->first;
+    Node *previousNode = list->first;
     while (currentNode != NULL) {
         if (currentNode->data == x) {
-            if (currentNode == first) {
-                first = first->next;
-                first->prev = NULL;
-            } else if (currentNode == last) {
-                last = last->prev;
-                last->next = NULL;
+            if (currentNode == list->first) {
+                list->first = list->first->next;
+                list->first->prev = NULL;
+            } else if (currentNode == list->last) {
+                list->last = list->last->prev;
+                list->last->next = NULL;
             } else {
                 previousNode->next = currentNode->next;
                 currentNode->next->prev = previousNode;
@@ -102,7 +103,7 @@ void DE(int x) {
 }
 
 void PRINT_ALL() {
-    Node *currentNode = first;
+    Node *currentNode = list->first;
     while (currentNode) {
         fprintf(output, "%d ", currentNode->data);
         currentNode = currentNode->next;
@@ -111,7 +112,7 @@ void PRINT_ALL() {
 }
 
 void PRINT_F(int x) {
-    Node *currentNode = first;
+    Node *currentNode = list->first;
     while (currentNode && x) {
         fprintf(output, "%d ", currentNode->data);
         currentNode = currentNode->next;
@@ -121,7 +122,7 @@ void PRINT_F(int x) {
 }
 
 void PRINT_L(int x) {
-    Node *currentNode = last;
+    Node *currentNode = list->last;
     x--; // we start from the last position therefore we have already counted 1 node
     while(currentNode && x){
         currentNode = currentNode->prev;

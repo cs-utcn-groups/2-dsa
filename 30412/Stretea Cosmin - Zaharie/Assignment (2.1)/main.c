@@ -1,6 +1,5 @@
 #include "head.h"
 
-
 int main() {
     input = fopen("input.dat", "r");
     output = fopen("output.dat", "w+");
