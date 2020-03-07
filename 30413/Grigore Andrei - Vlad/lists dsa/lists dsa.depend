@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1583332426 source:c:\users\aa\desktop\lists dsa\sll.c
+	"head.h"
+
+1583332655 c:\users\aa\desktop\lists dsa\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1583332636 source:c:\users\aa\desktop\lists dsa\main.c
+	<stdio.h>
+	<stdlib.h>
+	"head.h"
+
