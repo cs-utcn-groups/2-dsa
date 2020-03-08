@@ -77,6 +77,12 @@
 		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/main.c">
 			<Option target="2_2___queue"/>
 		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.c">
+			<Option target="2_2___queue"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.h">
+			<Option target="2_2___queue"/>
+		</Unit>
 		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

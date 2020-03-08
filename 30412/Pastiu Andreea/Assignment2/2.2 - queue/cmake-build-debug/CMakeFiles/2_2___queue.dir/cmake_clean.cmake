@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "2_2___queue.exe.manifest"
   "2_2___queue.pdb"
   "CMakeFiles/2_2___queue.dir/main.c.obj"
+  "CMakeFiles/2_2___queue.dir/queue.c.obj"
   "lib2_2___queue.dll.a"
 )
 

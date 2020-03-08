@@ -73,12 +73,12 @@ preinstall:
 CMakeFiles/2_2___queue.dir/all:
 	$(MAKE) -f CMakeFiles\2_2___queue.dir\build.make CMakeFiles/2_2___queue.dir/depend
 	$(MAKE) -f CMakeFiles\2_2___queue.dir\build.make CMakeFiles/2_2___queue.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.2 - queue\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target 2_2___queue"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.2 - queue\cmake-build-debug\CMakeFiles" --progress-num=1,2,3 "Built target 2_2___queue"
 .PHONY : CMakeFiles/2_2___queue.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/2_2___queue.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.2 - queue\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.2 - queue\cmake-build-debug\CMakeFiles" 3
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/2_2___queue.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.2 - queue\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/2_2___queue.dir/rule

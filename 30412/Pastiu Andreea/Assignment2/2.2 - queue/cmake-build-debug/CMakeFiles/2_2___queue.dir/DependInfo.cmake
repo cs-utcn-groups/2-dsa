@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/main.c" "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/cmake-build-debug/CMakeFiles/2_2___queue.dir/main.c.obj"
+  "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.c" "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/cmake-build-debug/CMakeFiles/2_2___queue.dir/queue.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
