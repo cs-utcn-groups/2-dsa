@@ -42,9 +42,11 @@ void AL(int x){
 
 }
 void DF(){
-    Node * currentNode = first;
-    first = first->next;
-    free(currentNode);
+    if(first) {
+        Node *currentNode = first;
+        first = first->next;
+        free(currentNode);
+    }
 }
 void DL() {
     if (first) {

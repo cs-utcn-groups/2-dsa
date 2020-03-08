@@ -1,6 +1,10 @@
 //
-// Created by Cosmin on 26-Feb-20.
+// Created by Cosmin on 06-Mar-20.
 //
+
+#ifndef ASSIGNMENT__2_1__HEAD_H
+#define ASSIGNMENT__2_1__HEAD_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,7 +14,12 @@ FILE *input, *output;
 typedef struct node {
     int data;
     struct node *next;
+    struct node *prev;
 } Node;
+typedef struct _list{
+    Node *first;
+    Node *last;
+}List;
 
 #define MAX_CMD_LINE 100
 
@@ -24,3 +33,5 @@ void DE(int x);
 void PRINT_ALL();
 void PRINT_F(int x);
 void PRINT_L(int x);
+
+#endif //ASSIGNMENT__2_1__HEAD_H
