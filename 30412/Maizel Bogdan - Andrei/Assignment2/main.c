@@ -7,7 +7,7 @@ typedef struct nodetype {
     struct nodetype *next;
     struct nodetype *prev;
 } nodeT;
-nodeT *first, *last;
+nodeT *first, *last, *sentinel;
 void initList();
 void addFirst(int x);
 void addLast(int x);
@@ -74,11 +74,14 @@ int main() {
 void initList() {
     first=NULL;
     last=NULL;
+    sentinel=NULL;
 }
 
 void addFirst(int x) {
     if((first)==NULL) {
         first = (nodeT*)malloc(sizeof(nodeT));
+        sentinel=(nodeT*)malloc(sizeof(nodeT));
+        (nodeT*)malloc(sizeof(nodeT));
         first->next = last;
         first->prev = NULL;
         first->value = x;
