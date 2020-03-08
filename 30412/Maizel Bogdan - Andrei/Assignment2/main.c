@@ -183,16 +183,6 @@ void printFirst(int x) {
     fclose(outputFile);
 }
 
-int countNodesInList() {
-    nodeT *currentNode = first;
-    int numberOfNodes=0;
-    while (currentNode != NULL) {
-        numberOfNodes++;
-        currentNode=currentNode->next;
-    }
-    return numberOfNodes;
-}
-
 void printLast(int x) {
     FILE *outputFile = fopen("..\\output.dat", "a");
     nodeT *currentNode = last;
