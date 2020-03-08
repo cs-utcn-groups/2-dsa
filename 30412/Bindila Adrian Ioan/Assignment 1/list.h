@@ -4,30 +4,31 @@
 
 #ifndef ASSIGNMENT_1_LIST_H
 #define ASSIGNMENT_1_LIST_H
+
 typedef struct _list {
     int data;
     struct _list *next;
 } list;
 list *first, *last;
-void initList(void);
 
-void addFirst(int x);
+void initList(void);//good
 
-void addLast(int x);
+void addFirst(int x);//good
 
-void deleteFirst(void);
+void addLast(int x);//good
 
-void deleteLast(void);
+void deleteFirst(void);//good
 
-void doomTheList(void);
+void deleteLast(void);//good
 
-void deleteElement(int x);
+void doomTheList(void);//good
 
-void printAll(void);
+void deleteElement(int x);//good
 
-void printFirst(int noOfElements);
+void printAll(FILE *output);
 
-void printLast(int noOfElements);
+void printFirst(int noOfElements,FILE *output);
 
-void printDebugList(void);
+void printLast(int noOfElements,FILE *output);
+
 #endif //ASSIGNMENT_1_LIST_H

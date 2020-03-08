@@ -4,22 +4,23 @@
 #include "list.h"
 #include "commands.h"
 
+#define IN_FILE "../input.dat"
+#define OUT_FILE "../output.dat"
 #define MAX_LINE_LENGTH 32
 
 int main() {
-    FILE *fin = fopen("../input.dat", "r");
+    FILE *input = fopen(IN_FILE, "r");
+    FILE *output = fopen(OUT_FILE, "w");
     initList();
-    printAll();
     char *buffer = (char *) malloc(MAX_LINE_LENGTH * sizeof(char));
-    while (fgets(buffer, MAX_LINE_LENGTH, fin)) {
-        int x = 0;
-        char *ptr,*number;
-        strtok_r(buffer," ",&number);
-        x=strtol(number,&ptr,10);///data
-        int command = readCommand(buffer);
-        executeCommand(command, x);
-        printDebugList();
+    while (fgets(buffer, MAX_LINE_LENGTH, input)) {
+        char *ptr, *number;
+        strtok_r(buffer, " \n", &number);///Commands without a number next to them have a \n as delimiter
+        int x = strtol(number, &ptr, 10);///data
+        doCommand(buffer, x, output);
     }
-    fclose(fin);
+    free(buffer);
+    fclose(input);
+    fclose(output);
     return 0;
 }

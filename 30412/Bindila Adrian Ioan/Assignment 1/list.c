@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include "list.h"
 
-
 void initList(void) {
     first = NULL;
     last = NULL;
@@ -63,7 +62,7 @@ void deleteLast(void) {
         if (currentElement == first) {
             ///if the list has one element
             first = last = NULL;
-        } else {
+        } else if(previousElement!=NULL) {
             ///if the list has more than one element
             previousElement->next = NULL;
             last = previousElement;
@@ -76,8 +75,8 @@ void doomTheList(void) {
     list *previousElement = NULL;
     list *currentElement = first;
     while (currentElement != NULL) {
-        previousElement = currentElement;
         free(previousElement);
+        previousElement = currentElement;
         currentElement = currentElement->next;
     }
     first = last = NULL;
@@ -106,32 +105,27 @@ void deleteElement(int x) {
     }
 }
 
-void printAll(void) {
-    FILE *fout = fopen("../output.dat", "w");
+void printAll(FILE *output) {
     list *currentElement = first;
     while (currentElement != NULL) {
-        fprintf(fout, "%d ", currentElement->data);
+        fprintf(output, "%d ", currentElement->data);
         currentElement = currentElement->next;
     }
-    fprintf(fout, "\n");
-    fclose(fout);
+    fprintf(output, "\n");
 }
 
-void printFirst(int noOfElements) {
-    FILE *fout = fopen("../output.dat", "w");
+void printFirst(int noOfElements,FILE *output) {
     list *currentElement = first;
     while (noOfElements > 0 && currentElement != NULL) {
-        fprintf(fout, "%d ", currentElement->data);
+        fprintf(output, "%d ", currentElement->data);
         currentElement = currentElement->next;
         noOfElements--;
     }
-    fprintf(fout, "\n");
-    fclose(fout);
+    fprintf(output, "\n");
 }
 
-void printLast(int noOfElements) {
+void printLast(int noOfElements,FILE *output) {
     ///we cannot print the last x elements of a list unless we know exactly how many elements are in total
-    FILE *fout = fopen("../output.dat", "w");
     list *currentElement = first;
     int k = 0;
     while (currentElement != NULL) {
@@ -143,19 +137,8 @@ void printLast(int noOfElements) {
         currentElement = currentElement->next;
     }
     while (currentElement != NULL) {
-        fprintf(fout, "%d ", currentElement->data);
+        fprintf(output, "%d ", currentElement->data);
         currentElement = currentElement->next;
     }
-    fprintf(fout, "\n");
-    fclose(fout);
-}
-
-void printDebugList(void) {
-    ///prints the list in console
-    list *currentElement = first;
-    while (currentElement != NULL) {
-        printf("%d ", currentElement->data);
-        currentElement = currentElement->next;
-    }
-    printf("\n");
+    fprintf(output, "\n");
 }
