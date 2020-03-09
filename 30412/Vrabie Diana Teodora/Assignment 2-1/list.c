@@ -104,6 +104,7 @@ void deleteList() {
         deleteFirstElement();
         node = myList->first;
     }
+    myList->nrOfMembers = 0;
 }
 
 void deleteElement(int data) {
@@ -120,11 +121,42 @@ void deleteElement(int data) {
             } else {
                 node->prev->next = node->next;
                 node->next->prev = node->prev;
+                myList->nrOfMembers--;
                 free(node);
                 return;
             }
         }
         node = node->next;
+    }
+}
+
+void printFirst(int nr, FILE *file) {
+    if (nr > myList->nrOfMembers) {
+        printAll(file);
+    } else {
+        Node *node = myList->first;
+        for (int i = 0; i < nr; ++i) {
+            fprintf(file, "%d ", node->value);
+            node = node->next;
+        }
+        fprintf(file, "\n");
+    }
+
+}
+
+void printLast(int nr, FILE *file) {
+    if (nr > myList->nrOfMembers) {
+        printAll(file);
+    } else {
+        Node *node = myList->last;
+        for (int i = 0; i < nr; ++i) {
+            node = node->prev;
+        }
+        while (node != NULL) {
+            fprintf(file, "%d ", node->value);
+            node = node->next;
+        }
+        fprintf(file, "\n");
     }
 }
 

@@ -67,7 +67,7 @@ void readFromFile() {
         case PRINT_ALL: {
             printAll(outputFile);
             break;
-        }/*
+        }
         case PRINT_F: {
             int value;
             fscanf(inputFile, "%d", &value);
@@ -79,7 +79,7 @@ void readFromFile() {
             fscanf(inputFile, "%d", &value);
             printLast(value, outputFile);
             break;
-        }*/
+        }
     }
 }
 
