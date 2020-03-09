@@ -12,6 +12,7 @@
 #include <string.h>
 
 #define MAX_COMMAND 15
+#define MAX_LINE 100
 typedef struct node {
     int data;
     struct node *next, *previous;
@@ -20,6 +21,15 @@ typedef struct node {
 typedef struct list {
     Node *sentinel;
 } List;
+
+typedef struct customer{
+    int money,time;
+    struct customer  *next, *previous;
+}Customer;
+
+typedef struct customerList{
+    Customer *sentinel;
+}CustomerList;
 
 void initList(List *list);
 
