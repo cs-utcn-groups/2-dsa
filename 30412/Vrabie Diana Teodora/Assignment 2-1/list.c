@@ -62,3 +62,70 @@ void addElementToEnd(int data) {
         myList->nrOfMembers++;
     }
 }
+
+void deleteFirstElement() {
+    if (myList->nrOfMembers == 0) return;
+    if (myList->nrOfMembers == 1) {
+        Node *node = myList->first;
+        myList->first = NULL;
+        myList->last = NULL;
+        myList->nrOfMembers = 0;
+        free(node);
+        return;
+    }
+    Node *node = myList->first;
+    myList->first = myList->first->next;
+    myList->first->prev = NULL;
+    free(node);
+    myList->nrOfMembers--;
+}
+
+void deleteLastElement() {
+    if (myList->nrOfMembers == 0) return;
+    if (myList->nrOfMembers == 1) {
+        Node *node = myList->last;
+        myList->first = NULL;
+        myList->last = NULL;
+        myList->nrOfMembers = 0;
+        free(node);
+        return;
+    }
+    Node *node = myList->last;
+    myList->last = myList->last->prev;
+    myList->last->next = NULL;
+    free(node);
+    myList->nrOfMembers--;
+}
+
+void deleteList() {
+    if (myList->nrOfMembers == 0)return;;
+    Node *node = myList->first;
+    while (node != NULL) {
+        deleteFirstElement();
+        node = myList->first;
+    }
+}
+
+void deleteElement(int data) {
+    if (myList->nrOfMembers == 0) return;
+    Node *node = myList->first;
+    while (node != NULL) {
+        if (node->value == data) {
+            if (node == myList->first) {
+                deleteFirstElement();
+                return;
+            } else if (node == myList->last) {
+                deleteLastElement();
+                return;
+            } else {
+                node->prev->next = node->next;
+                node->next->prev = node->prev;
+                free(node);
+                return;
+            }
+        }
+        node = node->next;
+    }
+}
+
+

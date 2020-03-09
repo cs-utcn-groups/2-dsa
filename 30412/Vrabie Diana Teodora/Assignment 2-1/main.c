@@ -21,7 +21,9 @@ int main() {
 
     initializeList();
 
-    while (!feof(inputFile)) {
+    while (1) {
+        if (feof(inputFile))
+            break;
         readFromFile();
     }
 
@@ -43,7 +45,7 @@ void readFromFile() {
             fscanf(inputFile, "%d", &value);
             addElementToEnd(value);
             break;
-        } /*
+        }
         case DF: {
             deleteFirstElement();
             break;
@@ -61,7 +63,7 @@ void readFromFile() {
             fscanf(inputFile, "%d", &value);
             deleteElement(value);
             break;
-        }*/
+        }
         case PRINT_ALL: {
             printAll(outputFile);
             break;
