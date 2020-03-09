@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "header.h"
 
 void init()
@@ -82,7 +83,6 @@ void deleteLast()
     nrElements--;
     if(first==NULL || last==NULL)
     {
-        // printf("List is emtpy\n");
         return;
     }
 
@@ -101,7 +101,6 @@ void deleteLast()
 
     last=element;
     last->next=NULL;
-    //printf("%d",last->info);
 }
 
 void PRINT_ALL (FILE *o)
@@ -207,39 +206,23 @@ void PRINT_ALLL ()
 void readInstructions(FILE *f,FILE *o)
 {
     char *s=(char *) malloc(sizeof(char)*maxLengthInstruction);
-    char *number=(char *) malloc(sizeof(char)*maxLengthInstruction);
 
     while(fgets(s,maxLengthInstruction,f)!=NULL)
     {
-        ///  printf("%s\n%s\n\n",s,strstr(s,"PRINT_L"));
-        //PRINT_ALLL();
-        //printf("%s\n",s);
-        int len=0;
         if(s[0]=='A' && s[1]=='F')
         {
-            int index=3;
+            char * token=strtok(s," ");
+            token=strtok(NULL," ");
 
-            while(isdigit(s[index]))
-            {
-                number[len++]=s[index++];
-            }
-            number[len++]=NULL;
-            /// printf("%d\n",atoi(number));
-            addElementAtFront(atoi(number));
+            addElementAtFront(atoi(token));
         }
         else
         {
             if(s[0]=='A' && s[1]=='L')
             {
-                int index=3;
-
-                while(isdigit(s[index]))
-                {
-                    number[len++]=s[index++];
-                }
-                number[len++]=NULL;
-                /// printf("%d\n",atoi(number));
-                addElementAtEnd(atoi(number));
+                char * token=strtok(s," ");
+                token=strtok(NULL," ");
+                addElementAtEnd(atoi(token));
             }
             else
             {
@@ -263,15 +246,10 @@ void readInstructions(FILE *f,FILE *o)
                         {
                             if(s[0]=='D' && s[1]=='E')
                             {
-                                int index=3;
+                                char * token=strtok(s," ");
+                                token=strtok(NULL," ");
+                                deleteElement(atoi(token));
 
-                                while(isdigit(s[index]))
-                                {
-                                    number[len++]=s[index++];
-                                }
-                                number[len++]=NULL;
-                                /// printf("%d\n",atoi(number));
-                                deleteElement(atoi(number));
                             }
                             else
                             {
@@ -282,35 +260,22 @@ void readInstructions(FILE *f,FILE *o)
                                 }
                                 else
                                 {
-                                    /// printf("sadfgsdhvfnisdjhvdshvsdbvjsdbvijsd");
                                     if(strstr(s,"PRINT_F"))
                                     {
-                                        PRINT_ALLL();
-                                        int index=8;
+                                        char * token=strtok(s," ");
+                                        token=strtok(NULL," ");
+                                        PRINT_F(atoi(token),o);
 
-                                        while(isdigit(s[index]))
-                                        {
-                                            number[len++]=s[index++];
-                                        }
-                                        number[len++]=NULL;
-                                        ///   printf("%d\n",atoi(number));
-                                        PRINT_F(atoi(number),o);
                                     }
                                     else
                                     {
-                                        ///printf("%s\n%s\n",s,strstr(s,"PRINT_L"));
+
                                         if(strstr(s,"PRINT_L"))
                                         {
-                                            PRINT_ALLL();
-                                            int index=8;
+                                            char * token=strtok(s," ");
+                                            token=strtok(NULL," ");
+                                            PRINT_L(atoi(token),o);
 
-                                            while(isdigit(s[index]))
-                                            {
-                                                number[len++]=s[index++];
-                                            }
-                                            number[len++]=NULL;
-                                            ///   printf("%d\n",atoi(number));
-                                            PRINT_L(atoi(number),o);
                                         }
                                     }
                                 }
@@ -321,7 +286,6 @@ void readInstructions(FILE *f,FILE *o)
             }
         }
     }
-    return s;
 }
 
 int main()
@@ -330,14 +294,6 @@ int main()
     FILE *f=fopen("input.dat","r");
     FILE *o=fopen("output.dat","w");
     readInstructions(f,o);
-
-//    addElementAtEnd(1);
-//    addElementAtEnd(2);
-//    addElementAtEnd(3);
-//    addElementAtEnd(4);
-//    PRINT_ALLL();
-//    DOOM_THE_LIST();
-//    PRINT_ALLL();
 
     return 0;
 }

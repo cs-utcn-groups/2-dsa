@@ -238,13 +238,14 @@ void initCountries()
         country[i].totalDmgCountry=country[i].totalWaves=0;
     }
 }
-
+node ** aaa;
 int main()
 {
     FILE *f=fopen("input.dat","r");
     FILE *o=fopen("output.dat","w+");
 
-    initCountries(firstCountry,lastCountry);
+  ///  initCountries(firstCountry,lastCountry);
+
 
     initCountries();
 
@@ -253,11 +254,6 @@ int main()
     attackSuccededTask(o);
     outputStrongestAndWeakest(o);
     computeWhoCouldWinAlone(o);
-
-//    for(int i=0; i<nrOfCountries; i++)
-//    {
-//        PRINT_ALL(firstCountry[i],lastCountry[i],o);
-//    }
 
     return 0;
 }
