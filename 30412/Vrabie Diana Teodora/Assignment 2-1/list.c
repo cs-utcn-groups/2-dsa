@@ -5,7 +5,7 @@
 #include "list.h"
 
 void initializeList() {
-    myList = (List*) malloc(sizeof(List));
+    myList = (List *) malloc(sizeof(List));
     myList->nrOfMembers = 0;
     myList->first = NULL;
     myList->last = NULL;
@@ -27,7 +27,7 @@ void addElementToFront(int data) {
         newNode->prev = NULL;
         myList->first->prev = newNode;
         myList->first = newNode;
-        myList->nrOfMembers ++;
+        myList->nrOfMembers++;
     }
 }
 
@@ -36,9 +36,29 @@ void printAll(FILE *file) {
         return;
     }
     Node *node = myList->first;
-    while (node!= NULL) {
+    while (node != NULL) {
         fprintf(file, "%d ", node->value);
         node = node->next;
     }
     fprintf(file, "\n");
+}
+
+void addElementToEnd(int data) {
+    if (myList->last == NULL) {
+        myList->first = initializeEmptyNode();
+        myList->last = initializeEmptyNode();
+        myList->last->value = data;
+        myList->last->next = NULL;
+        myList->last->prev = NULL;
+        myList->first = myList->last;
+        myList->nrOfMembers = 1;
+    } else {
+        Node *newNode = initializeEmptyNode();
+        newNode->value = data;
+        newNode->next = NULL;
+        newNode->prev = myList->last;
+        myList->last->next = newNode;
+        myList->last = newNode;
+        myList->nrOfMembers++;
+    }
 }

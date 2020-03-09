@@ -38,12 +38,12 @@ void readFromFile() {
             addElementToFront(value);
             break;
         }
-     /*   case AL: {
+        case AL: {
             int value;
             fscanf(inputFile, "%d", &value);
             addElementToEnd(value);
             break;
-        }
+        } /*
         case DF: {
             deleteFirstElement();
             break;
