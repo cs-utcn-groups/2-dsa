@@ -6,5 +6,7 @@ int main()
     FILE *g=fopen("output.txt","w");
     initializeSLL();
     readFile(f,g);
+    fclose(g);
+    fclose(f);
     return 0;
 }

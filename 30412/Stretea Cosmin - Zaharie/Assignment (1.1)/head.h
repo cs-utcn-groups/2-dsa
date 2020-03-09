@@ -1,8 +1,6 @@
 //
 // Created by Cosmin on 26-Feb-20.
 //
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
