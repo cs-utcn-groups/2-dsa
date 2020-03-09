@@ -3,4 +3,4 @@ project(Assignment_2_1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Assignment_2_1 main.c)
+add_executable(Assignment_2_1 main.c node.c node.h list.c list.h)
