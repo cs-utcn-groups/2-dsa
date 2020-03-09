@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void initializeList();
-void AF(int data);
-void AL(int data);
-void DE(int x);
-void DF();
-void DL();
-void DOOM_THE_LIST();
-void PRINT_F(int x,FILE * g);
-void PRINT_L(int x,FILE * g);
-void PRINT_ALL(FILE * g);
-void readFile(FILE * f,FILE * g);
+
+void readFile(FILE *f,FILE *g);
+void initializeSLL();
+void addFirst(int data);
+void addLast(int data);
+void deleteFirst();
+void deleteLast();
+void removeAll();
+void deleteEl(int data);
+void printSLL();
+void printFirst(int data,FILE *g);
+void printLast(int data,FILE *g);
+
 typedef struct node
 {
     int data;
-    struct node * next;
-}
-NodeT;
-NodeT * first, * last;
+    struct node *next;
+} Node;
+Node *first;
+Node *last;

@@ -2,9 +2,9 @@
 
 int main()
 {
-    FILE * f=fopen("input.dat","r");
-    FILE * g=fopen("output.dat","w");
-    initializeList();
+    FILE *f=fopen("input.txt","r");
+    FILE *g=fopen("output.txt","w");
+    initializeSLL();
     readFile(f,g);
     fclose(g);
     fclose(f);
