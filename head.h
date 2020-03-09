@@ -4,18 +4,17 @@
 void initializeList();
 void AF(int data);
 void AL(int data);
-void DE(int x);
 void DF();
 void DL();
-void DOOM_THE_LIST();
-void PRINT_F(int x,FILE * g);
-void PRINT_L(int x,FILE * g);
+void DE(int x);
 void PRINT_ALL(FILE * g);
+void PRINT_L(FILE * g,int x);
+void PRINT_F(FILE * g,int x);
+void DOOM_THE_LIST();
 void readFile(FILE * f,FILE * g);
 typedef struct node
 {
     int data;
-    struct node * next;
-}
-NodeT;
+    struct node * next, * previous;
+} NodeT;
 NodeT * first, * last;
