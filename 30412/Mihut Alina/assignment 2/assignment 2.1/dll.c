@@ -5,102 +5,105 @@
 
 void initializeList()
     {
-        first=(NodeT*) malloc (sizeof(NodeT));
-        last=(NodeT*) malloc (sizeof(NodeT));
-        first = NULL;
-        last = NULL;
+        ListPtr= (ListT*) malloc(sizeof(ListT));
+        ListPtr->first=(NodeT*) malloc (sizeof(NodeT));
+        ListPtr->last=(NodeT*) malloc (sizeof(NodeT));
+        ListPtr->first = NULL;
+        ListPtr->last = NULL;
     }
 void addFirst(int data) {
     NodeT *newElement=(NodeT*) malloc (sizeof(NodeT));
     newElement->data=data;
-    if ( first == NULL ) {
-        first = newElement;
-        first->next= NULL;
-        first->prev=NULL;
-        last = first;
+    if ( ListPtr->first==NULL) {
+        ListPtr->first = newElement;
+        ListPtr->first->next= NULL;
+        ListPtr->first->prev=NULL;
+        ListPtr->last = ListPtr->first;
     }
     else {
-        first->prev=newElement;
-        newElement->next = first;
+        ListPtr->first->prev=newElement;
+        newElement->next = ListPtr->first;
         newElement->prev = NULL;
-        first=newElement;
+        ListPtr->first=newElement;
     }
 
 }
+
 void addLast (int data) {
     NodeT *newElement = (NodeT *) malloc(sizeof(NodeT));
     newElement->data=data;
-    if ( first == NULL ) {
-        first = newElement;
-        first->next= NULL;
-        first->prev=NULL;
-        last = first;
+    if ( ListPtr->first==NULL) {
+        ListPtr->first = newElement;
+        ListPtr->first->next= NULL;
+        ListPtr->first->prev=NULL;
+        ListPtr->last = ListPtr->first;
     }
-    else if (last != NULL) {
+    else if (ListPtr->last != NULL) {
         newElement->next = NULL;
-        newElement->prev=last;
-        last->next = newElement;
-        last = newElement;
+        newElement->prev=ListPtr->last;
+        ListPtr->last->next = newElement;
+        ListPtr->last = newElement;
     }
 }
 
 void deleteFirst() {
     NodeT *element;
-    if (first != NULL){
-        element=first;
-        first=first->next;
+    if (ListPtr->first!=NULL){
+        element=ListPtr->first;
+        ListPtr->first=ListPtr->first->next;
         free(element);
-        if (first == NULL)
-            last = NULL;
-        else first->prev=NULL;}
+        if (ListPtr->first == NULL)
+            ListPtr->last = NULL;
+        else ListPtr->first->prev=NULL;}
 }
 void deleteLast() {
     NodeT *currentElement;
-    currentElement = first;
+    currentElement = ListPtr->first;
     if (currentElement != NULL)
-        while (currentElement != last) {
+        while (currentElement != ListPtr->last) {
             currentElement = currentElement->next;
         }
-    if (currentElement == first)
-        first = last = NULL;
+    if (currentElement == ListPtr->first)
+        ListPtr->first = ListPtr->last = NULL;
     else {
-        last->prev->next = NULL;
-        last = last->prev;
+        ListPtr->last->prev->next = NULL;
+        ListPtr->last = ListPtr->last->prev;
 
     }
 }
 void doomTheList (){
     NodeT *currentElement;
-    while (first !=NULL){
-        currentElement=first;
-        first=first->next;
+    while (ListPtr->first!=NULL){
+        currentElement=ListPtr->first;
+        ListPtr->first=ListPtr->first->next;
         free(currentElement);
     }
-    last=NULL;
+    ListPtr->last=NULL;
 }
+
 void deleteElement (int data) {
-    NodeT *currentElement= first;
+    NodeT *currentElement= ListPtr->first;
 
     while (currentElement != NULL) {
         if (currentElement->data == data) {
-            if (first == currentElement && last == currentElement)
+            if (ListPtr->first == currentElement && ListPtr->last == currentElement)
             {
-                first=NULL;
-                last=NULL;
+                ListPtr->first=NULL;
+                ListPtr->last=NULL;
                 free(currentElement);
             }
             else
-                if (currentElement == first)
-                { first = first->next;
-                    if (first == NULL)
-                        last = NULL;
-                    else first->prev=NULL;
+                if (currentElement == ListPtr->first)
+                { ListPtr->first = ListPtr->first->next;
+                    if (ListPtr->first == NULL)
+                        ListPtr->last = NULL;
+                    else ListPtr->first->prev=NULL;
                 free(currentElement);}
                 else
-                    if (currentElement == last)
+                    if (currentElement == ListPtr->last)
                 {
-                    last=last->prev;
-                    last->next=NULL;
+                    ListPtr->last=ListPtr->last->prev;
+                    ListPtr->last->next=NULL;
                     free(currentElement);
                 }
                 else {
@@ -115,7 +118,7 @@ void deleteElement (int data) {
 
 void printAllElements (FILE *fout)
 {
-    NodeT *currentElement=first;
+    NodeT *currentElement=ListPtr->first;
     while (currentElement!=NULL)
     {
         fprintf (fout, " %d ", currentElement->data);
@@ -126,9 +129,9 @@ void printAllElements (FILE *fout)
 }
 
 void printFirst (int x, FILE *fout){
-    NodeT *currentElement=first;
+    NodeT *currentElement=ListPtr->first;
     int i=0;
-    while (i<x || currentElement!=NULL)
+    while (i<x  && currentElement!=NULL)
     {
         fprintf (fout, " %d ", currentElement->data);
         currentElement=currentElement->next;
@@ -141,12 +144,12 @@ void printFirst (int x, FILE *fout){
 void printLast (int x, FILE *fout){
     NodeT *p;
     int noOfElements=0;
-    for ( p = first; p != NULL; p = p->next )
+    for ( p = ListPtr->first; p != NULL; p = p->next )
         noOfElements++;
     int k=noOfElements-x;
     int count=0;
     if (k<=0) printAllElements(fout);
-    else for ( p = first; p != NULL; p = p->next )
+    else for ( p = ListPtr->first; p != NULL; p = p->next )
     {
         count++;
         if (count>=x)   fprintf (fout, " %d ", p->data);

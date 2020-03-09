@@ -12,7 +12,11 @@ typedef struct node {
     struct node *prev;
 } NodeT;
 
-NodeT * first, * last;
+typedef struct sentinel{
+    NodeT *first;
+    NodeT *last;
+}ListT;
+ListT *ListPtr;
 void initializeList();
 void addFirst(int data);
 void addLast (int data);
