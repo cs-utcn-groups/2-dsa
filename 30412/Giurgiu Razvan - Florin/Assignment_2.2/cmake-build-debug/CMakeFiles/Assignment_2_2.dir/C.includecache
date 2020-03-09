@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/SEM 2 DSA/Assignment_2.2/main.c
+stdio.h
+-
+stdlib.h
+-
+queue.h
+E:/SEM 2 DSA/Assignment_2.2/queue.h
+
+E:/SEM 2 DSA/Assignment_2.2/queue.h
+

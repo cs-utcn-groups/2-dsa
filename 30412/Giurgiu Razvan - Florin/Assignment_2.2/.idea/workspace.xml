@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Assignment_1" targetName="Assignment_1" />
+      <config projectName="Assignment_2_2" targetName="Assignment_2_2" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74ea73cd-b416-4803-850b-3ab0d15b9539" name="Default Changelist" comment="" />
+    <list default="true" id="e8ae2209-b699-466e-849e-d8072b37f68e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,18 +20,11 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
-    <option name="clangWarnings" value="-Wno-unused-variable,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wno-unknown-escape-sequence" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
-  </component>
-  <component name="ProjectId" id="1YLPXyAgnGegiQStUTJkIK8gAZe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1YdRfrLHd5lPZ0t2mdRmJPQfO94" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Assignment_1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,7 +39,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Assignment_1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment_1" TARGET_NAME="Assignment_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Assignment_1" RUN_TARGET_NAME="Assignment_1">
+    <configuration name="Assignment_2_2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment_2_2" TARGET_NAME="Assignment_2_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Assignment_2_2" RUN_TARGET_NAME="Assignment_2_2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -57,32 +50,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="74ea73cd-b416-4803-850b-3ab0d15b9539" name="Default Changelist" comment="" />
-      <created>1582718945065</created>
+      <changelist id="e8ae2209-b699-466e-849e-d8072b37f68e" name="Default Changelist" comment="" />
+      <created>1583270590188</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582718945065</updated>
-      <workItem from="1582718949086" duration="7572000" />
-      <workItem from="1582750400538" duration="4815000" />
-      <workItem from="1582760436036" duration="156000" />
-      <workItem from="1583245657056" duration="30000" />
+      <updated>1583270590188</updated>
+      <workItem from="1583270592384" duration="5123000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
