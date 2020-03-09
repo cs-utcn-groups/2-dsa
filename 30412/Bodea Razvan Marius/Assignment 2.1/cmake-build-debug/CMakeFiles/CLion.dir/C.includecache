@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/dll.c
+C:/Users/razvi/Desktop/CLion/dll.c
 head.h
-C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/head.h
+C:/Users/razvi/Desktop/CLion/head.h
 
-C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/head.h
+C:/Users/razvi/Desktop/CLion/head.h
 stdio.h
 -
 stdlib.h
--
-
-C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/main.c
-stdio.h
--
-head.h
-C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/head.h
-string.h
 -
 

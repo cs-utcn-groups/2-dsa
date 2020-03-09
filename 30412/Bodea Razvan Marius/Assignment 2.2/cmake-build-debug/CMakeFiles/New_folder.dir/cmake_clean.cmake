@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/New_folder.dir/Others.c.obj"
   "CMakeFiles/New_folder.dir/Queue.c.obj"
   "CMakeFiles/New_folder.dir/main.c.obj"
   "New_folder.exe"

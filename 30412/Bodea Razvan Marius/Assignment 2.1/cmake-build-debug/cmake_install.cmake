@@ -1,4 +1,4 @@
-# Install script for directory: C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1
+# Install script for directory: C:/Users/razvi/Desktop/CLion
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/razvi/Desktop/CLion/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

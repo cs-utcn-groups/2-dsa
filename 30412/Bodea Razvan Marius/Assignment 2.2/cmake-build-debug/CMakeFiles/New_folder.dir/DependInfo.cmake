@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Others.c" "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/cmake-build-debug/CMakeFiles/New_folder.dir/Others.c.obj"
   "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Queue.c" "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/cmake-build-debug/CMakeFiles/New_folder.dir/Queue.c.obj"
   "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/main.c" "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/cmake-build-debug/CMakeFiles/New_folder.dir/main.c.obj"
   )

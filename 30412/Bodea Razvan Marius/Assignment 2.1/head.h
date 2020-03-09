@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void initializeSll();
+void initializeDll();
 
 void Add_First(int data);
 
@@ -34,7 +34,11 @@ typedef struct node {
     struct node *prev;
 } NodeT;
 
-NodeT *first, *last;
+typedef struct list {
+    NodeT *first;
+    NodeT *last;
+} LisT;
 
+LisT *list;
 
 #endif //CLION_HEAD_H

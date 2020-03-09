@@ -122,6 +122,33 @@ New_folder/fast:
 	$(MAKE) -f CMakeFiles\New_folder.dir\build.make CMakeFiles/New_folder.dir/build
 .PHONY : New_folder/fast
 
+Others.obj: Others.c.obj
+
+.PHONY : Others.obj
+
+# target to build an object file
+Others.c.obj:
+	$(MAKE) -f CMakeFiles\New_folder.dir\build.make CMakeFiles/New_folder.dir/Others.c.obj
+.PHONY : Others.c.obj
+
+Others.i: Others.c.i
+
+.PHONY : Others.i
+
+# target to preprocess a source file
+Others.c.i:
+	$(MAKE) -f CMakeFiles\New_folder.dir\build.make CMakeFiles/New_folder.dir/Others.c.i
+.PHONY : Others.c.i
+
+Others.s: Others.c.s
+
+.PHONY : Others.s
+
+# target to generate assembly for a file
+Others.c.s:
+	$(MAKE) -f CMakeFiles\New_folder.dir\build.make CMakeFiles/New_folder.dir/Others.c.s
+.PHONY : Others.c.s
+
 Queue.obj: Queue.c.obj
 
 .PHONY : Queue.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... New_folder
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Others.obj
+	@echo ... Others.i
+	@echo ... Others.s
 	@echo ... Queue.obj
 	@echo ... Queue.i
 	@echo ... Queue.s

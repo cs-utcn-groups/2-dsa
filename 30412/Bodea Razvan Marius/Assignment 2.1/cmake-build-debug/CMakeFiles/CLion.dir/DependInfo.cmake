@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/dll.c" "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/cmake-build-debug/CMakeFiles/CLion.dir/dll.c.obj"
-  "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/main.c" "C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.1/cmake-build-debug/CMakeFiles/CLion.dir/main.c.obj"
+  "C:/Users/razvi/Desktop/CLion/dll.c" "C:/Users/razvi/Desktop/CLion/cmake-build-debug/CMakeFiles/CLion.dir/dll.c.obj"
+  "C:/Users/razvi/Desktop/CLion/main.c" "C:/Users/razvi/Desktop/CLion/cmake-build-debug/CMakeFiles/CLion.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

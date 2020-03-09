@@ -4,87 +4,101 @@
 
 #include "head.h"
 
-void initializeSll() {
-    first = NULL;
-    last = NULL;
+void initializeDll() {
+    list = (LisT *) malloc(sizeof(LisT));
+    list->first = NULL;
+    list->last = NULL;
+
 }
 
 
 void Add_First(int data) {
-    if (first == NULL) {
-        first = (NodeT *) malloc(sizeof(NodeT));
-        first->next = last;
-        first->data = data;
-        first->prev = NULL;
-        last = first;
-    } else {
-        NodeT *newNode = (NodeT *) malloc(sizeof(NodeT));
-        newNode->data = data;
-        newNode->next = first;
-        first->prev = newNode;
-        newNode->prev = NULL;
-        first = newNode;
-    }
-
-}
-
-void Add_Last(int data) {
-    if (first == NULL) {
-        first = (NodeT *) malloc(sizeof(NodeT));
-        first->next = last;
-        first->data = data;
-        first->prev = NULL;
-        last = first;
+    if (list->first == NULL) {
+        list->first = (NodeT *) malloc(sizeof(NodeT));
+        list->first->next = NULL;
+        list->first->data = data;
+        list->first->prev = NULL;
+    } else if (list->last == NULL) {
+        list->last = (NodeT *) malloc(sizeof(NodeT));
+        list->last->data = data;
+        list->last->next = NULL;
+        list->first->next = list->last;
+        list->last->prev = list->first;
     } else {
         NodeT *newNode = (NodeT *) malloc(sizeof(NodeT));
         newNode->data = data;
         newNode->next = NULL;
-        newNode->prev = last;
-        last->next = newNode;
-        last = newNode;
+        newNode->prev = list->last;
+        list->last->next = newNode;
+        list->last = newNode;
+    }
+}
+
+
+void Add_Last(int data) {
+    if (list->first == NULL) {
+        list->first = (NodeT *) malloc(sizeof(NodeT));
+        list->first->next = NULL;
+        list->first->data = data;
+        list->first->prev = NULL;
+    } else if (list->last == NULL) {
+        list->last = (NodeT *) malloc(sizeof(NodeT));
+        list->last->data = data;
+        list->last->next = NULL;
+        list->first->next = list->last;
+        list->last->prev = list->first;
+    } else {
+        NodeT *newNode = (NodeT *) malloc(sizeof(NodeT));
+        newNode->data = data;
+        newNode->next = NULL;
+        newNode->prev = list->last;
+        list->last->next = newNode;
+        list->last = newNode;
     }
 }
 
 void Delete_First() {
-    if (first == NULL) {
+    if (list->first == NULL) {
         return;
     }
-    NodeT *newNode = first;
-    first = first->next;
-    first->prev = NULL;
+    NodeT *newNode = list->first;
+    list->first = list->first->next;
+    list->first->prev = NULL;
     free(newNode);
 }
 
 void Delete_Last() {
-    if (first == NULL) {
+    if (list->first == NULL) {
         return;
     }
-    if (first == last) {
+    if (list->first == list->last) {
         Delete_First();
         return;
     }
-    NodeT *newNode = last;
-    last = last->prev;
-    last->next = NULL;
+    NodeT *newNode = list->last;
+    list->last = list->last->prev;
+    list->last->next = NULL;
     free(newNode);
 }
 
 
 void Remove_All() {
-    NodeT *current = first;
+    NodeT *current = list->first;
     while (current != NULL) {
-        first = first->next;
+        list->first = list->first->next;
         free(current);
-        current = first;
+        current = list->first;
     }
+    list->first = NULL;
+    list->last = NULL;
 }
 
 void Delete_Element(int n) {
-    if (first->data == n) {
+    if (list->first->data == n) {
         Delete_First();
     } else {
-        NodeT *current = first->next;
-        while (current != last) {
+        NodeT *current = list->first->next;
+        while (current != list->last) {
             if (current->data == n) {
                 current->next->prev = current->prev;
                 current->prev->next = current->next;
@@ -93,7 +107,7 @@ void Delete_Element(int n) {
             }
             current = current->next;
         }
-        if (last->data == n)
+        if (list->last->data == n)
             Delete_Last();
     }
 }
@@ -114,10 +128,10 @@ int Check_Element(int n) {
 
 void Print_All(FILE *fptr) {
     {
-        if (first == NULL) {
+        if (list->first == NULL) {
             fprintf(fptr, "List is empty!\n");
         } else {
-            NodeT *current = first;
+            NodeT *current = list->first;
             while (current != NULL) {
                 fprintf(fptr, "%d ", current->data);
                 current = current->next;
@@ -128,10 +142,10 @@ void Print_All(FILE *fptr) {
 }
 
 void Print_First_N(int nr, FILE *fptr) {
-    if (first == NULL) {
+    if (list->first == NULL) {
         fprintf(fptr, "List is empty\n");
     } else {
-        NodeT *current = first;
+        NodeT *current = list->first;
         for (int i = 0; i < nr && current != NULL; i++) {
             fprintf(fptr, "%d ", current->data);
             current = current->next;
@@ -142,7 +156,7 @@ void Print_First_N(int nr, FILE *fptr) {
 
 void Print_Last_N(int nr, FILE *fptr) {
     //we don't need to keep track of the nr of elements in this case
-    NodeT *current = last;
+    NodeT *current = list->last;
     for (int i = 1; i < nr; i++) {
         current = current->prev;
     }

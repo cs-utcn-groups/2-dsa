@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1"
+CMAKE_SOURCE_DIR = C:\Users\razvi\Desktop\CLion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\razvi\Desktop\CLion\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CLion.dir/depend.make
@@ -58,29 +58,29 @@ include CMakeFiles/CLion.dir/flags.make
 
 CMakeFiles/CLion.dir/main.c.obj: CMakeFiles/CLion.dir/flags.make
 CMakeFiles/CLion.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CLion.dir/main.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CLion.dir\main.c.obj   -c "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\razvi\Desktop\CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CLion.dir/main.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CLion.dir\main.c.obj   -c C:\Users\razvi\Desktop\CLion\main.c
 
 CMakeFiles/CLion.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CLion.dir/main.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\main.c" > CMakeFiles\CLion.dir\main.c.i
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\razvi\Desktop\CLion\main.c > CMakeFiles\CLion.dir\main.c.i
 
 CMakeFiles/CLion.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CLion.dir/main.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\main.c" -o CMakeFiles\CLion.dir\main.c.s
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\razvi\Desktop\CLion\main.c -o CMakeFiles\CLion.dir\main.c.s
 
 CMakeFiles/CLion.dir/dll.c.obj: CMakeFiles/CLion.dir/flags.make
 CMakeFiles/CLion.dir/dll.c.obj: ../dll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CLion.dir/dll.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CLion.dir\dll.c.obj   -c "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\dll.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\razvi\Desktop\CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CLion.dir/dll.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CLion.dir\dll.c.obj   -c C:\Users\razvi\Desktop\CLion\dll.c
 
 CMakeFiles/CLion.dir/dll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CLion.dir/dll.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\dll.c" > CMakeFiles\CLion.dir\dll.c.i
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\razvi\Desktop\CLion\dll.c > CMakeFiles\CLion.dir\dll.c.i
 
 CMakeFiles/CLion.dir/dll.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CLion.dir/dll.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\dll.c" -o CMakeFiles\CLion.dir\dll.c.s
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\razvi\Desktop\CLion\dll.c -o CMakeFiles\CLion.dir\dll.c.s
 
 # Object files for target CLion
 CLion_OBJECTS = \
@@ -96,7 +96,7 @@ CLion.exe: CMakeFiles/CLion.dir/build.make
 CLion.exe: CMakeFiles/CLion.dir/linklibs.rsp
 CLion.exe: CMakeFiles/CLion.dir/objects1.rsp
 CLion.exe: CMakeFiles/CLion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CLion.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\razvi\Desktop\CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CLion.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CLion.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/CLion.dir/clean:
 .PHONY : CMakeFiles/CLion.dir/clean
 
 CMakeFiles/CLion.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1" "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1" "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug" "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug" "C:\DSA_LAB\2-dsa\30412\Bodea Razvan Marius\Assignment 2.1\cmake-build-debug\CMakeFiles\CLion.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\razvi\Desktop\CLion C:\Users\razvi\Desktop\CLion C:\Users\razvi\Desktop\CLion\cmake-build-debug C:\Users\razvi\Desktop\CLion\cmake-build-debug C:\Users\razvi\Desktop\CLion\cmake-build-debug\CMakeFiles\CLion.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CLion.dir/depend
 

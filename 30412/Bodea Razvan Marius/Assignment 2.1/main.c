@@ -13,7 +13,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
     FILE *fptr = fopen(FILE_PATH_OUT, "w");
-    initializeSll();
+    initializeDll();
     char *operation = (char *) malloc(MAX_LEN * sizeof(char));
     while (!feof(f)) {
         fscanf(f, "%s", operation);
@@ -25,11 +25,11 @@ int main() {
             fscanf(f, "%d", &n);
             Add_Last(n);
         } else if (strcmp(operation, "DF") == 0) {
-            if (first != NULL) {
+            if (list->first != NULL) {
             }
             Delete_First();
         } else if (strcmp(operation, "DL") == 0) {
-            if (first != NULL) {
+            if (list->first != NULL) {
             }
             Delete_Last();
         } else if (strcmp(operation, "DOOM_THE_LIST") == 0) {

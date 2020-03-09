@@ -7,10 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "../CMakeLists.txt"
-  "CMakeFiles/3.15.3/CMakeCCompiler.cmake"
-  "CMakeFiles/3.15.3/CMakeRCCompiler.cmake"
-  "CMakeFiles/3.15.3/CMakeSystem.cmake"
   "C:/Program Files/JetBrains/CLion 2019.2.3/bin/cmake/win/share/cmake-3.15/Modules/CMakeCCompiler.cmake.in"
   "C:/Program Files/JetBrains/CLion 2019.2.3/bin/cmake/win/share/cmake-3.15/Modules/CMakeCCompilerABI.c"
   "C:/Program Files/JetBrains/CLion 2019.2.3/bin/cmake/win/share/cmake-3.15/Modules/CMakeCInformation.cmake"
@@ -87,6 +83,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2019.2.3/bin/cmake/win/share/cmake-3.15/Modules/Platform/Windows.cmake"
   "C:/Program Files/JetBrains/CLion 2019.2.3/bin/cmake/win/share/cmake-3.15/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/JetBrains/CLion 2019.2.3/bin/cmake/win/share/cmake-3.15/Modules/ProcessorCount.cmake"
+  "../CMakeLists.txt"
+  "CMakeFiles/3.15.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.15.3/CMakeRCCompiler.cmake"
+  "CMakeFiles/3.15.3/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:
