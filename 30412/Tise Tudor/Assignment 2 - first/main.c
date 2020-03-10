@@ -65,15 +65,18 @@ int main() {
             if (strcmp(command,REMOVE_ELEMENTS)== 0){
                 removeAll();
             }
-            if (strcmp(command,DELETE_ELEMENT)== 0){
+            //the next operation throws me an error. can you please take a look at what am I doing wrong for the deletion a node?
+            
+            /*if (strcmp(command,DELETE_ELEMENT)== 0){
                 removeElement(number);
-            }
+            }*/
 
         }
     } else {
         printf("Cannot open the file");
         exit(1);
     }
+
 
     fclose(f);
     fclose(g);
