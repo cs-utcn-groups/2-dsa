@@ -14,35 +14,35 @@ int main() {
         if(strcmp(command,"AF") == 0) {
             element = readElement();
             addFirst(element);
-        } else {
+        } else
         if(strcmp(command,"AL") == 0) {
             element = readElement();
             addLast(element);
-        } else {
+        } else
         if(strcmp(command,"DF") == 0) {
             deleteFirst();
-        } else {
+        } else
         if(strcmp(command,"DL") == 0) {
             deleteLast();
-        } else {
+        } else
         if(strcmp(command,"PRINT_ALL") == 0) {
             printAll(fp_output);
-        } else {
+        } else
         if(strcmp(command,"DOOM_THE_LIST") == 0) {
             doomTheList();
-        } else {
+        } else
         if(strcmp(command,"DE") == 0) {
             element = readElement();
             deleteElement(element);
-        } else {
+        } else
         if(strcmp(command,"PRINT_F") == 0) {
             element = readElement();
             printFirstElements(fp_output,element);
-        } else {
+        } else
         if(strcmp(command,"PRINT_L") == 0) {
             element = readElement();
             printLastElements(fp_output,element);
-        }}}}}}}}}
+        }
     }
     freeMemory();
     return 0;

@@ -57,9 +57,10 @@ void DL() {
 }
 void DOOM_THE_LIST(){
     NodeT * currentElement = first;
-    NodeT * previousElement = first;
+    NodeT * previousElement;
     if (first != NULL) {
         while (currentElement != NULL) {
+            previousElement = currentElement;
             currentElement = currentElement->next;
             free(previousElement);
         }
@@ -86,7 +87,7 @@ void DE(int data) {
             previousElement = currentElement;
             currentElement = currentElement->next;
             free(previousElement);
-            previousElement = currentElement;
+            //previousElement = currentElement;
         }
         else {
             previousElement = currentElement;
