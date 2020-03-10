@@ -6,7 +6,7 @@ void initializeSll() {
     first = NULL;
     last = NULL;
 }
-void AF(int data) {
+void addFirst(int data) {
     if (first == NULL) {
         first = (NodeT *)malloc(sizeof(NodeT));
         first->data = data;
@@ -20,7 +20,7 @@ void AF(int data) {
         first = newElement;
     }
 }
-void AL(int data) {
+void addLast(int data) {
     if (first == NULL) {
         first = (NodeT*)malloc(sizeof(NodeT));
         first->data = data;
@@ -35,14 +35,14 @@ void AL(int data) {
         last = newElement;
     }
 }
-void DF() {
+void deleteFirst() {
     if(first != NULL) {
         NodeT *firstElement = first;
         first = first->next;
         free(firstElement);
     }
 }
-void DL() {
+void deleteLast() {
     if(first != NULL) {
         NodeT * currentElement = first;
         NodeT * previousElement = first;
@@ -55,7 +55,7 @@ void DL() {
         last->next = NULL;
     }
 }
-void DOOM_THE_LIST(){
+void doomTheList(){
     NodeT * currentElement = first;
     NodeT * previousElement;
     if (first != NULL) {
@@ -68,7 +68,7 @@ void DOOM_THE_LIST(){
         last = NULL;
     }
 }
-void DE(int data) {
+void deleteElement(int data) {
     NodeT * currentElement = first;
     NodeT * previousElement= first;
     while(currentElement != NULL) {
@@ -95,7 +95,7 @@ void DE(int data) {
         }
     }
 }
-void PRINT_F (FILE * output, int tillValue) {
+void printFirst (FILE * output, int tillValue) {
     NodeT * currentElement = first;
     if (first == NULL) {
         fprintf(output,"List is empty\n");
@@ -110,7 +110,7 @@ void PRINT_F (FILE * output, int tillValue) {
         fprintf(output,"\n");
     }
 }
-void PRINT_L (FILE * output, int tillValue) {
+void printLast (FILE * output, int tillValue) {
     if(first == NULL) {
         fprintf(output,"List is empty\n");
     }
@@ -122,7 +122,7 @@ void PRINT_L (FILE * output, int tillValue) {
             currentElement = currentElement->next;
         }
         if(noOfElements <= tillValue) {
-            PRINT_ALL(output);
+            printAll(output);
         }
         else {
             currentElement = first;
@@ -140,7 +140,7 @@ void PRINT_L (FILE * output, int tillValue) {
     }
 }
 
-void PRINT_ALL(FILE * output) {
+void printAll(FILE * output) {
     if(first == NULL) {
         fprintf(output,"List is empty!\n");
     }
