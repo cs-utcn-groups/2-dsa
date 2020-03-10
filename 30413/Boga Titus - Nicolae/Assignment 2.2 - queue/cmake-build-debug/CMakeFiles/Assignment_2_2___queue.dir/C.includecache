@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/An 1 Sem 2/DSA-Git/30413/Boga Titus - Nicolae/Assignment 2.2 - queue/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

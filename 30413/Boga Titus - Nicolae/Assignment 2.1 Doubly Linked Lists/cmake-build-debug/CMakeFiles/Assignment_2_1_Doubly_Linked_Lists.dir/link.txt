@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Assignment_2_1_Doubly_Linked_Lists.dir/main.c.o  -o Assignment_2_1_Doubly_Linked_Lists 
