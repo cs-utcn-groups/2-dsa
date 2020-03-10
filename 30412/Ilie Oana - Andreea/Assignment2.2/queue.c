@@ -14,21 +14,13 @@ void initializeQueue() {
 }
 
 void createQueue() {
-    customerT *currentElC = (customerT *) malloc(sizeof(customerT));
-
-    currentElC = firstC;
-
-
-    timeT *currentElT = (timeT *) malloc(sizeof(timeT));
-    currentElT = firstT;
+    customerT *currentElC = firstC;
+    timeT *currentElT = firstT;
     while (currentElT != NULL) {
         addQueue(currentElT->time, 0);
         currentElT = currentElT->next;
     }
-
-    queueT *currentElQ = (queueT *) malloc(sizeof(queueT));
-    currentElQ = firstQ;
-
+    queueT *currentElQ = firstQ;
     int sumTime = 0, sumRoubles = 0;
     while (currentElC != NULL) {
         sumTime += currentElC->time;
@@ -39,7 +31,7 @@ void createQueue() {
         }
         currentElC = currentElC->next;
     }
-    if (currentElQ != NULL) {
+    while (currentElQ != NULL) {
         currentElQ->roubles = sumRoubles;
         currentElQ = currentElQ->next;
     }
