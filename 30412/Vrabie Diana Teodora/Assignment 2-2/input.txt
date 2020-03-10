@@ -1,0 +1,4 @@
+2 3 5 10 20 30 45
+asdasd 100 5
+fihfue 230 15
+grgjrijg 12 90
