@@ -12,25 +12,57 @@ typedef  struct list{
     NodeT *first;
     NodeT *last;
 }ListT;
-ListT M,T;
+void addLast(ListT *x, int data);
+void readData(char*line,int *time, char *names,ListT *x,ListT*y, int *NrOfTimePeriods);
+void findSum(ListT *x, ListT *y, int nrOfTimePeriods,int *time);
+void freeMemory(char *line, int *time, char *names);
+FILE *in,*out;
 int main() {
-    FILE *in,*out;
+    ListT M,T;
     in=fopen(DATA_PATH_IN,"r");
     out=fopen(DATA_PATH_OUT,"w");
-    int time[100];
-    char names[100];
-    char *line;
+    int *time,nrOfTimePeriods=0;
+    char *names,*line;
     line=(char*)malloc(MAX_LINE*sizeof(char*));
+    time=(int*)malloc(MAX_LINE*sizeof(char*));
+    names=(char*)malloc(MAX_LINE*sizeof(char*));
+    readData(line,time,names,&M,&T,&nrOfTimePeriods);
+    findSum(&M,&T,nrOfTimePeriods,time);
+    freeMemory(line,time,names);
+    fclose(in);
+    fclose(out);
+    return 0;
+}
+void addLast(ListT *x, int data)
+{
+    if(x->first==NULL)
+    {
+        x->first=(NodeT*)malloc(sizeof(NodeT));
+        x->first->data=data;
+        x->first->next=x->last;
+        x->last=x->first;
+    }
+    else
+    {
+        NodeT *newNode;
+        newNode=(NodeT*)malloc(sizeof(NodeT));
+        x->last->next=newNode;
+        newNode->next=NULL;
+        newNode->data=data;
+        x->last=newNode;
+    }
+}
+void readData(char*line,int *time, char *names,ListT *x,ListT*y,int *nrOfTimePeriods)
+{
+
     fgets(line,MAX_LINE,in);
     char *p;
-    int nrOfTimePeriods=0;
     for(p=strtok(line," ");p!=0;p=strtok(NULL," "))
     {
-        time[nrOfTimePeriods]=atof(p);
-        nrOfTimePeriods++;
+        time[*nrOfTimePeriods]=atof(p);
+        (*nrOfTimePeriods)++;
     }
-
-    M.first=M.last=T.first=T.last=NULL;
+    x->first=x->last=y->first=y->last=NULL;
     while(fgets(line,MAX_LINE,in)>0) {
         char *r;
         int k=0,count=0;
@@ -44,49 +76,21 @@ int main() {
                 k++;
             }else if(k==1)
             {
-                if(M.first==NULL)
-                {
-                    M.first=(NodeT*)malloc(sizeof(NodeT));
-                    M.first->data=atoi(r);
-                    M.first->next=M.last;
-                    M.last=M.first;
-                }
-                else
-                {
-                    NodeT *newNode;
-                    newNode=(NodeT*)malloc(sizeof(NodeT));
-                    M.last->next=newNode;
-                    newNode->next=NULL;
-                    newNode->data=atoi(r);
-                    M.last=newNode;
-                }
+                addLast(x,atoi(r));
                 k++;
             }else if(k==2)
             {
-                if(T.first==NULL)
-                {
-                    T.first=(NodeT*)malloc(sizeof(NodeT));
-                    T.first->data=atoi(r);
-                    T.first->next=T.last;
-                    T.last=T.first;
-                }
-                else
-                {
-                    NodeT *newNode;
-                    newNode=(NodeT*)malloc(sizeof(NodeT));
-                    T.last->next=newNode;
-                    newNode->next=NULL;
-                    newNode->data=atoi(r);
-                    T.last=newNode;
-                }
+                addLast(y,atoi(r));
             }
         }
     }
-    int sumCashier=0,sumTime=T.first->data;
-    NodeT *currentNodeTime, *currentNodeMoney;
-    currentNodeMoney=M.first;
-    currentNodeTime=T.first;
-    int timeCount=0,ok=0;
+}
+void findSum(ListT *x, ListT *y, int nrOfTimePeriods,int *time)
+{
+    NodeT *currentNodeMoney, *currentNodeTime;
+    currentNodeMoney=x->first;
+    currentNodeTime=y->first;
+    int timeCount=0,sumTime=y->first->data,sumCashier=0,ok=0;
     while(timeCount!=nrOfTimePeriods)
     {
         if(time[timeCount]==sumTime)
@@ -101,8 +105,8 @@ int main() {
         }else if(time[timeCount]>sumTime)
         {
             if(ok!=1)
-                 sumCashier+=currentNodeMoney->data;
-            if(currentNodeTime==T.last)
+                sumCashier+=currentNodeMoney->data;
+            if(currentNodeTime==y->last)
             {
                 ok=1;
                 sumTime+=currentNodeTime->data;
@@ -122,5 +126,10 @@ int main() {
             timeCount++;
         }
     }
-    return 0;
+}
+void freeMemory(char *line, int *time, char *names)
+{
+    free(line);
+    free(time);
+    free(names);
 }
