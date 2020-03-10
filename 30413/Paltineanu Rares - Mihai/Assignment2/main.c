@@ -12,21 +12,30 @@
 #define PRINT_FIRST "PRINT_F"
 #define PRINT_LAST "PRINT_L"
 
-
 int ct = 0;
 
 typedef struct array {
 
-    int element;
+    int element;    ///actually, i cant stop puttin empty lines, i'm sorry :))
     struct array* next;
+    struct array* previous;
 
 } arrayT;
 
-arrayT* first,* last;
+typedef struct sentinel {
+
+    arrayT* first;
+    arrayT* last;
+
+} sentinel;
+
+sentinel* sent;
 
 void initialize() {
 
-    first = last = NULL;
+    sent = (sentinel*)malloc(sizeof(sentinel));
+    sent->first = NULL;
+    sent->last = NULL;
 
 }
 
@@ -41,90 +50,95 @@ char* takingTheCommand(char* array) {
         i++;
 
     }
+
     command[i] = '\0';
     return command;
+
 }
 
 void addFirst(int number) {
 
+    arrayT* current = (arrayT*)malloc(sizeof(arrayT));
+    current->element = number;
+    current->previous = NULL;
 
-    if(first == NULL) {
+    if(sent->first == NULL) {
 
-        first = (arrayT*)malloc(sizeof(arrayT));
-        first->element = number;
-        first->next = last;
-        last = first;
+        current->next = NULL;
+        sent->first = current;
+        sent->last = current;
 
     } else {
 
-        arrayT* current = (arrayT*)malloc(sizeof(arrayT));
-        current->element = number;
-        current->next = first;
-        first = current;
+        current->next = sent->first;
+        sent->first->previous = current;
+        sent->first = current;
 
     }
 }
 
 void addLast(int number) {
 
-    if(last == NULL) {
+    arrayT* current = (arrayT*)malloc(sizeof(arrayT));
+    current->element = number;
+    current->next = NULL;
 
-        first = (arrayT*)malloc(sizeof(arrayT));
-        first->element = number;
-        first->next = last;
-        last = first;
+    if(sent->last == NULL) {
+
+        current->previous = NULL;
+        sent->first = current;
+        sent->last = current;
 
     } else {
 
-        arrayT* current = (arrayT*)malloc(sizeof(arrayT));
-        current->element = number;
-        last->next = current;
-        current->next = NULL;
-        last = current;
+        current->previous = sent->last;
+        sent->last->next = current;
+        sent->last = current;
 
     }
 }
 
 void deleteFirst() {
 
-    if(first == NULL)
+    if(sent->first == NULL)
         return;
 
-    arrayT* current = first;
-    first = first->next;
+    arrayT* current = sent->first;
+    sent->first = sent->first->next;
+    sent->first->previous = NULL;
     free(current);
 
 }
 
 void deleteLast() {
 
-    if(last == NULL)
-        return;
+    arrayT* current = sent->last;
 
-    arrayT* current = first;
+    if(current != NULL) {
 
-    while(current->next != last)
-        current = current->next;
+        sent->last = sent->last->previous;
+        sent->last->next = NULL;
+        free(current);
 
-    last = current;
-    current = last->next;
-    free(current);
-    last->next = NULL;
-
+    }
 }
 
 void deleteAll() {
 
-    arrayT* current = first;
+    if(sent->first != NULL) {
 
-    while(current != NULL) {
+        arrayT* current = sent->first;
+        while(current != NULL) {
 
-        first = first->next;
-        free(current);
-        current = first;
+            sent->first = sent->first->next;
+            free(current);
+            current = sent->first;
 
+        }
     }
-    first = last = NULL;
+
+    sent->first = sent->last = NULL;
+
 }
 
 int takingTheNumber(char* array) {
@@ -154,17 +168,13 @@ int takingTheNumber(char* array) {
     }
 
     number*= negativenumber;
-
     return number;
+
 }
 
 void printFirstX(int number) {
 
-
-    if(first == NULL)
-        return;
-
-    arrayT* current = first;
+    arrayT* current = sent->first;
     int i = 0;
 
     while(i < number) {
@@ -174,22 +184,24 @@ void printFirstX(int number) {
         i++;
 
     }
+
     printf("\n");
 
 }
 
 void printLastX(int number) {
 
-    if(first == NULL)
+    if(sent->first == NULL)
         return;
 
-    arrayT* current = first;
-    int i = 0;
+    arrayT* current = sent->last;
+    int i = 1;
 
-    while(i < ct - number) {
+    while(i < number) {
 
-        current = current->next;
+        current = current->previous;
         i++;
+
     }
 
     while(current != NULL) {
@@ -200,20 +212,17 @@ void printLastX(int number) {
     }
 
     printf("\n");
-
 }
 
 void printall() {
 
-
-    if(first == NULL) {
+    if(sent->first == NULL) {
 
         printf("There are no elements in the list.\n");
 
     } else {
 
-
-        arrayT* current = first;
+        arrayT* current = sent->first;
 
         while(current != NULL) {
 
@@ -224,45 +233,45 @@ void printall() {
     }
 
     printf("\n");
-
 }
 
 void removeX(int number) {
 
-    if(first != NULL) {
+    if(sent->first != NULL) {
 
-        arrayT* previous = (arrayT*)malloc(sizeof(arrayT));
-        arrayT* current = first;
+        arrayT* previousT = sent->first;
+        arrayT* current = sent->first;
 
         while(current != NULL) {
-
             if(current->element == number) {
 
                 ct--;
 
-                if(current == first) {
+                if(current == sent->first) {
 
-                    first = first->next;
+                    sent->first = sent->first->next;
+                    sent->first->previous = NULL;
 
-                } else if(current == last) {
+                } else if(current == sent->last) {
 
-                    last = previous;
-                    last->next = NULL;
+                    sent->last = previousT;
+                    sent->last->next = NULL;
 
                 } else {
 
-                    previous->next = current->next;
+                    previousT->next = current->next;
 
                 }
 
-                previous = current;
+                previousT = current;
                 current = current->next;
-                free(previous);
-                previous = current;
+                current->previous = previousT->previous;
+                free(previousT);
+                previousT = current;
 
             } else {
 
-                previous = current;
+                previousT = current;
                 current = current->next;
 
             }
@@ -274,54 +283,55 @@ void readingCommand(FILE* in) {
 
     char* input = (char*)malloc(50);
     char* command = (char*)malloc(30);
-
     int number;
 
     while(fgets(input, 50, in) != NULL) {
 
         command = takingTheCommand(input);
 
-        if(stricmp(command, ADD_FIRST) == 0) {
+        if(stricmp(command, ADD_FIRST) == 0) { ///first
 
             number = takingTheNumber(input);
             addFirst(number);
             ct++;
 
-        } else if(stricmp(command, ADD_LAST) == 0) {
+        } else if(stricmp(command, ADD_LAST) == 0) { /// last
 
             number = takingTheNumber(input);
             addLast(number);
             ct++;
 
-        } else if(strncmp(command, DELETE_FIRST, 2) == 0) {
+        } else if(strncmp(command, DELETE_FIRST, 2) == 0) { /// first remove
 
             deleteFirst();
 
-            if(ct > 0)
+            if(ct > 0) {
                 ct--;
+            }
 
-        } else if(strncmp(command, DELETE_LAST, 2) == 0) {
+        } else if(strncmp(command, DELETE_LAST, 2) == 0) { ///last remove
 
             deleteLast();
 
-            if(ct > 0)
+            if(ct > 0) {
                 ct--;
+            }
 
-        } else if(strncmp(command, DELETE_ALL, 13) == 0) {
+        } else if(strncmp(command, DELETE_ALL, 13) == 0) { ///remove all
 
-                deleteAll();
-                ct = 0;
+            deleteAll();
+            ct = 0;
 
-        } else if(strncmp(command, DELETE_ELEMENT, 2) == 0) {
+        } else if(strncmp(command, DELETE_ELEMENT, 2) == 0) { ///remove x
 
             number = takingTheNumber(input);
             removeX(number);
 
-        } else if(strncmp(command, PRINT_ALL, 9) == 0) {
+        } else if(strncmp(command, PRINT_ALL, 9) == 0) { ///printall
 
             printall();
 
-        } else if(strncmp(command, PRINT_FIRST, 7) == 0) {
+        } else if(strncmp(command, PRINT_FIRST, 7) == 0) { ///printfirstX
 
             number = takingTheNumber(input);
 
@@ -330,8 +340,7 @@ void readingCommand(FILE* in) {
             else
                 printFirstX(number);
 
-
-        } else if(strncmp(command, PRINT_LAST, 7) == 0) {
+        } else if(strncmp(command, PRINT_LAST, 7) == 0) { ///printlast
 
             number = takingTheNumber(input);
 
@@ -346,16 +355,14 @@ void readingCommand(FILE* in) {
 
 int main() {
 
-    FILE* in = fopen("input.data", "r");
+    FILE* in = fopen("input.dat", "r");
 
-    if(in == NULL) {
-
+    if(in == NULL)
         return -1;
-
-    }
 
     initialize();
     readingCommand(in);
 
     return 0;
+
 }
