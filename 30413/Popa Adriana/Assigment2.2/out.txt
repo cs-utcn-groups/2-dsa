@@ -1,0 +1,6 @@
+After 10 seconds: 5
+After 20 seconds: 10020
+After 50 seconds: 20085
+After 100 seconds: 30150
+After 200 seconds: 40235
+After 400 seconds: 50320

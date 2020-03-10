@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583861236 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment2.1\main.c
+	"doubly.h"
+
+1583861313 c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment2.1\doubly.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583863230 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment2.1\doubly.c
+	"doubly.h"
+

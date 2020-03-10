@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583871444 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment2.2\main.c
+	"queue.h"
+
+1583871331 c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment2.2\queue.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583871345 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment2.2\queue.c
+	"queue.h"
+
