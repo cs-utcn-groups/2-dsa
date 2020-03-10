@@ -21,8 +21,5 @@ void initializeCustomerList();
 
 void addCustomerToList(int cash, int time);
 
-void printCustomerList();
-
-Customer *getTopCustomer();
 
 #endif //ASSIGNMENT_2_2_CUSTOMERLIST_H

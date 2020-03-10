@@ -14,6 +14,8 @@ FILE *inputFile, *outputFile;
 
 void parseFirstLine();
 
+void solveRequest();
+
 int main() {
     inputFile = fopen(INPUT_PATH, "r");
     outputFile = fopen(OUTPUT_PATH, "w");
@@ -29,9 +31,28 @@ int main() {
         readCustomer(inputFile);
     }
 
-    printCustomerList();
+    solveRequest();
 
     return 0;
+}
+
+void solveRequest() {
+    if (timeList->nrOfEntries > 0) {
+        Node *currentTimeNode = timeList->first;
+        for (int i = 0; i < timeList->nrOfEntries; ++i) {
+            int time = currentTimeNode->time;
+            int cash = 0;
+            if (customerList->nrOfCustomers == 0) return;
+            Customer *currentCustomer = customerList->first;
+            while (currentCustomer != NULL && time - currentCustomer->time >= 0) {
+                time -= currentCustomer->time;
+                cash += currentCustomer->cash;
+                currentCustomer = currentCustomer->next;
+            }
+            fprintf(outputFile, "After %d seconds: %d\n", currentTimeNode->time, cash);
+            currentTimeNode=currentTimeNode->next;
+        }
+    }
 }
 
 void parseFirstLine() {
@@ -44,5 +65,4 @@ void parseFirstLine() {
         addTimeToList(atoi(parsePtr));
         parsePtr = strtok(NULL, " ");
     }
-    printTimeList();
 }

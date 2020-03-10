@@ -27,6 +27,5 @@ void initializeTimeList();
 
 void addTimeToList(int time);
 
-void printTimeList();
 
 #endif //ASSIGNMENT_2_2_TIMELIST_H

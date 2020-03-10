@@ -31,11 +31,3 @@ void addCustomerToList(int cash, int time) {
     }
 }
 
-void printCustomerList() {
-    Customer *customer = customerList->first;
-    while (customer!=NULL) {
-        printf("(%d %d) ", customer->cash, customer->time);
-        customer=customer->next;
-    }
-    printf("\n");
-}

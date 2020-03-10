@@ -33,13 +33,3 @@ Node *initializeEmptyNode() {
     return node;
 }
 
-void printTimeList() {
-    if (timeList->nrOfEntries != 0) {
-        Node *node = timeList->first;
-        while (node != NULL) {
-            printf("%d ", node->time);
-            node=node->next;
-        }
-    }
-    printf("\n");
-}
