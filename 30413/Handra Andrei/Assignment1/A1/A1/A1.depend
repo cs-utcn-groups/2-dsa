@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583700289 source:c:\users\andre\desktop\programming sem 2\2-dsa\30413\handra andrei\assignment1\a1\a1\main.c
+	"head.h"
+	<string.h>
+
+1583699400 c:\users\andre\desktop\programming sem 2\2-dsa\30413\handra andrei\assignment1\a1\a1\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1583787303 source:c:\users\andre\desktop\programming sem 2\2-dsa\30413\handra andrei\assignment1\a1\a1\sll.c
+	"head.h"
+
