@@ -31,11 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="input.dat" />
-		<Unit filename="main.c">
+		<Unit filename="customers.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="output.dat" />
+		<Unit filename="input1.dat" />
+		<Unit filename="output1.dat" />
 		<Extensions>
 			<code_completion />
 			<envvars />
