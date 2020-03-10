@@ -16,31 +16,29 @@ void addFirst(dlList *mydlList, int value) {
     node *newNode = createNode(value, mydlList->sentinel, mydlList->sentinel->next);
     mydlList->sentinel->next->prev = newNode;
     mydlList->sentinel->next = newNode;
-    if (mydlList->sentinel->prev == mydlList->sentinel) {
-        mydlList->sentinel->prev = newNode; //if list was empty
-    }
 }
 
 void addLast(dlList *mydlList, int value) {
     node *newNode = createNode(value, mydlList->sentinel->prev, mydlList->sentinel);
     mydlList->sentinel->prev->next = newNode;
     mydlList->sentinel->prev = newNode;
-    if (mydlList->sentinel->next == mydlList->sentinel) {
-        mydlList->sentinel->next = newNode; //if list was empty
-    }
 }
 
 void deleteFirst(dlList *mydlList) {
-    mydlList->sentinel->next = mydlList->sentinel->next->next;
-    if (mydlList->sentinel->next == mydlList->sentinel) {
-        mydlList->sentinel->prev = mydlList->sentinel;
+    if (mydlList->sentinel->next != mydlList->sentinel) {
+        node *curFirst = mydlList->sentinel->next;
+        mydlList->sentinel->next = mydlList->sentinel->next->next;
+        mydlList->sentinel->next->prev = mydlList->sentinel;
+        free(curFirst);
     }
 }
 
 void deleteLast(dlList *mydlList) {
-    mydlList->sentinel->prev = mydlList->sentinel->prev->prev;
-    if (mydlList->sentinel->prev == mydlList->sentinel) {
-        mydlList->sentinel->next = mydlList->sentinel;
+    if (mydlList->sentinel->prev != mydlList->sentinel) {
+        node *curLast = mydlList->sentinel->prev;
+        mydlList->sentinel->prev = mydlList->sentinel->prev->prev;
+        mydlList->sentinel->prev->next = mydlList->sentinel;
+        free(curLast);
     }
 }
 
