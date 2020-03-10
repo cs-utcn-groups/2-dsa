@@ -26,45 +26,6 @@ int main() {
     initializeList();
     setUpFile();
 
-    /*for(int i = 0; i < 3; i++){
-        fgets(line, INSTRUCTION_LENGHT, stdin);
-
-        token = strtok(line, " ");
-        strcpy(command,token);
-        token = strtok(NULL, " ");
-
-        if (token != NULL) {
-            number = atoi(token);
-        } else {
-            command[strlen(command)-1] = '\0';
-        }
-
-        if (strcmp(command,ADD_LAST)== 0){
-            addLast(number);
-        }
-        if (strcmp(command,ADD_FIRST)== 0){
-            addFirst(number);
-        }
-        if (strcmp(command,DELETE_LAST)== 0){
-            removeLast();
-        }
-        if (strcmp(command,DELETE_FIRST)== 0){
-            removeFirst();
-        }
-    }
-
-
-    NodeT * currentElement = first;
-    while(currentElement != NULL)
-    {
-        printf("%d ", currentElement->data);
-        currentElement = currentElement->next;
-    }
-    printf("\n");
-
-    printf("there are %d numbers of elements",getNoOfItems());
-*/
-
     if (f != NULL) {
         while (!feof(f)) {
             fgets(line, INSTRUCTION_LENGHT, f);
@@ -105,6 +66,7 @@ int main() {
                 removeAll();
             }
             //the next operation throws me an error. can you please take a look at what am I doing wrong for the deletion a node?
+            
             /*if (strcmp(command,DELETE_ELEMENT)== 0){
                 removeElement(number);
             }*/
