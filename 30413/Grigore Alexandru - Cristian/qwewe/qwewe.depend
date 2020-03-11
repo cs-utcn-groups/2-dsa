@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583910562 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\qwewe\queue.c
+	"head.h"
+
+1583911317 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\qwewe\head.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583911267 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\qwewe\main.c
+	"head.h"
+
