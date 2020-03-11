@@ -27,7 +27,7 @@ int readnr(FILE *f)
 int main()
 {
     init();
-    initializeSll();
+    initializeDll();
     while(fscanf(f,"%s",function)!=EOF)
     {
         if(strcmp(function,"AF")==0)

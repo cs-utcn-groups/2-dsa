@@ -1,143 +1,159 @@
 #include "head.h"
 
-void initializeSll()
+SentinelT *Sentinel;
+
+void initializeDll()
 {
-    first = NULL;
-    last = NULL;
+    Sentinel=(SentinelT*)malloc(sizeof(SentinelT));
+    Sentinel->first=NULL;
+    Sentinel->last=NULL;
 }
 
-void AF(int data)
+void AF(int key)
 {
-    if(first == NULL)
+    if(Sentinel==NULL)
     {
-        first = (NodeT*)malloc(sizeof(NodeT));
-        first->next = NULL;
-        first->prev = NULL;
-        first->data = data;
-        last = first;
+        return;
+    }
+    if(Sentinel->first == NULL)
+    {
+        Sentinel->first = (NodeT*)malloc(sizeof(NodeT));
+        Sentinel->first->data = key;
+        Sentinel->first->next = NULL;
+        Sentinel->first->prev = NULL;
+        Sentinel->last = Sentinel->first;
     }
     else
     {
         NodeT * newElement = (NodeT*)malloc(sizeof(NodeT));
-        newElement->data = data;
-        newElement->next = first;
+        newElement->data = key;
         newElement->prev=NULL;
-        first = newElement;
+        newElement->next = Sentinel->first;
+        Sentinel->first->prev=newElement;
+        Sentinel->first = newElement;
     }
 }
 
-void AL(int data)
+void AL(int key)
 {
-    if(first == NULL)
+    if(Sentinel==NULL)
     {
-        first = (NodeT*)malloc(sizeof(NodeT));
-        first->next = NULL;
-        first->prev = NULL;
-        first->data = data;
-        last = first;
+        return;
+    }
+    if(Sentinel->first == NULL)
+    {
+        Sentinel->first = (NodeT*)malloc(sizeof(NodeT));
+        Sentinel->first->data = key;
+        Sentinel->first->next = NULL;
+        Sentinel->first->prev = NULL;
+        Sentinel->last = Sentinel->first;
     }
     else
     {
         NodeT * newElement = (NodeT*)malloc(sizeof(NodeT));
-        last->next = newElement;
+        Sentinel->last->next = newElement;
+        newElement->data = key;
         newElement->next = NULL;
-        newElement->prev = last;
-        newElement->data = data;
-        last = newElement;
+        newElement->prev = Sentinel->last;
+        Sentinel->last = newElement;
     }
 }
 
 void DF()
 {
-    if(first==NULL)
+    if(Sentinel==NULL || Sentinel->first==NULL)
     {
         return;
     }
-    NodeT *newElement = first;
-    first = first->next;
-    free(newElement);
-    first->prev=NULL;
+    if(Sentinel->first->next==NULL)
+    {
+        free(Sentinel->first);
+        Sentinel->first=Sentinel->last=NULL;
+    }
+    else
+    {
+        NodeT *newElement = Sentinel->first;
+        Sentinel->first = Sentinel->first->next;
+        free(newElement);
+        Sentinel->first->prev=NULL;
+    }
 }
 
 void DL()
 {
-    if(first==NULL)
+    if(Sentinel==NULL || Sentinel->first==NULL)
     {
         return;
     }
-    if(last!=NULL)
+    if(Sentinel->first->next==NULL)
     {
-       NodeT *beforeLast = first;
-       if(first!=last)
-       {
-           while(beforeLast->next->next!=NULL)
-           {
-               beforeLast=beforeLast->next;
-           }
-           free(last);
-           last=beforeLast;
-           beforeLast->next=NULL;
-           beforeLast->prev=last;
-       }
-       else
-       {
-           free(last);
-           last=NULL;
-           first=NULL;
-       }
+        free(Sentinel->first);
+        Sentinel->first=Sentinel->last=NULL;
+    }
+    else
+    {
+        NodeT *newElement=Sentinel->last;
+        Sentinel->last=newElement->prev;
+        free(newElement);
+        Sentinel->last->next=NULL;
     }
 }
 
-void DE(int data)
+void DE(int key)
 {
-    NodeT * currentElement = first;
-    NodeT * previousElement= first;
-    while(currentElement != NULL)
+    if(Sentinel==NULL || Sentinel->first==NULL)
     {
-        if(currentElement->data == data)
+        return;
+    }
+    if(Sentinel->first->next==NULL)
+    {
+        free(Sentinel->first);
+        Sentinel->first=Sentinel->last=NULL;
+    }
+    else
+    {
+        NodeT *newElement=Sentinel->first;
+        while(newElement->data==key)
         {
-            if(currentElement == first)
+            DF();
+            newElement=Sentinel->first;
+        }
+        newElement=newElement->next;
+        if(Sentinel->first==NULL)
+        {
+            Sentinel->last=NULL;
+        }
+        while(newElement)
+        {
+            if(newElement->data==key)
             {
-                first = currentElement->next;
-                free(currentElement);
-                currentElement=first;
-                currentElement->prev=NULL;
-                previousElement=first;
-                previousElement->prev=NULL;
+                NodeT *anotherElement=newElement;
+                newElement->prev->next=newElement->next;
+                newElement->next->prev=newElement->prev;
+                newElement=newElement->next;
+                if(anotherElement==Sentinel->last)
+                {
+                    Sentinel->last=anotherElement->prev;
+                }
+                free(anotherElement);
             }
-            else if(currentElement == last)
+            if(newElement)
             {
-                free(currentElement);
-                last=previousElement;
-                last->next=NULL;
-                currentElement=NULL;
-            }
-            else
-            {
-                previousElement->next = currentElement->next;
-                free(currentElement);
-                currentElement=previousElement->next;
-                currentElement->prev = previousElement;
+                newElement=newElement->next;
             }
         }
-        else
-        {
-            previousElement = currentElement;
-            currentElement = currentElement->next;
-        }
-
     }
 }
 
 void print_All(FILE *o)
 {
-    if(first == NULL)
+    if(Sentinel==NULL || Sentinel->first==NULL)
     {
         fprintf(o,"List is empty!\n");
     }
     else
     {
-        NodeT * currentElement = first;
+        NodeT * currentElement = Sentinel->first;
         while(currentElement != NULL)
         {
             fprintf(o,"%d ", currentElement->data);
@@ -150,13 +166,13 @@ void print_All(FILE *o)
 
 void PRINT_F(int nr,FILE *o)
 {
-    if(first==NULL)
+    if(Sentinel==NULL || Sentinel->first==NULL)
     {
         fprintf(o,"List is doomed.\n");
     }
     else
     {
-        NodeT *currentNode=first;
+        NodeT *currentNode=Sentinel->first;
         for(int i=0;i<nr && currentNode!=NULL;i++)
         {
             fprintf(o,"%d ",currentNode->data);
@@ -168,14 +184,14 @@ void PRINT_F(int nr,FILE *o)
 
 void PRINT_L(int nr,FILE *o)
 {
-    if(first==NULL)
+    if(Sentinel==NULL || Sentinel->first==NULL)
     {
         fprintf(o,"List is doomed.\n");
     }
     else
     {
         int nrOfElements=0;
-         NodeT *currentNode=first;
+         NodeT *currentNode=Sentinel->first;
          while(currentNode!=NULL)
          {
              nrOfElements++;
@@ -187,7 +203,7 @@ void PRINT_L(int nr,FILE *o)
          }
          else
          {
-             currentNode=first;
+             currentNode=Sentinel->first;
              int i=0;
              while(i<nrOfElements-nr)
              {
@@ -206,12 +222,13 @@ void PRINT_L(int nr,FILE *o)
 
 void DOOM_THE_LIST()
 {
-    NodeT * currentElement = first;
+    NodeT *currentElement =(NodeT*)malloc(sizeof(NodeT));
+    currentElement=Sentinel->first;
     while(currentElement != NULL)
     {
-        first = first->next;
+        Sentinel->first = Sentinel->first->next;
         free(currentElement);
-        currentElement = first;
+        currentElement = Sentinel->first;
     }
 }
 

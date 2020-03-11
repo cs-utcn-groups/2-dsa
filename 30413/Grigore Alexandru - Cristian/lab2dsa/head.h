@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-void initializeSll();
+
+void initializeDll();
 void AF(int key);
 void AL(int key);
 void print_All(FILE *o);
@@ -17,5 +18,8 @@ typedef struct node {
     struct node * prev;
 } NodeT;
 
-NodeT *first,*last;
+typedef struct sentinel{
+    NodeT *first;
+    NodeT *last;
+}SentinelT;
 
