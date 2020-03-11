@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1583959342 source:c:\users\acasa\desktop\utcn\data structures and algorithms\mydsa\2-dsa\30413\rotaru andrei\assignment2\main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
