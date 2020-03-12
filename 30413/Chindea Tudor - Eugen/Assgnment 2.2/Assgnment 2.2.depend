@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1584005498 source:c:\users\tudor\onedrive\desktop\lap cp\assgnment 2.2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

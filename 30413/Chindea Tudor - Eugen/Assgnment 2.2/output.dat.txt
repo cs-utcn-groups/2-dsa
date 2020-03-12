@@ -1,0 +1,6 @@
+Afetr 10 seconds: 5
+Afetr 20 seconds: 10005
+Afetr 50 seconds: 10015
+Afetr 100 seconds: 10015
+Afetr 200 seconds: 10085
+Afetr 400 seconds: 10085
