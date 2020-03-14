@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/Work/C++/3.1 Trees to list and back again/main.c" "D:/Work/C++/3.1 Trees to list and back again/cmake-build-debug/CMakeFiles/3_1_Trees_to_list_and_back_again.dir/main.c.obj"
+  "D:/Work/An 1 Sem 2/DSA-Git/30413/Boga Titus - Nicolae/3.1 Trees to list and back again/main.c" "D:/Work/An 1 Sem 2/DSA-Git/30413/Boga Titus - Nicolae/3.1 Trees to list and back again/cmake-build-debug/CMakeFiles/3_1_Trees_to_list_and_back_again.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

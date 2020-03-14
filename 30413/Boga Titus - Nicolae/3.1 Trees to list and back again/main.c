@@ -109,7 +109,14 @@ void prettyPrint(NODE *parent,int level)
 {
     if(parent==NULL)
         return;
-    printf("%c is on the level %d\n",parent->id,level);
+    printf("%c is on the level %d and is parent to: ",parent->id,level);
+    if(parent->left)
+        printf("%c ",parent->left->id);
+    if(parent->right)
+        printf("%c ",parent->right->id);
+    if(!parent->left&&!parent->right)
+        printf("none");
+    printf("\n");
     prettyPrint(parent->left,level+1);
     prettyPrint(parent->right,level+1);
 

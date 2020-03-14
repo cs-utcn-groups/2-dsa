@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2019.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\Work\C++\3.1 Trees to list and back again"
+"C:\Program Files\JetBrains\CLion 2019.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\Work\An 1 Sem 2\DSA-Git\30413\Boga Titus - Nicolae\3.1 Trees to list and back again"
 -- The C compiler identification is GNU 8.1.0
 -- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe
 -- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe -- works
@@ -8,4 +8,4 @@
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/Work/C++/3.1 Trees to list and back again/cmake-build-debug
+-- Build files have been written to: D:/Work/An 1 Sem 2/DSA-Git/30413/Boga Titus - Nicolae/3.1 Trees to list and back again/cmake-build-debug
