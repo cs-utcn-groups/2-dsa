@@ -22,7 +22,9 @@ void enqueue(int data)
 
 void dequeue()
 {
+    NodeT * currentElement = first;
     first=first->next;
+    free(currentElement);
 }
 
 

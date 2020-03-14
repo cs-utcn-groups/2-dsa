@@ -39,9 +39,11 @@ void fAL(int x)
 
 void fDF()
 {
-    if (first != NULL)
+    NodeT * currentElement = first;
+    if (currentElement != NULL)
     {
-        first = first->next;
+        first = currentElement->next;
+        free(currentElement);
     }
 }
 
@@ -54,6 +56,7 @@ void fDL()
         {
             currentElement = currentElement->next;
         }
+        free(last);
         currentElement->next = NULL;
         last = currentElement;
     }
@@ -81,21 +84,24 @@ void fDE(int x) //deletes the first instance if there is one
         {
             if(currentElement == first)
             {
-                first->next = first;
+                first = first->next;
+                free(currentElement);
+                currentElement = first;
+                previousElement = first;
             }
             else if(currentElement == last)
             {
+                free(last);
                 last = previousElement;
                 last->next = NULL;
+                currentElement = NULL;
             }
             else
             {
                 previousElement->next = currentElement->next;
+                free(currentElement);
+                currentElement = previousElement->next;
             }
-            previousElement = currentElement;
-            currentElement = currentElement->next;
-            free(previousElement);
-            previousElement = currentElement;
         }
         else
         {
