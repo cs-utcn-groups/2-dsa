@@ -42,14 +42,13 @@ int main() {
         }
 
         //computing the rubles for each time segment
-        NodeCustomer *currentCustomer;
+        NodeCustomer *currentCustomer = firstC;
         NodeTime * currentTime = firstT;
-        
+        int s = 0;
+        int sum = 0;
+
         while(currentTime != NULL)
         {
-            currentCustomer = firstC;
-            int s = 0;
-            int sum = 0;
             while ((currentCustomer!= NULL) && (s + currentCustomer->seconds <= currentTime->data)){
                 s = s + currentCustomer->seconds;
                 sum = sum + currentCustomer->rubles;
