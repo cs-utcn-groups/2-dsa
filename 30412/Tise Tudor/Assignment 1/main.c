@@ -76,6 +76,7 @@ int main() {
     }
 
     fclose(f);
+    fclose(g);
 
     return 0;
 }

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Others.c
+Others.h
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Others.h
+Queue.h
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Queue.h
+stdio.h
+-
+stdlib.h
+-
+
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Others.h
+ctype.h
+-
+stdio.h
+-
+
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Queue.c
+Queue.h
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Queue.h
+stdio.h
+-
+stdlib.h
+-
+
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Queue.h
+stdio.h
+-
+
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/main.c
+stdio.h
+-
+stdlib.h
+-
+Queue.h
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Queue.h
+Others.h
+C:/DSA_LAB/2-dsa/30412/Bodea Razvan Marius/Assignment 2.2/Others.h
+

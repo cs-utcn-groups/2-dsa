@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1583345581 source:d:\info\c facultate\dsastoicatudor\killthecommunistgarbage\main.c
+	"header.h"
+
+1583345238 d:\info\c facultate\dsastoicatudor\killthecommunistgarbage\header.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1583936006 source:d:\info\c facultate\dsastoicatudor\assignement 2.1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"header.h"
+
+1583935067 d:\info\c facultate\dsastoicatudor\assignement 2.1\header.h
+
