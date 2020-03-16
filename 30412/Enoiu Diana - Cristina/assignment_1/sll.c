@@ -87,7 +87,6 @@ void deleteElement(int data) {
             previousElement = currentElement;
             currentElement = currentElement->next;
             free(previousElement);
-            //previousElement = currentElement;
         }
         else {
             previousElement = currentElement;
