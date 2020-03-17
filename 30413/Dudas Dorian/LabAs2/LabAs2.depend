@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583922108 source:c:\users\dorian\desktop\dorian\cp - lab\2-dsa\30413\dudas dorian\labas2\funct.c
+	"header.h"
+
+1583922153 c:\users\dorian\desktop\dorian\cp - lab\2-dsa\30413\dudas dorian\labas2\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583921662 source:c:\users\dorian\desktop\dorian\cp - lab\2-dsa\30413\dudas dorian\labas2\main.c
+	"header.h"
+

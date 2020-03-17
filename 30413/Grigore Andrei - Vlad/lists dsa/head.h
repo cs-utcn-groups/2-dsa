@@ -14,6 +14,7 @@ void PRINT_L(int data,FILE *o);
 typedef struct node {
     int data;
     struct node * next;
+    struct node * prev;
 } NodeT;
 
 NodeT * first, * last;

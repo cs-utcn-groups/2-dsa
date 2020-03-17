@@ -5,7 +5,7 @@
 
 int main() {
     FILE *fIN = fopen("input.dat","r");
-   FILE *fOUT = fopen("output.dat","w");
+    FILE *fOUT = fopen("output.dat","w");
    initializeSLL();
 
     while(!feof(fIN)) {

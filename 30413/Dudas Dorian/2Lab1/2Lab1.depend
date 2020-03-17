@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1582789264 source:c:\users\dorian\desktop\dorian\cp - lab\1-cp\dudas dorian\2lab1\main.c
+	"head.h"
+
+1582789705 c:\users\dorian\desktop\dorian\cp - lab\1-cp\dudas dorian\2lab1\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1582789280 source:c:\users\dorian\desktop\dorian\cp - lab\1-cp\dudas dorian\2lab1\stack_funct.c
+	"head.h"
+
+1582789280 source:c:\users\dorian\desktop\dorian\cp - lab\2-dsa\30413\dudas dorian\2lab1\stack_funct.c
+	"head.h"
+
+1582789705 c:\users\dorian\desktop\dorian\cp - lab\2-dsa\30413\dudas dorian\2lab1\head.h
+	<stdio.h>
+	<stdlib.h>
+

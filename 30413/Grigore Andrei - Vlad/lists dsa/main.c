@@ -12,7 +12,7 @@ void init()
     function=(char*)malloc(sizeof(char)*100);
     element=(char*)malloc(sizeof(char)*100);
     f=fopen("input.dat","r");
-    o=fopen("output.txt","a");
+    o=fopen("output.txt","w");
 }
 
 int readnr(FILE *f)
@@ -25,7 +25,8 @@ int readnr(FILE *f)
 int main()
 {
     init();
-    initializeSll();
+    initializeDll();
+    san=malloc(sizeof(Sentinel));
     while(fscanf(f,"%s",function)!=EOF)
     {
         if(strcmp(function,"AF")==0)

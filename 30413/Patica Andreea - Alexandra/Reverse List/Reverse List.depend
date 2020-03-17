@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1583855499 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\reverse list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1583855488 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\reverse list\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1583855858 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\reverse list\list.c
+	"header.h"
+
