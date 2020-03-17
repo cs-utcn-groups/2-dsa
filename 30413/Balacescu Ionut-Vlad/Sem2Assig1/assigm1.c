@@ -27,7 +27,7 @@ void DOOM_THE_LIST()
         currentElement = first;
     }
     last=NULL;
-   /// printf("List have been cleared\n");
+    /// printf("List have been cleared\n");
 }
 void DL()
 {
@@ -35,8 +35,8 @@ void DL()
     NodeT*previousElement=first;
     if(last==NULL)
     {
-       /// printf("The list is empty\n");
-       return;
+        /// printf("The list is empty\n");
+        return;
     }
     else
     {
@@ -173,14 +173,104 @@ void PRINT_L(int x)
     {
         PRINT_ALL();
     }
-    else {
-        for(int i=0;i<nr-x;i++){
+    else
+    {
+        for(int i=0; i<nr-x; i++)
+        {
             currentNode=currentNode->next;
         }
-        while(currentNode!=NULL){
+        while(currentNode!=NULL)
+        {
             printf("%d ",currentNode->data);
             currentNode=currentNode->next;
         }
-     printf("\n");
+        printf("\n");
+    }
+}
+void executeInstr(char *s1)
+{
+    int nr=0;
+    char *s2=(char*)malloc(sizeof(char)*100);
+    if(strstr(s1,"AF")!=0)
+    {
+        for(int i=0; i<strlen(s1); i++)
+        {
+            if(s1[i]>='0'&&s1[i]<='9')
+            {
+                s2[nr]=s1[i];
+                nr++;
+            }
+        }
+        s2[nr]='\0';
+        AF(atoi(s2));
+    }
+    if(strstr(s1,"AddL")!=0)
+    {
+        for(int i=0; i<strlen(s1); i++)
+        {
+            if(s1[i]>='0'&&s1[i]<='9')
+            {
+                s2[nr]=s1[i];
+                nr++;
+            }
+        }
+        s2[nr]='\0';
+        AddL(atoi(s2));
+    }
+    if(strstr(s1,"DE")!=0)
+    {
+        for(int i=0; i<strlen(s1); i++)
+        {
+            if(s1[i]>='0'&&s1[i]<='9')
+            {
+                s2[nr]=s1[i];
+                nr++;
+            }
+        }
+        s2[nr]='\0';
+        DE(atoi(s2));
+    }
+
+    if(strstr(s1,"PRINT_L")!=0)
+    {
+        for(int i=0; i<strlen(s1); i++)
+        {
+            if(s1[i]>='0'&&s1[i]<='9')
+            {
+                s2[nr]=s1[i];
+                nr++;
+            }
+        }
+        s2[nr]='\0';
+        PRINT_L(atoi(s2));
+    }
+    if(strstr(s1,"PRINT_F")!=0)
+    {
+        for(int i=0; i<strlen(s1); i++)
+        {
+            if(s1[i]>='0'&&s1[i]<='9')
+            {
+                s2[nr]=s1[i];
+                nr++;
+            }
+        }
+        s2[nr]='\0';
+        PRINT_F(atoi(s2));
+    }
+    if(strstr(s1,"DL")!=0)
+    {
+        DL();
+    }
+    if(strstr(s1,"DOOM")!=0)
+    {
+        DOOM_THE_LIST();
+    }
+    if(strstr(s1,"PRINT_ALL")!=0)
+    {
+        PRINT_ALL();
+    }
+    if(strstr(s1,"DF")!=0)
+    {
+        DF();
     }
 }
