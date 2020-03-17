@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "instructions.h"
@@ -6,7 +7,7 @@
 int main() {
     FILE *fIN = fopen("input.dat","r");
     FILE *fOUT = fopen("output.dat","w");
-   initializeSLL();
+    initializeSentinel();
 
     while(!feof(fIN)) {
 
@@ -15,20 +16,20 @@ int main() {
         int x;
         if(strcmp(instruction,"AF")==0) {
             fscanf(fIN,"%d",&x);
-            AF(x);
+            addFirst(x);
         }
         else if(strcmp(instruction,"AL")==0) {
             fscanf(fIN,"%d",&x);
-            AL(x);
+            addLast(x);
         }
         else if(strcmp(instruction,"DF")==0) {
-            DF();
+            deleteFirst();
         }
         else if(strcmp(instruction,"DL")==0) {
-            DL();
+            deleteLast();
         }
         else if(strcmp(instruction,"DOOM_THE_LIST")==0) {
-            doomSLL();
+            DOOM_THE_LIST();
         }
         else if(strcmp(instruction,"DE")==0) {
             fscanf(fIN,"%d",&x);
@@ -51,4 +52,3 @@ int main() {
     fclose(fOUT);
     return 0;
 }
-
