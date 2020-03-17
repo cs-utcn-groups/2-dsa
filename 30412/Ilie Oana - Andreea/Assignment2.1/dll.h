@@ -4,7 +4,6 @@
 
 #ifndef ASSIGNMENT2_1_DLL_H
 #define ASSIGNMENT2_1_DLL_H
-
 #include <stdio.h>
 
 typedef struct node {
