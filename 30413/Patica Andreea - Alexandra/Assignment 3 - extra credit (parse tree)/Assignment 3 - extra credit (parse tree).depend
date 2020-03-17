@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1584318025 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 3 - extra credit (parse tree)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
