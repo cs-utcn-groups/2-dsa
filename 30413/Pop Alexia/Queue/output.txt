@@ -1,0 +1,6 @@
+After 10:5
+After 20:10005
+After 50:10015
+After 100:10015
+After 200:10085
+After 400:10085
