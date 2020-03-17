@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1583868098 source:c:\users\aa\desktop\assignment2.1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"head.h"
+
+1583868541 c:\users\aa\desktop\assignment2.1\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1583867845 source:c:\users\aa\desktop\assignment2.1\dll.c
+	"head.h"
+

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "head.h"
 char *function;
 char *element;
@@ -12,7 +13,7 @@ void init()
     function=(char*)malloc(sizeof(char)*100);
     element=(char*)malloc(sizeof(char)*100);
     f=fopen("input.dat","r");
-    o=fopen("output.txt","w");
+    o=fopen("output.txt","a");
 }
 
 int readnr(FILE *f)
@@ -26,7 +27,6 @@ int main()
 {
     init();
     initializeDll();
-    san=malloc(sizeof(Sentinel));
     while(fscanf(f,"%s",function)!=EOF)
     {
         if(strcmp(function,"AF")==0)
@@ -52,9 +52,9 @@ int main()
             arg=readnr(f);
             DE(arg);
         }
-        if(strcmp(function,"print_All")==0)
+        if(strcmp(function,"PRINT_ALL")==0)
         {
-            print_All(o);
+           PRINT_ALL(o);
         }
         if(strcmp(function,"PRINT_F")==0)
         {
