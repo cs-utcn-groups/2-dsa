@@ -16,6 +16,7 @@ typedef struct _binTree {
     struct _binTree *left, *right;
 } binTree;
 
+
 binTree *createBinTree(FILE *inFile);
 
 void inOrder(binTree *myTree, int level, FILE *outFile);
