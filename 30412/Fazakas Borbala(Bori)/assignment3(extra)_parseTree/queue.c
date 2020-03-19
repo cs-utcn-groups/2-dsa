@@ -13,7 +13,7 @@ Queue createQueue() {
     return newQueue;
 }
 
-static void addFirst(Queue *myQueue, char* value) {
+static void addFirst(Queue *myQueue, char *value) {
     node *newNode = createNode(value, myQueue->first);
     myQueue->first = newNode;
     if (myQueue->last == NULL) {
@@ -21,7 +21,7 @@ static void addFirst(Queue *myQueue, char* value) {
     }
 }
 
-void push(Queue *myQueue, char* value) {
+void push(Queue *myQueue, char *value) {
     if (myQueue->first == NULL) {
         addFirst(myQueue, value);
     } else {
@@ -31,11 +31,11 @@ void push(Queue *myQueue, char* value) {
     }
 }
 
-char* pop(Queue *myQueue) {
+char *pop(Queue *myQueue) {
     if (myQueue->first != NULL) {
         node *prevFirst = myQueue->first;
         myQueue->first = myQueue->first->next;
-        char* result = prevFirst->data;
+        char *result = prevFirst->data;
         free(prevFirst);
         if (myQueue->first == NULL) myQueue->last = NULL;
         return result;
@@ -44,7 +44,7 @@ char* pop(Queue *myQueue) {
     }
 }
 
-char* front(Queue *myQueue) {
+char *front(Queue *myQueue) {
     if (myQueue->first != NULL) {
         return myQueue->first->data;
     } else {

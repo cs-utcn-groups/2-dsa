@@ -10,18 +10,18 @@
 
 FILE *openFile(char *name, char *mode);
 
-Queue getExpressionQueue(char* expression);
+Queue getExpressionQueue(char *expression);
 
 int main() {
-    FILE* inFile = openFile("../data.in", "r");
-    char* expression = (char*) malloc(sizeof(char)*MAX_LINE_LENGTH);
+    FILE *inFile = openFile("../data.in", "r");
+    char *expression = (char *) malloc(sizeof(char) * MAX_LINE_LENGTH);
     fgets(expression, MAX_LINE_LENGTH, inFile);
     Queue expQueue = getExpressionQueue(expression);
     printf("original expression is:");
     printAllQueue(&expQueue, stdout);
-    binTree* expTree = createBinTree(&expQueue);
+    binTree *expTree = createBinTree(&expQueue);
     printf("the tree constructed from this expression is:\n");
-    inOrder(expTree, 0,  stdout);
+    inOrder(expTree, 0, stdout);
 
     return 0;
 }
@@ -35,13 +35,11 @@ FILE *openFile(char *name, char *mode) {
     return newFile;
 }
 
-Queue getExpressionQueue(char* expression)
-{
+Queue getExpressionQueue(char *expression) {
     Queue expQueue = createQueue();
     char separator[] = " ";
-    char* exp = strtok(expression, separator);
-    while(exp!=NULL)
-    {
+    char *exp = strtok(expression, separator);
+    while (exp != NULL) {
         push(&expQueue, exp);
         exp = strtok(NULL, separator);
     }

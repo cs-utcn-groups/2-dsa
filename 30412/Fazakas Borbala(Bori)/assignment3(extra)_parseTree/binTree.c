@@ -10,42 +10,37 @@
 #define MEM_ERR_CODE 2
 #define MEM_ERR_MESS "error allocating memory for node"
 
-void checkMemoryAllocation(void* ptr)
-{
+void checkMemoryAllocation(void *ptr) {
     if (ptr == NULL) {
         perror(MEM_ERR_MESS);
         exit(MEM_ERR_CODE);
     }
 }
 
-bool isOperator(char* s)
-{
+bool isOperator(char *s) {
     char operators[] = "+-*/";
-    return strlen(s)==1 && strchr(operators, s[0])!=NULL;
+    return strlen(s) == 1 && strchr(operators, s[0]) != NULL;
 }
 
-binTree* createBinTree(Queue* expQueue) {
+binTree *createBinTree(Queue *expQueue) {
     binTree *newTree = (binTree *) malloc(sizeof(binTree));
     checkMemoryAllocation(newTree);
     newTree->rootData = (char *) malloc(sizeof(char) * MAX_DATA_LENGTH);
     checkMemoryAllocation(newTree->rootData);
     strcpy(newTree->rootData, pop(expQueue));
 
-    if(isOperator(newTree->rootData))
-    {
+    if (isOperator(newTree->rootData)) {
         newTree->left = createBinTree(expQueue);
         newTree->right = createBinTree(expQueue);
-    }
-    else
-    {
-        newTree->left=NULL;
-        newTree->right=NULL;
+    } else {
+        newTree->left = NULL;
+        newTree->right = NULL;
     }
     return newTree;
 }
 
 void inOrder(binTree *myTree, int level, FILE *outFile) {
-    if (myTree!=NULL) //existing node
+    if (myTree != NULL) //existing node
     {
         inOrder(myTree->left, level + 1, outFile);
         for (int i = 1; i <= level; i++) fprintf(outFile, "   ");

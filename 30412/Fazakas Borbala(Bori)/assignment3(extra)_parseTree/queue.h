@@ -14,11 +14,11 @@ typedef struct {
 
 Queue createQueue();
 
-void push(Queue *myQueue, char* value);
+void push(Queue *myQueue, char *value);
 
-char* pop(Queue *myQueue);
+char *pop(Queue *myQueue);
 
-char* front(Queue *myQueue);
+char *front(Queue *myQueue);
 
 void printAllQueue(Queue *myQueue, FILE *outFile);
 
