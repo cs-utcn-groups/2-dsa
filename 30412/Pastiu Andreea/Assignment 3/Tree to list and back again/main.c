@@ -14,10 +14,10 @@ typedef struct node
     struct node *prev, *next;
 }nodeT;
 
-void prettyPrint(vertexT *pVertex, int i);
-vertexT *getTreeFromList(nodeT *t);
+void prettyPrint(vertexT *root, int level);
+vertexT *getTreeFromList(nodeT **firstFromList);
 void traverseList(nodeT *t);
-nodeT *getListFromTree(vertexT *pVertex);
+nodeT *getListFromTree(vertexT *root);
 vertexT *createBinTree(FILE *ifptr);
 void addNodeLast(nodeT **firstFromList, nodeT **lastFromList, int id);
 void preorderTreeToList(nodeT **firstFromList, nodeT **lastFromList, vertexT *root);
@@ -36,7 +36,8 @@ int main()
         vertexT *root = createBinTree(ifptr);
         nodeT *firstFromList = getListFromTree(root);
         traverseList(firstFromList);
-        root = getTreeFromList(firstFromList);
+        root = getTreeFromList(&firstFromList);
+        printf("A very very pretty printing right here:\n");
         prettyPrint(root, 0);
     }
 
@@ -98,7 +99,7 @@ void preorderTreeToList(nodeT **firstFromList, nodeT **lastFromList, vertexT *ro
     }
     else
     {
-        
+        addNodeLast(firstFromList, lastFromList, -1);
     }
 }
 
@@ -117,18 +118,47 @@ void traverseList(nodeT *firstFromList)
     nodeT *currentNode = firstFromList;
     while(currentNode != NULL)
     {
-        printf("%d ", currentNode->id);
+        if (currentNode->id == -1)
+        {
+            printf("* ");
+        }
+        else
+        {
+            printf("%d ", currentNode->id);
+        }
         currentNode = currentNode->next;
     }
     printf("\n");
 }
 
-vertexT *getTreeFromList(nodeT *t)
+vertexT *getTreeFromList(nodeT **firstFromList)
 {
-    return NULL;
+    vertexT *currentVertex = (vertexT*) malloc(sizeof(vertexT));
+    if(firstFromList != NULL)
+    {
+        if ((*firstFromList)->id == -1)
+        {
+            return NULL;
+        }
+        currentVertex->id = (*firstFromList)->id;
+        *firstFromList = (*firstFromList)->next;
+        currentVertex->left = getTreeFromList(firstFromList);
+        *firstFromList = (*firstFromList)->next;
+        currentVertex->right = getTreeFromList(firstFromList);
+        return currentVertex;
+    }
 }
 
-void prettyPrint(vertexT *pVertex, int i)
+void prettyPrint(vertexT *root, int level)
 {
-
+    if(root != NULL)
+    {
+        prettyPrint(root->right, level+1);
+        for(int i = 0; i < level; i++)
+        {
+            printf("       ");
+        }
+        printf("%d\n", root->id);
+        prettyPrint(root->left, level+1);
+    }
 }
