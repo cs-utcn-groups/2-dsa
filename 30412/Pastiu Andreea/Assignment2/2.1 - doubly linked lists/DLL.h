@@ -14,7 +14,13 @@ typedef struct node
     struct node *prev;
 }nodeT;
 
-nodeT *sentinel;
+typedef struct sentinel
+{
+    struct node *head;
+    struct node *tail;
+}sentinelT;
+
+sentinelT *sentinel;
 
 void initializeSentinelList();
 void addFirst(int x);
@@ -27,5 +33,6 @@ void printAll(FILE* ofptr);
 void printFirstXValues(FILE* ofptr, int x);
 int countElementsOfList();
 void printLastXValues(FILE* ofptr, int x);
+
 
 #endif //INC_2_1___DOUBLY_LINKED_LISTS_DLL_H
