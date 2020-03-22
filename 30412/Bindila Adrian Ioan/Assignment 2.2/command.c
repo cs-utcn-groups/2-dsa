@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
-#include "command.h"
 
 void readTime(char *buffer) {
     buffer = strtok(buffer, " \n");

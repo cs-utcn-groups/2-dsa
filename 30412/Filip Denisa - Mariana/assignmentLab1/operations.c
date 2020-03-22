@@ -73,6 +73,8 @@ void DOOM_THE_LIST() {
         free(currentElement);
         currentElement = first;
     }
+    first = NULL;
+    last = NULL;
 }
 
 void DE(int x) {
