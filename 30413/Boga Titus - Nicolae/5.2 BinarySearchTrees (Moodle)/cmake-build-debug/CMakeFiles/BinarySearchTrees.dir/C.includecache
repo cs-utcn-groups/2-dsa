@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/C++/5.2 BinarySearchTrees/header.c
+header.h
+D:/Work/C++/5.2 BinarySearchTrees/header.h
+
+D:/Work/C++/5.2 BinarySearchTrees/header.h
+stdio.h
+-
+stdlib.h
+-
+
+D:/Work/C++/5.2 BinarySearchTrees/main.c
+header.c
+D:/Work/C++/5.2 BinarySearchTrees/header.c
+
