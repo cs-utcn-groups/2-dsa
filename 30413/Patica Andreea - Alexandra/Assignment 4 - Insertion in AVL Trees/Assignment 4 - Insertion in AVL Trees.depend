@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1584834536 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 4 - insertion in avl trees\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1584834553 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 4 - insertion in avl trees\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1584832534 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 4 - insertion in avl trees\avl.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+

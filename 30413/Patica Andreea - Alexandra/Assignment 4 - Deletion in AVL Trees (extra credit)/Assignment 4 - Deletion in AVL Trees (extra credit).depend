@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1584837272 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 4 - deletion in avl trees (extra credit)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1584837272 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 4 - deletion in avl trees (extra credit)\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1584837331 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\assignment 4 - deletion in avl trees (extra credit)\avl.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
