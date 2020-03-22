@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1584469760 source:c:\users\asus\desktop\foldernou\2-dsa\30413\balacescu ionut-vlad\assign2_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
