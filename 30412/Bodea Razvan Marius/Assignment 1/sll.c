@@ -139,7 +139,7 @@ void Print_First_N(int nr, FILE *fptr) {
     }
 }
 
-void Print_Last_N(int nr, int noOfEl, FILE *fptr) {
+void Print_Last_N(int nr, int noOfEl) {
     //this was tricky because I had to keep track of the nr of elements   (linear complexity)
     NodeT *current = first;
     while (noOfEl > nr) {
