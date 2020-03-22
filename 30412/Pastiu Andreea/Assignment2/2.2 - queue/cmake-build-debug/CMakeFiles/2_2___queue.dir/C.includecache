@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/main.c
+stdio.h
+-
+queue.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.h
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.c
+queue.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.h
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.2 - queue/queue.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
