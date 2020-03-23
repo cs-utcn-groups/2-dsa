@@ -1,0 +1,8 @@
+i Aspirin Bayer,7.65,6,20150702,20190702
+i Paracetamol,9.99,10,20160120,20200830
+i Vizik,30.5,3,20180403,20220220
+i Aerius,25.9,28,20170609,20210807
+u Vizik,Vizik Another,4.5,~,~,20180405
+d Aspirin Bayer
+i Algocalmin,15.8,21,20170809,20190827
+e
