@@ -8,11 +8,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-typedef struct node
+typedef struct nodel
 {
     char data;
-    struct node *next;
-    struct node *prev;
+    struct nodel *next;
+    struct nodel *prev;
 }NodeL;
 
 NodeL *first, *last;

@@ -10,9 +10,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct node1{
+typedef struct nodet{
     char id;
-    struct node1 *left, *right;
+    struct nodet *left, *right;
 }NodeT;
 NodeT *createBinTree();
 void prettyPrint (NodeT *root, int space);

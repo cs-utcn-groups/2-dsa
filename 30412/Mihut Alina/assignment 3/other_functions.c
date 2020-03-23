@@ -27,11 +27,11 @@ NodeT *getTreeFromList(NodeL *currentElement)
         return NULL;
     else
     {
-        NodeT *node = (NodeT *) malloc(sizeof(NodeT));
-        node->id=currentElement->data;
-        node->left=getTreeFromList(currentElement->next);
-        node->right=getTreeFromList(currentElement->next);
-        return node;
+        NodeT *newNode = (NodeT *) malloc(sizeof(NodeT));
+        newNode->id=currentElement->data;
+        newNode->left=getTreeFromList(currentElement->next);
+        newNode->right=getTreeFromList(currentElement->next);
+        return newNode;
     }
 
 
