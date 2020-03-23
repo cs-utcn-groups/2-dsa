@@ -70,8 +70,8 @@ NodeT *getTreeFromList(NodeL **pList) {
             perror("O crapat!");
         }
         p->id = c;
-        p->left = getTreeFromList(&(*pList));
-        p->right = getTreeFromList(&(*pList));
+        p->left = getTreeFromList(pList);
+        p->right = getTreeFromList(pList);
         return p;
     }
     else
@@ -104,16 +104,16 @@ NodeL *getListFromTree(NodeT *root) {
 
 void preorderAddList(NodeT *p, NodeL **first, NodeL **last) {
     if (p) {
-        addLast(&(*first), &(*last), p->id);
+        addLast(first, last, p->id);
         if (p->left == NULL)
-            addLast(&(*first), &(*last), '*');
+            addLast(first, last, '*');
         else
-            preorderAddList(p->left, &(*first), &(*last));
+            preorderAddList(p->left, first, last);
 
         if(p->right == NULL)
-            addLast(&(*first), &(*last), '*');
+            addLast(first, last, '*');
         else
-            preorderAddList(p->right, &(*first), &(*last));
+            preorderAddList(p->right, first, last);
     }
 }
 
