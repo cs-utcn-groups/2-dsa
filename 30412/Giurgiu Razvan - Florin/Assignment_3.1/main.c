@@ -16,7 +16,7 @@ typedef struct nodetype
 NodeT *createBinaryTree();
 NodeL *getListFromTree(NodeT *root), *first, *last;
 void traverseList(NodeL *firstFromList);
-
+NodeT *getTreeFromList(NodeL *firstFromList);
 void preorder(NodeT *currentRoot, int level) {
     if (currentRoot != NULL) {
         for (int i = 0; i < level; i++)
@@ -26,6 +26,7 @@ void preorder(NodeT *currentRoot, int level) {
         preorder(currentRoot->right, level + 1);
     }
 }
+void al(char data);
 
 int main() {
     NodeT *root = createBinaryTree();
@@ -82,7 +83,39 @@ NodeL *getListFromTree(NodeT *root)
     first->next = getListFromTree(root->left);
     first->next = getListFromTree(root->right);
     return p;
+}
 
+void al(char data)
+{
+    NodeL *p = (NodeL*)malloc(sizeof(NodeL));
+    p->id=data;
+    if(first==NULL)
+    {
+        first=p;
+        first->next = NULL;
+        first->prev = NULL;
+        last = first;
+    }
+    else
+    {
+        last->next = p;
+        p->prev = last;
+        p->next = NULL;
+        last = p;
+    }
+
+}
+
+NodeT *getTreeFromList(NodeL *firstFromList)
+{
+    if (firstFromList == NULL) return NULL;
+
+    NodeT *p = (NodeT*)malloc(sizeof(NodeT));
+    p->id = firstFromList->id;
+    p->left = getTreeFromList(firstFromList->next);
+    p->right =  getTreeFromList(firstFromList->next);
+
+    return p;
 
 
 }
