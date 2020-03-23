@@ -95,6 +95,96 @@ NodeT *insertNode(NodeT *p, int key) {
     return p;
 }
 
+NodeT *minValueNode(NodeT* node)
+{
+    NodeT *current = node;
+
+    /* loop down to find the leftmost leaf */
+    while (current->left != NULL)
+        current = current->left;
+
+    return current;
+}
+
+
+NodeT *deleteNode(NodeT* root, int key)
+{
+
+    if (root == NULL)
+        return root;
+
+    if ( key < root->key )
+        root->left = deleteNode(root->left, key);
+
+    else if( key > root->key )
+        root->right = deleteNode(root->right, key);
+
+    else
+    {
+        // one or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            NodeT *temp = root->left ? root->left :
+                                root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+                temp = root;
+                root = NULL;
+            }
+            else // One child case
+                *root = *temp;
+            free(temp);
+        }
+        else
+        {
+            NodeT* temp = minValueNode(root->right);
+
+            // Copy
+            root->key = temp->key;
+
+            //Delete
+            root->right = deleteNode(root->right, temp->key);
+        }
+    }
+
+    if (root == NULL)
+        return root;
+
+    root->height = 1 + max(height(root->left),
+                           height(root->right));
+
+
+    int balance = balanceOfNode(root);
+
+
+    // Left Left Case
+    if (balance > 1 && balanceOfNode(root->left) >= 0)
+        return rotateRight(root);
+
+    // Left Right Case
+    if (balance > 1 && balanceOfNode(root->left) < 0)
+    {
+        root->left =  rotateLeft(root->left);
+        return rotateRight(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && balanceOfNode(root->right) <= 0)
+        return rotateLeft(root);
+
+    // Right Left Case
+    if (balance < -1 && balanceOfNode(root->right) > 0)
+    {
+        root->right = rotateRight(root->right);
+        return rotateLeft(root);
+    }
+
+    return root;
+}
+
+
 void preorder (NodeT *p, int level) {
     if (p != NULL) {
         for (int i = 0; i <= level; i++)
@@ -118,6 +208,13 @@ int main() {
         root=insertNode(root,j);
         j=0;
     }
+    printf ("Tree is: \n");
+    preorder(root,0);
+    insertNode(root,24);
+    printf ("Tree is: \n");
+    preorder(root,0);
+
+    root=deleteNode(root,24);
     printf ("Tree is: \n");
     preorder(root,0);
     return 0;
