@@ -6,7 +6,7 @@ int main() {
     initializeList();
     NodeL *firstFromList = getListFromTree(root);
     traverseList();
-    root = getTreeFromList(firstFromList);
+    root = getTreeFromList();
     prettyPrint(root, 0);
     return 0;
 }
