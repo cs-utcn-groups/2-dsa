@@ -28,7 +28,7 @@ NodeL *getListFromTree(NodeT *root);
 
 void traverseList();
 
-NodeT *getTreeFromList(NodeL *currentNode);
+NodeT *getTreeFromList();
 
 void prettyPrint(NodeT *currentRoot, int level);
 

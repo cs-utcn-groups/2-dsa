@@ -51,17 +51,17 @@ void traverseList(){
     }
     printf("\n");
 }
-NodeT *getTreeFromList(NodeL *currentNode){
+NodeT *getTreeFromList(){
     char *c = (char*)malloc(sizeof(char));
-    c[0] = currentNode->id;
-    currentNode = currentNode->next;
+    c[0] = first->id;
+    first = first->next;
     if(strcmp(c, "*")==0) {
         return NULL;
     }
     NodeT *newNode = (NodeT*)malloc(sizeof(NodeT));
     newNode->id = c[0];
-    newNode->left = getTreeFromList(currentNode);
-    newNode->right = getTreeFromList(currentNode);
+    newNode->left = getTreeFromList();
+    newNode->right = getTreeFromList();
     return newNode;
 }
 void prettyPrint(NodeT *currentRoot, int level) {
