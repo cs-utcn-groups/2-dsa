@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "stdlib.h"
 #include "string.h"
+#define COUNT 2
 typedef struct nodeTree {
     char id;
     struct nodeTree * left,* right;
@@ -13,7 +14,7 @@ NodeT * createBinTree();
 NodeL * getListFromTree(NodeT * currentNodeTree);
 void traverseList(NodeL * nodeFromList);
 NodeT * getTreeFromList (NodeL * nodeFromList);
-void prettyPrint (NodeT * nodeFromTree);
+void prettyPrint (NodeT * nodeFromTree, int space);
 int main() {
     NodeT * root = createBinTree();
     NodeL * firstFromList = getListFromTree(root);
@@ -21,8 +22,8 @@ int main() {
     traverseList(firstFromList);
     printf("\n");
     root = getTreeFromList(firstFromList);
-    printf("The tree is: ");
-    prettyPrint(root);
+    printf("The tree is:\n");
+    prettyPrint(root, 0);
     return 0;
 }
 NodeT * createBinTree() {
@@ -67,12 +68,16 @@ NodeT * getTreeFromList (NodeL * nodeFromList) {
     newNodeTree->right = getTreeFromList(nodeFromList->previous);
     return newNodeTree;
 }
-void prettyPrint (NodeT * nodeFromTree) {
+void prettyPrint (NodeT * nodeFromTree, int space) {
     if (nodeFromTree == NULL) {
-        printf("*");
         return;
     }
+    space += COUNT;
+    prettyPrint(nodeFromTree->right, space);
+    printf("\n");
+    for (int i= COUNT;i < space; i++) {
+        printf(" ");
+    }
     printf("%c",nodeFromTree->id);
-    prettyPrint(nodeFromTree->left);
-    prettyPrint(nodeFromTree->right);
+    prettyPrint(nodeFromTree->left, space);
 }
