@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1585141638 source:d:\info\c facultate\dsastoicatudor\assignement4.1\main.c
+	"header.h"
+
+1585141451 d:\info\c facultate\dsastoicatudor\assignement4.1\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1585141811 source:d:\info\c facultate\dsastoicatudor\assignement4.1\functions.c
+	"header.h"
+
+1585141886 source:d:\info\c facultate\dsastoicatudor\assignement 4.1\main.c
+	"header.h"
+
+1585141451 d:\info\c facultate\dsastoicatudor\assignement 4.1\header.h
+	<stdio.h>
+	<stdlib.h>
+
