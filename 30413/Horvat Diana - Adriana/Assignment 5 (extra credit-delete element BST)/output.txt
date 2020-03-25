@@ -1,0 +1,13 @@
+The Perfectly Balanced Binary Search Tree is:
+30
+  20
+    10
+    25
+  40
+    50
+After deleting the node with the value 30, our tree is:
+40
+  20
+    10
+    25
+  50
