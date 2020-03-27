@@ -87,22 +87,86 @@ void prettyPrint(Node *root, int level) {
         prettyPrint(root->left, level + 1);
 }
 
+Node *findSuccesor(Node *root) {
+    Node *succesor = root->right;
+    if(succesor==NULL)
+        return NULL;
+    while (succesor->left != NULL)
+        succesor = succesor->left;
+    return succesor;
+}
+
+Node *findPredecesor(Node *root) {
+    Node *predecesor = root->left;
+    if(predecesor==NULL)
+        return NULL;
+    while (predecesor->right != NULL)
+        predecesor = predecesor->right;
+    return predecesor;
+}
+
+Node *delete(Node *root, int data) {
+    if (root == NULL) {
+        return root;
+    }
+    if (data < root->data) {
+        root->left = delete(root->left, data);
+    } else if (data > root->data) {
+        root->right = delete(root->right, data);
+    } else {
+        if (root->left == NULL) {
+            Node *temp = root->right;
+            free(root);
+            return temp;
+        } else if (root->right == NULL) {
+            Node *temp = root->left;
+            free(root);
+            return temp;
+        }
+        else {
+            if(findSuccesor(root)!=NULL){
+                Node *replacement=findSuccesor(root);
+                root->data=replacement->data;
+                root->right=delete(root->right,replacement->data);
+            }
+            else{
+                Node *replacement=findPredecesor(root);
+                root->data=replacement->data;
+                root->left=delete(root->left,replacement->data);
+            }
+        }
+    }
+    root->height = 1 + max(height(root->left), height(root->right));
+    if (getBalance(root) < -1 && data < root->left->data)
+        root = rotateRight(root);
+    else if (getBalance(root) < -1 && data > root->left->data) {
+        root->left = rotateLeft(root->left);
+        root = rotateRight(root);
+    } else if (getBalance(root) > 1 && data > root->right->data)
+        root = rotateLeft(root);
+    else if (getBalance(root) > 1 && data < root->right->data) {
+        root->right = rotateRight(root->right);
+        root = rotateLeft(root);
+    }
+    return root;
+}
+
 int main() {
     Node *root = NULL;
     root = insert(root, 0);
-    root=insert(root, 1);
-    root=insert(root, 2);
-    root=insert(root,3);
-    root=insert(root,5);
+    root = insert(root, 1);
+    root = insert(root, 2);
+    root = insert(root, 3);
+    root = insert(root, 5);
+    root = insert(root, 4);
+    root = insert(root, -1);
+    root = insert(root, 10);
+    root = insert(root, 8);
+    root = insert(root, -2);
+    prettyPrint(root,0);
+    root=delete(root,8);
+    root=delete(root,4);
+    root=delete(root,10);
     prettyPrint(root, 0);
-    printf("\n\n\n\n");
-    root=insert(root,4);
-    prettyPrint(root,0);
-    root=insert(root,-1);
-    root=insert(root,10);
-    root=insert(root,8);
-    root=insert(root,-2);
-    printf("\n\n\n\n");
-    prettyPrint(root,0);
     return 0;
 }
