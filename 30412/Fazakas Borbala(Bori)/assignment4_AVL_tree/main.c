@@ -2,20 +2,20 @@
 #include "AVLTree.h"
 
 int main() {
-    FILE* inFile = fopen("data.in", "r");
-    AVLTree* myTree = createEmptyAVLTree();
+    FILE *inFile = fopen("data.in", "r");
+    AVLTree *myTree = createEmptyAVLTree();
     int newData;
     char opCode;
     char c;
-    while(!feof(inFile))
-    {
+    while (!feof(inFile)) {
         fscanf(inFile, "%c %d", &opCode, &newData);
-        while((c=fgetc(inFile))!='\n' && c!=EOF);
-        switch (opCode)
-        {
-            case 'd': deleteNode(&myTree, newData);
+        while ((c = fgetc(inFile)) != '\n' && c != EOF);
+        switch (opCode) {
+            case 'd':
+                deleteNode(&myTree, newData);
                 break;
-            case 'i': insertNode(&myTree, newData);
+            case 'i':
+                insertNode(&myTree, newData);
                 break;
         }
         printf("\nafter %c %d\n", opCode, newData);

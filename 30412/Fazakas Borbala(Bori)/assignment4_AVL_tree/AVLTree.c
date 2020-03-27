@@ -154,7 +154,7 @@ void deleteNode(AVLTree **treeAddress, int data) {
             }
         }
 
-        if(*treeAddress!=NULL) {
+        if (*treeAddress != NULL) {
             recalculateHeight(myTree);
             recalculateBalanceFactor(myTree);
             if (!balanced(myTree)) balanceTree(myTree);

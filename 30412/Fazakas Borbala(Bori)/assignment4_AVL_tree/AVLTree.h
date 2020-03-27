@@ -13,14 +13,14 @@ typedef struct _AVLTree {
     int height, balanceFactor;
 } AVLTree;
 
-AVLTree* createEmptyAVLTree();
+AVLTree *createEmptyAVLTree();
 
 AVLTree createAVLTree(int data);
 
-void inOrder(AVLTree* myTree, FILE *outFile);
+void inOrder(AVLTree *myTree, FILE *outFile);
 
-void insertNode(AVLTree** myTree, int data);
+void insertNode(AVLTree **myTree, int data);
 
-void deleteNode(AVLTree** myTree, int data);
+void deleteNode(AVLTree **myTree, int data);
 
 #endif //ASSIGNMENT4_AVL_TREE_AVLTREE_H
