@@ -39,11 +39,21 @@ BSTNodeT * insert(BSTNodeT * root, int key) {
     // calculate height of root
     root->height = computeHeight(root);
 
+    // re-balance tree if it's the case
+    root = reBalanceTree(root,key);
+
+    return root;
+}
+BSTNodeT * reBalanceTree(BSTNodeT * root, int key) {
+    /*
+    * function to re-establish the balance of the tree
+    * returns the root of the generated balanced tree
+    */
+
     // get balance of the current subtree
     int balance = computeBalance(root);
 
-    // perform rotations when needed
-    if(root->height > 1) {
+    // perform rotations when needed to re-balance the tree
         if (balance > 1 && key < root->left->key) {
             root = rightRotate(root);
         }
@@ -58,7 +68,7 @@ BSTNodeT * insert(BSTNodeT * root, int key) {
             root->left = rightRotate(root);
             root->right = leftRotate(root);
         }
-    }
+
     return root;
 }
 /*

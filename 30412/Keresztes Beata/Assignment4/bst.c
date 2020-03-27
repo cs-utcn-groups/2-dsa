@@ -26,8 +26,9 @@ BSTNodeT * createNode(int key) {
 void printBST(BSTNodeT * root, int level) {
     // function that prints the BST, traversing it post order
     if(root) {
-        for(int i=0;i<=level ;i++)
-            printf("    ");
+        for(int i=0; i <= level; i++) {
+            printf("   ");
+        }
         printf("%d\n", root->key);
         printBST(root->left, level + 1);
         printBST(root->right, level + 1);

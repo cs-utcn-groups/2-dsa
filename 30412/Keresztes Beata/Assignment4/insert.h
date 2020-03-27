@@ -13,6 +13,8 @@
 BSTNodeT * constructBST(FILE * fp);
 // function that inserts a new node to the BST tree, keeping te property of a balanced tree
 BSTNodeT * insert(BSTNodeT * root, int key);
+// function to re-balance the tree
+BSTNodeT * reBalanceTree(BSTNodeT * root, int key);
 /*
  * rotation functions
  */
