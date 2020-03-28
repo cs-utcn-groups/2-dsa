@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/SEM 2 DSA/Assignment_4.1/avl.c
+avl.h
+E:/SEM 2 DSA/Assignment_4.1/avl.h
+stdio.h
+-
+stdlib.h
+-
+
+E:/SEM 2 DSA/Assignment_4.1/avl.h
+
+E:/SEM 2 DSA/Assignment_4.1/main.c
+stdio.h
+-
+avl.h
+E:/SEM 2 DSA/Assignment_4.1/avl.h
+
