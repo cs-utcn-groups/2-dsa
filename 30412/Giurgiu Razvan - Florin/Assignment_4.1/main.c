@@ -20,7 +20,6 @@ int main() {
     root = insert(root, 40);
     root = insert(root, 50);
     root = insert(root, 25);
-
     preOrder(root);
     return 0;
 }

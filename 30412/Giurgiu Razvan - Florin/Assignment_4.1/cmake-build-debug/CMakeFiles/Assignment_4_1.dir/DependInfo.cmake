@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "E:/SEM 2 DSA/Assignment_4.1/avl.c" "E:/SEM 2 DSA/Assignment_4.1/cmake-build-debug/CMakeFiles/Assignment_4_1.dir/avl.c.obj"
-  "E:/SEM 2 DSA/Assignment_4.1/main.c" "E:/SEM 2 DSA/Assignment_4.1/cmake-build-debug/CMakeFiles/Assignment_4_1.dir/main.c.obj"
+  "E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_4.1/avl.c" "E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_4.1/cmake-build-debug/CMakeFiles/Assignment_4_1.dir/avl.c.obj"
+  "E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_4.1/main.c" "E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_4.1/cmake-build-debug/CMakeFiles/Assignment_4_1.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
