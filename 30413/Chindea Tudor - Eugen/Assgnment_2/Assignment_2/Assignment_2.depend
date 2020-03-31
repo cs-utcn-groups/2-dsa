@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1583924096 source:c:\users\tudor\onedrive\desktop\dsa lab me\2-dsa\30413\chindea tudor - eugen\assgnment_2\assignment_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
