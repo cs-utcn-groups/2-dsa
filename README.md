@@ -52,7 +52,7 @@ Lab 7: Graphs - representation and traversals
 
 ```
 Lab 8: Graphs - Graph Processing Algorithms (Dijkstra, Prim, Kursal, Floyd etc.)
-```
+``` 
 * Assignments 6: 
 	- 6.1 [Kruskal and Bellman Ford](https://github.com/cs-utcn-groups/2-dsa/tree/master/Assignments/Assignment%206/Assignment%206.1%20-%20Kruskal%20and%20Bellman%20Ford)
 	- 6.2 [Vertex Cover Approximation](https://github.com/cs-utcn-groups/2-dsa/tree/master/Assignments/Assignment%206/Assignment%206.2%20-%20Vertex%20Cover%20Approximation%20-%20extra%20credit) (extra credit!)
