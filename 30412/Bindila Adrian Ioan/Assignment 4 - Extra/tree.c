@@ -90,23 +90,23 @@ tree *adjustBalanceInsert(tree *root, double key) {
 tree *adjustBalanceDelete(tree *root) {
     ///fix any inbalances
     int balanceFactor = getBalanceFactor(root);
-    int lBalanceFactor =getBalanceFactor(root->left);
-    int rBalanceFactor =getBalanceFactor(root->right);
-    if (balanceFactor > 1 && lBalanceFactor>=0) {
+    int lBalanceFactor = getBalanceFactor(root->left);
+    int rBalanceFactor = getBalanceFactor(root->right);
+    if (balanceFactor > 1 && lBalanceFactor >= 0) {
         ///left left case
         return rotateRight(root);
     }
-    if (balanceFactor > 1 && lBalanceFactor<0) {
+    if (balanceFactor > 1 && lBalanceFactor < 0) {
         ///left right case
         root->left = rotateLeft(root->left);
         return rotateRight(root);
     }
-    if (balanceFactor < -1 && rBalanceFactor>=0) {
+    if (balanceFactor < -1 && rBalanceFactor >= 0) {
         ///right left case
         root->right = rotateRight(root->right);
         return rotateLeft(root);
     }
-    if (balanceFactor < -1 && rBalanceFactor<0) {
+    if (balanceFactor < -1 && rBalanceFactor < 0) {
         ///right right case
         return rotateLeft(root);
     }
