@@ -22,6 +22,8 @@ tree *rotateRight(tree *root);
 
 tree *balancedInsert(tree *root, double key);
 
+tree *adjustBalance(tree *root, double key);
+
 void printTree(tree *root, int level);
 
 

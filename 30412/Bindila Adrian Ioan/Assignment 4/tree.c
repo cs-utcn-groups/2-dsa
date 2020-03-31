@@ -52,23 +52,7 @@ tree *rotateRight(tree *root) {
     return lChild;
 }
 
-tree *balancedInsert(tree *root, double key) {
-    ///decided to use the recursive insertion as it makes it easier to update the heights
-
-    if (root == NULL) {
-        tree *leaf = createLeaf(key);
-        return leaf;
-    }
-    if (root->key > key) {
-        root->left = balancedInsert(root->left, key);
-    } else if (root->key < key) {
-        root->right = balancedInsert(root->right, key);
-    } else {
-        printf("%lf already exists in the tree!", key);
-    }
-
-    root->height = __max(getHeight(root->left), getHeight(root->right)) + 1;
-
+tree *adjustBalance(tree *root, double key) {
     ///fix any inbalances
     int balanceFactor = getBalanceFactor(root);
 
@@ -94,6 +78,27 @@ tree *balancedInsert(tree *root, double key) {
     ///if no adjustments are needed:
     return root;
 }
+
+tree *balancedInsert(tree *root, double key) {
+    ///decided to use the recursive insertion as it makes it easier to update the heights
+
+    if (root == NULL) {
+        tree *leaf = createLeaf(key);
+        return leaf;
+    }
+    if (root->key > key) {
+        root->left = balancedInsert(root->left, key);
+    } else if (root->key < key) {
+        root->right = balancedInsert(root->right, key);
+    } else {
+        printf("%lf already exists in the tree!", key);
+    }
+
+    root->height = __max(getHeight(root->left), getHeight(root->right)) + 1;
+
+    return adjustBalance(root, key);
+}
+
 
 void printTree(tree *root, int level) {
     if (root != NULL) {
