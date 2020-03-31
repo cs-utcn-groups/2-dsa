@@ -22,7 +22,7 @@ tree *rotateRight(tree *root);
 
 tree *balancedInsert(tree *root, double key);
 
-void printTree(tree *root, double level);
+void printTree(tree *root, int level);
 
 
 #endif //ASSIGNMENT_4_TREE_H

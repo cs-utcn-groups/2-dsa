@@ -95,7 +95,7 @@ tree *balancedInsert(tree *root, double key) {
     return root;
 }
 
-void printTree(tree *root, double level) {
+void printTree(tree *root, int level) {
     if (root != NULL) {
         printTree(root->right, level + 1);
         for (int i = 0; i < level; ++i) {
