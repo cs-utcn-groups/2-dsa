@@ -7,15 +7,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 void initializeSll();
-void AF(int data);
-void AL(int data);
-void DF();
-void DL();
-void DOOM_THE_LIST();
-void DE(int data);
-void PRINT_ALL(FILE * output);
-void PRINT_F (FILE * output, int tillValue);
-void PRINT_L (FILE * output, int tillValue);
+void addFirst(int data);
+void addLast(int data);
+void deleteFirst();
+void deleteLast();
+void doomTheList();
+void deleteElement(int data);
+void printAll(FILE * output);
+void printFirst (FILE * output, int tillValue);
+void printLast (FILE * output, int tillValue);
 typedef struct _node {
     int data;
     struct _node * next;

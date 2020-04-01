@@ -24,35 +24,35 @@ int main() {
     while(fscanf(fp_input,"%s",command)!=EOF) {
         if(strcmp(command,"AF") == 0) {
             element = readElement();
-            AF(element);
+            addFirst(element);
         }
         if(strcmp(command,"AL") == 0) {
             element = readElement();
-            AL(element);
+            addLast(element);
         }
         if(strcmp(command,"DF") == 0) {
-            DF();
+            deleteFirst();
         }
         if(strcmp(command,"DL") == 0) {
-            DL();
+            deleteLast();
         }
         if(strcmp(command,"PRINT_ALL") == 0) {
-            PRINT_ALL(fp_output);
+            printAll(fp_output);
         }
         if(strcmp(command,"DOOM_THE_LIST") == 0) {
-            DOOM_THE_LIST();
+            doomTheList();
         }
         if(strcmp(command,"DE") == 0) {
             element = readElement();
-            DE(element);
+            deleteElement(element);
         }
         if(strcmp(command,"PRINT_F") == 0) {
             element = readElement();
-            PRINT_F(fp_output,element);
+            printFirst(fp_output, element);
         }
         if(strcmp(command,"PRINT_L") == 0) {
             element = readElement();
-            PRINT_L(fp_output,element);
+            printLast(fp_output, element);
         }
     }
 
