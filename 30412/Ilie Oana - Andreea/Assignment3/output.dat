@@ -1,0 +1,20 @@
+Initial Tree:
+            7
+      5
+            6
+1
+            4
+      2
+            3
+
+Doubly-linked list:
+1 2 3 * * 4 * * 5 6 * * 7 * * 
+
+New Tree:
+            7
+      5
+            6
+1
+            4
+      2
+            3
