@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1585501536 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory moodle lab6 ex1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"header.h"
+
+1585426648 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory moodle lab6 ex1\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1585500839 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory moodle lab6 ex1\hash.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+	<string.h>
+
