@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1585820515 source:c:\users\lepoa\desktop\dsa\2-dsa\30413\paltineanu rares - mihai\graphs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
