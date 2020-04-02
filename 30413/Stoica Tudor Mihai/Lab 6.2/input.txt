@@ -1,0 +1,17 @@
+17
+i Stoica Tudor
+i Corona Virus
+i Jador
+i Stoica Corona
+i Jador Virus
+f Stoica Tudor
+f Corona Virus
+f Jador
+l
+d Stoica Tudor
+d Jador
+f Stoica Tudor
+f Corona Virus
+f Jador Virus
+f Jador
+l
