@@ -13,7 +13,7 @@ edge *createedge(int endPoint, int length) {
     return newedge;
 }
 
-edge *createedgeWithNext(int endPoint, int length,  edge *next) {
+edge *createedgeWithNext(int endPoint, int length, edge *next) {
     edge *newedge = createedge(endPoint, length);
     newedge->next = next;
     return newedge;

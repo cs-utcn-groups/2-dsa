@@ -7,19 +7,19 @@
 
 #include <stdio.h>
 
-typedef struct{
+typedef struct {
     int noNodes;
-    int** edges;
-}mGraph;
+    int **edges;
+} mGraph;
 
-mGraph createMGraph_fromFile(FILE* inFile);
+mGraph createMGraph_fromFile(FILE *inFile);
 
 mGraph createMGaph_fromAdjList();
 
-void printAdjMatrix(mGraph* myGraph, FILE* outFile);
+void printAdjMatrix(mGraph *myGraph, FILE *outFile);
 
-void dfs(mGraph* myGraph, FILE* outFile, FILE* inFile);
+void dfs(mGraph *myGraph, FILE *outFile, FILE *inFile);
 
-void bfs(mGraph* myGraph, FILE* outFile, FILE* inFile);
+void bfs(mGraph *myGraph, FILE *outFile, FILE *inFile);
 
 #endif //ASSIGNMENT5_GRAPHS_MATRIXGRAPH_H

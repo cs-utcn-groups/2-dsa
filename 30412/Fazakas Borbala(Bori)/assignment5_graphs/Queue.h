@@ -12,8 +12,8 @@
 //implemented with a circular list
 
 typedef struct {
-    node  *last;
-} Queue; 
+    node *last;
+} Queue;
 
 Queue createQueue();
 
@@ -21,10 +21,10 @@ void enqueue(Queue *myQueue, int value);
 
 int dequeue(Queue *myQueue);
 
-int front(Queue* myQueue);
+int front(Queue *myQueue);
 
 void printAllQueue(Queue *myQueue, FILE *outFile);
 
-bool isEmpty(Queue* myQueue);
+bool isEmpty(Queue *myQueue);
 
 #endif //QUEUE_QUEUE_H

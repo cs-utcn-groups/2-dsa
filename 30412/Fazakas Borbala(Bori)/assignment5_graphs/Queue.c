@@ -20,27 +20,25 @@ Queue createQueue() {
 
 void enqueue(Queue *myQueue, int value) {
     node *newNode = createNode(value);
-    if(myQueue->last!=NULL) {
+    if (myQueue->last != NULL) {
         newNode->next = myQueue->last->next;
         myQueue->last->next = newNode;
-    }
-    else{
+    } else {
         newNode->next = newNode;
     }
     myQueue->last = newNode;
 }
 
-int front(Queue* myQueue){
+int front(Queue *myQueue) {
     return myQueue->last->next->data;
 }
 
 int dequeue(Queue *myQueue) {
-    node* prevFirst = myQueue->last->next;
+    node *prevFirst = myQueue->last->next;
     int toReturn = prevFirst->data;
-    if(myQueue->last->next==myQueue->last){
-        myQueue->last=NULL;
-    }
-    else {
+    if (myQueue->last->next == myQueue->last) {
+        myQueue->last = NULL;
+    } else {
         myQueue->last->next = myQueue->last->next->next;
     }
     free(prevFirst);
@@ -54,14 +52,14 @@ void printAllQueue(Queue *myQueue, FILE *outFile) {
         int found = 0;
         while (!found) {
             fprintf(outFile, "%d ", curNode->data);
-            if(curNode==myQueue->last) found = 1;
+            if (curNode == myQueue->last) found = 1;
             curNode = curNode->next;
         }
         fprintf(outFile, "\n");
     }
 }
 
-bool isEmpty(Queue* myQueue){
-    return myQueue->last==NULL;
+bool isEmpty(Queue *myQueue) {
+    return myQueue->last == NULL;
 }
 

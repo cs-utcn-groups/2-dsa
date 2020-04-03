@@ -10,21 +10,21 @@
 #include "matrixGraph.h"
 #include "edge.h"
 
-typedef struct{
+typedef struct {
     int noNodes;
-    list* lists;
-}lGraph;
+    list *lists;
+} lGraph;
 
-lGraph createLGaph_fromAdjMatrix(mGraph* MGraph);
+lGraph createLGaph_fromAdjMatrix(mGraph *MGraph);
 
 mGraph createMGaph_fromAdjList();
 
-void printAdjLists(lGraph* myGraph, FILE* outFile);
+void printAdjLists(lGraph *myGraph, FILE *outFile);
 
-void l_dfs(lGraph* myGraph, FILE* outFile, FILE* inFile);
+void l_dfs(lGraph *myGraph, FILE *outFile, FILE *inFile);
 
-void l_bfs(lGraph* myGraph, FILE* outFile, FILE* inFile);
+void l_bfs(lGraph *myGraph, FILE *outFile, FILE *inFile);
 
-list findLongestPath(lGraph* myGraph, int source, int dest);
+list findLongestPath(lGraph *myGraph, int source, int dest);
 
 #endif //ASSIGNMENT5_GRAPHS_LISTGRAPH_H
