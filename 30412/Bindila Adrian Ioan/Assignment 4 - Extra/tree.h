@@ -3,7 +3,7 @@
 //
 
 #ifndef ASSIGNMENT_4_TREE_H
-#define ASSIGNMENT_4_TREE_H
+
 typedef struct _tree {
     double key;
     int height;
@@ -32,5 +32,5 @@ tree *adjustBalanceDelete(tree *root);
 
 void printTree(tree *root, int level);
 
-
+#define ASSIGNMENT_4_TREE_H
 #endif //ASSIGNMENT_4_TREE_H
