@@ -7,6 +7,7 @@
 #include <stdbool.h>
 #include "Queue.h"
 #include "edge.h"
+#include "deEdge.h"
 
 static void allocateMatrix(mGraph *myGraph) {
     myGraph->edges = (int **) malloc(sizeof(int *) * (myGraph->noNodes + 1));
@@ -162,4 +163,100 @@ list findLongestPath(lGraph *myGraph, int source, int dest) {
     int longestPathLength = 0;
     longest_path_dfs(myGraph, source, dest, nowVisited, &currPath, 0, &longestPathLength, &longestPath);
     return longestPath;
+}
+
+deEdge* findMinimumFrontierEdge(lGraph* myGraph, bool* visited){ //!!! runs in e, not log e, as it would mi optimal
+    int minCost = INT_MAX;
+    deEdge* minEdge = NULL;
+    for(int i=1; i<=myGraph->noNodes; i++){
+        if(visited[i]){
+            edge* iterator = myGraph->lists[i].first;
+            while(iterator!=NULL){
+                if(!visited[iterator->endPoint] && iterator->length<minCost) {
+                    free(minEdge);
+                    minEdge = createDeEdge(i, iterator->endPoint, iterator->length);
+                    minCost = iterator->length;
+                }
+                iterator=iterator->next;
+            }
+        }
+    }
+    return minEdge;
+}
+
+void primsAlgorithm(lGraph *myGraph){ //O(ve), not O(vloge)
+    int startNode;
+    printf("Which is the root of the Prim-tree?");
+    fscanf(stdin, "%d", &startNode);
+    bool* visited = l_getVisitedArray(myGraph);
+    visited[startNode]=true;
+    int noVisitedNodes = 1;
+    int minCost = 0;
+    deEdge* frontierEdge;
+    printf("the edges in the prim tree are:\n");
+    while(noVisitedNodes<myGraph->noNodes){
+        frontierEdge = findMinimumFrontierEdge(myGraph, visited);
+        printf("(%d, %d, %d)\n",  frontierEdge->endp1, frontierEdge->endp2,  frontierEdge->length);
+        visited[frontierEdge->endp2]=true;
+        noVisitedNodes++;
+    }
+}
+
+int* getIntArray(int size, int INIT_VALUE){
+    int* array = (int*) malloc(sizeof(int)*size);
+    for(int i=1; i<size; i++){
+        array[i]=INIT_VALUE;
+    }
+    return array;
+}
+
+deEdge* findMinDistanceEdge(lGraph* myGraph, bool* visited, int* distances, int* prevs){ //O(v)
+    int minDist = INT_MAX;
+    deEdge* minEdge = NULL;
+    for(int i=1; i<=myGraph->noNodes; i++){
+        if(!visited[i] && distances[i]<minDist){
+            minEdge = createDeEdge(prevs[i], i, distances[i]-distances[prevs[i]]);
+            minDist = distances[i];
+        }
+    }
+    return minEdge;
+}
+
+void updateDistances(lGraph* myGraph, int addedNode,  bool* visited, int* distances, int* prevs){ //O(v)
+    edge* iterator = myGraph->lists[addedNode].first;
+    while(iterator!=NULL){
+        if(!visited[iterator->endPoint] && distances[iterator->endPoint]>distances[addedNode]+iterator->length){
+            distances[iterator->endPoint]=distances[addedNode]+iterator->length;
+            prevs[iterator->endPoint]=addedNode;
+        }
+        iterator=iterator->next;
+    }
+
+}
+
+void dijkstraAlgorithm(lGraph *myGraph){
+    int startNode;
+    printf("Which is the root of the Dijkstra-tree?");
+    fscanf(stdin, "%d", &startNode);
+
+    bool* visited = l_getVisitedArray(myGraph);
+    int* distances = getIntArray(myGraph->noNodes+1, INT_MAX);
+    int* prevs = getIntArray(myGraph->noNodes+1, -1);
+
+    distances[startNode]=0;
+    prevs[startNode]=0;
+    visited[startNode]=true;
+    updateDistances(myGraph, startNode, visited, distances, prevs);
+
+    int noVisitedNodes = 1;
+    deEdge* frontierEdge;
+    printf("the edges in the Dijsktra tree are:\n");
+    while(noVisitedNodes<myGraph->noNodes){
+        frontierEdge = findMinDistanceEdge(myGraph, visited, distances, prevs);
+        printf("New edge: (%d, %d, %d)\n",  frontierEdge->endp1, frontierEdge->endp2,  frontierEdge->length);
+        printf("--> the distance to node %d is %d\n", frontierEdge->endp2, distances[frontierEdge->endp2]);
+        visited[frontierEdge->endp2]=true;
+        updateDistances(myGraph, frontierEdge->endp2, visited, distances, prevs);
+        noVisitedNodes++;
+    }
 }

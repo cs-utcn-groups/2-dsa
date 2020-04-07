@@ -23,5 +23,11 @@ int main() {
 
     mGraph newMatrixGraph = createMGaph_fromAdjList(&listGraph);
     printAdjMatrix(&newMatrixGraph, stdout);
+
+    printf("Prims algorithms for this graph:\n");
+    primsAlgorithm(&listGraph);
+
+    printf("Dijkstra algorithm for this graph: \n");
+    dijkstraAlgorithm(&listGraph);
     return 0;
 }
