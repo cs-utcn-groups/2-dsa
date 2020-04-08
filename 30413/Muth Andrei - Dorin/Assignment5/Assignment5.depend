@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1586087927 source:c:\labcp\2-dsa\30413\muth andrei - dorin\assignment5\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1586088631 source:c:\labcp\2-dsa\30413\muth andrei - dorin\assignment5\lists2matrix.c
+	<stdio.h>
+	<stdlib.h>
+
