@@ -118,6 +118,15 @@ void l_bfs(lGraph *myGraph, FILE *outFile, FILE *inFile) {
     fprintf(outFile, "\n");
 }
 
+int* getIntArray(int size, int INIT_VALUE){
+    int* array = (int*) malloc(sizeof(int)*size);
+    for(int i=1; i<size; i++){
+        array[i]=INIT_VALUE;
+    }
+    return array;
+}
+
+
 
 /*with a modified dfs I simply check all the siple paths in the graph starting at the given root
 modifications with respect to the general dfs: I don't generate a tree --> I may need to visit a node more than once.
@@ -127,15 +136,15 @@ modifications with respect to the general dfs: I don't generate a tree --> I may
  */
 
 
-void longest_path_dfs(lGraph *myGraph, int node, int dest, bool *nowVisited, list *currPath, int currPathLength,
+void longest_path_dfs(lGraph *myGraph, int node, int dest, int* distances, bool *nowVisited, list *currPath, int currPathLength,
                       int *longestPathLegth, list *longestPath) {
     if (node != dest) {
         nowVisited[node] = true;
         edge *iterator = myGraph->lists[node].first;
         while (iterator != NULL) {
-            if (!nowVisited[iterator->endPoint]) {
+            if (!nowVisited[iterator->endPoint] && distances[iterator->endPoint]>distances[node]+iterator->length) { //otherwise, it's not worth visiting it again
                 addLast(currPath, iterator->endPoint, iterator->length);
-                longest_path_dfs(myGraph, iterator->endPoint, dest, nowVisited, currPath,
+                longest_path_dfs(myGraph, iterator->endPoint, dest, distances, nowVisited, currPath,
                                  currPathLength + iterator->length, longestPathLegth, longestPath);
                 deleteLast(currPath);
             }
@@ -160,8 +169,10 @@ list findLongestPath(lGraph *myGraph, int source, int dest) {
     list currPath = createList();
     addLast(&currPath, source, 0);
     bool *nowVisited = l_getVisitedArray(myGraph);
+    int* distances = getIntArray(myGraph->noNodes+1, INT_MAX);
+    distances[source]=0;
     int longestPathLength = 0;
-    longest_path_dfs(myGraph, source, dest, nowVisited, &currPath, 0, &longestPathLength, &longestPath);
+    longest_path_dfs(myGraph, source, dest, distances, nowVisited, &currPath, 0, &longestPathLength, &longestPath);
     return longestPath;
 }
 
@@ -200,14 +211,6 @@ void primsAlgorithm(lGraph *myGraph){ //O(ve), not O(vloge)
         visited[frontierEdge->endp2]=true;
         noVisitedNodes++;
     }
-}
-
-int* getIntArray(int size, int INIT_VALUE){
-    int* array = (int*) malloc(sizeof(int)*size);
-    for(int i=1; i<size; i++){
-        array[i]=INIT_VALUE;
-    }
-    return array;
 }
 
 deEdge* findMinDistanceEdge(lGraph* myGraph, bool* visited, int* distances, int* prevs){ //O(v)
