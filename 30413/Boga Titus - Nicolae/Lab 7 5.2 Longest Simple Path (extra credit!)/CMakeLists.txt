@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(Lab_7_5_2_Longest_Simple_Path__extra_credit__ C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(Lab_7_5_2_Longest_Simple_Path__extra_credit__ main.c)

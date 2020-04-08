@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/C++/Lab 7 5.2 Longest Simple Path (extra credit!)/main.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+
