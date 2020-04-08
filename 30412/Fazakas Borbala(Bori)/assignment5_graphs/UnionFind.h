@@ -9,7 +9,7 @@
 
 typedef struct {
     int size;
-    int* root;
+    int* roots;
 }UnionFind;
 
 void union_f(UnionFind* myUF, int a, int b);

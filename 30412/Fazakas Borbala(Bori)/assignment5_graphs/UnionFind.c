@@ -3,59 +3,44 @@
 //
 
 #include "UnionFind.h"
+#include <stdlib.h>
 
-/*UnionFind createUnionFind(int noElements)
+UnionFind createUnionFind(int noElements)
 {
-    UnionFind muUf;
-    this.noElements=noElements;
-    root = new int[noElements+1];
-    noChildren = new int[noElements+1];
-    for(int i=1; i<=noElements; i++) {
-        root[i]=i;
-        noChildren[i]=0;
+    UnionFind myUf;
+    myUf.size = noElements;
+    myUf.roots = (int*) malloc(sizeof(int*)*(noElements+1));
+    for(int i=1; i<=noElements; i++){
+        myUf.roots[i]=i;
     }
 }
 
-void union(int a, int b)
+static int getRoot(UnionFind* myUf, int a) //path compression
 {
-int rootA = getRoot(a);
-int rootB = getRoot(b);
-if(noChildren[rootA]<noChildren[rootB])
-{
-setRoot(rootA, rootB);
-if(noChildren[rootA]+1>noChildren[rootB]) noChildren[rootB]+=noChildren[rootA]+1;
-}
-else {
-setRoot(rootB, rootA);
-if(noChildren[rootB]+1>noChildren[rootA]) noChildren[rootA]+=noChildren[rootB]+1;
-}
-printRootsArray();
-}
-
-public boolean connected(int a, int b)
-{
-    if(getRoot(a)==getRoot(b)) return true;
-    return false;
-}
-
-private int getRoot(int a)
-{
-    if(root[a]==a) return a;
+    if(myUf->roots[a]==a) return a;
     else
     {
-        int rootA = getRoot(root[a]);
-        root[a]=rootA;
+        int rootA = getRoot(myUf, myUf->roots[a]);
+        myUf->roots[a]=rootA;
         return rootA;
     }
 }
 
-private void setRoot(int a, int newRoot)
+void setRoot(UnionFind* myUf, int a, int newRoot)
 {
-    root[a]=newRoot;
+    myUf->roots[a]=newRoot;
 }
 
-private void printRootsArray()
+void union_f(UnionFind* myUf, int a, int b)
 {
-    System.out.println(Arrays.toString(root));
+    int rootA = getRoot(myUf, a);
+    int rootB = getRoot(myUf, b);
+    setRoot(myUf, rootA, rootB);
 }
- */
+
+bool find(UnionFind* myUf, int a, int b)
+{
+    if(getRoot(myUf, a)==getRoot(myUf, b)) return true;
+    return false;
+}
+
