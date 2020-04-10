@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/C++/(Lab 8) 6.2 Vertex Cover Approximation (extra credit!)/main.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+

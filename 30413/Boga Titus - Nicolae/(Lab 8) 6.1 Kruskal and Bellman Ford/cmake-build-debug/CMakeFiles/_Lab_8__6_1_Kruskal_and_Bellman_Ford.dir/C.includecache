@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/C++/(Lab 8) 6.1 Kruskal and Bellman Ford/main.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+
