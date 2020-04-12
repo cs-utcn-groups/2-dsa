@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/graphTraversals.c
+graphTraversals.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/graphTraversals.h
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/graphTraversals.h
+queue.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/queue.h
+stack.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/stack.h
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/node.h
+stdio.h
+-
+stdlib.h
+-
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/queue.h
+node.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/node.h
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/stack.h
+node.h
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 5/Adjacency List/node.h
+
