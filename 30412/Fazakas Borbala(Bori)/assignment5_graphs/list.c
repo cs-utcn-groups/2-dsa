@@ -11,10 +11,12 @@ list createList() {
     list newList;
     newList.first = NULL;
     newList.last = NULL;
+    newList.size=0;
     return newList;
 }
 
 void addFirst(list *myList, int endPoint, int length) {
+    myList->size++;
     edge *newedge = createedgeWithNext(endPoint, length, myList->first);
     myList->first = newedge;
     if (myList->last == NULL) myList->last = myList->first;
@@ -23,6 +25,7 @@ void addFirst(list *myList, int endPoint, int length) {
 void addLast(list *myList, int endPoint, int length) {
     if (myList->first == NULL) addFirst(myList, endPoint, length);
     else {
+        myList->size++;
         edge *newedge = createedge(endPoint, length);
         myList->last->next = newedge;
         myList->last = newedge;
@@ -31,6 +34,7 @@ void addLast(list *myList, int endPoint, int length) {
 
 void deleteFirst(list *myList) {
     if (myList->first != NULL) {
+        myList->size--;
         edge *prevFirst = myList->first;
         myList->first = myList->first->next;
         free(prevFirst);
@@ -40,6 +44,7 @@ void deleteFirst(list *myList) {
 
 void deleteLast(list *myList) {
     if (myList->last != NULL) {
+        myList->size--;
         edge *lastButOne = myList->first;
         if (myList->first != myList->last) {
             while (lastButOne->next->next != NULL) lastButOne = lastButOne->next;
@@ -55,6 +60,7 @@ void deleteLast(list *myList) {
 }
 
 void deleteAll(list *myList) {
+    myList->size=0;
     edge *curFirst;
     while (myList->first != NULL) {
         curFirst = myList->first;
@@ -71,6 +77,7 @@ void deleteValue(list *myList, int endPoint) {
         if (curedge->endPoint ==
             endPoint)  //remark that in all of the 3 cases prevedge is constant/it's value doesn't matter anymore
         {
+            myList->size--;
             if (curedge == myList->first) //it remains null
             {
                 deleteFirst(myList);

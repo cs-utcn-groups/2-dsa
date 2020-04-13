@@ -9,10 +9,11 @@ UnionFind createUnionFind(int noElements)
 {
     UnionFind myUf;
     myUf.size = noElements;
-    myUf.roots = (int*) malloc(sizeof(int*)*(noElements+1));
+    myUf.roots = (int*) malloc(sizeof(int)*(noElements+1));
     for(int i=1; i<=noElements; i++){
         myUf.roots[i]=i;
     }
+    return myUf;
 }
 
 static int getRoot(UnionFind* myUf, int a) //path compression

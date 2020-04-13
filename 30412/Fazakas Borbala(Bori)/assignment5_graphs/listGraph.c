@@ -299,7 +299,54 @@ void BellmanFordAlgorithm(lGraph* myGraph){
     printDistances(myGraph, startNode, distances, "Bellman-Ford");
 }
 
-void kruskalalgorithm(lGraph* myGraph){
-    UnionFind myUF = createUnionFind(myGraph->noNodes);
+int noEdges(lGraph* myGraph){
+    int result = 0;
+    for(int i=1; i<=myGraph->noNodes; i++){
+        result+=myGraph->lists[i].size;
+    }
+    return result/2;
+}
 
+deEdge* getEdgesArray(lGraph* myGraph, int noEdgesInGraph){
+    deEdge* edges = (deEdge*) malloc(sizeof(deEdge)*noEdgesInGraph);
+    int index=0;
+    for(int i=1; i<=myGraph->noNodes; i++){
+        edge* iterator = myGraph->lists[i].first;
+        while(iterator!=NULL){
+            if(iterator->endPoint>i) { //otherwise, it was counted before
+                edges[index] = *createDeEdge(i, iterator->endPoint, iterator->length);
+                index++;
+            }
+            iterator=iterator->next;
+        }
+    }
+    return edges;
+}
+
+int compareEdges_nonVoid(deEdge* a, deEdge* b){
+    return a->length-b->length;
+}
+
+int compareEdges(const void* a, const void* b){
+    return compareEdges_nonVoid(a, b);
+}
+
+void kruskalAlgorithm(lGraph* myGraph){
+    printf("-------Kruskal algorithm--------\n");
+    UnionFind myUF = createUnionFind(myGraph->noNodes);
+    int noEdgesInGraph = noEdges(myGraph);
+    deEdge* edges = getEdgesArray(myGraph, noEdgesInGraph);
+    qsort(edges, noEdgesInGraph, sizeof(deEdge), compareEdges);
+    printf("The edges in the minimum spanning tree are\n");
+
+    int sumOfLengths=0;
+    int noFoundEdges=0;
+    for(int i=0; i<noEdgesInGraph && noFoundEdges<myGraph->noNodes-1; i++){
+        if(!find(&myUF, edges[i].endp1, edges[i].endp2)){
+            union_f(&myUF, edges[i].endp1, edges[i].endp2);
+            printf("(%d, %d) with length %d\n", edges[i].endp1, edges[i].endp2, edges[i].length);
+            sumOfLengths+=edges[i].length;
+            noFoundEdges++;
+        }
+    }
 }

@@ -11,7 +11,7 @@ int main() {
 
     lGraph listGraph = createLGaph_fromAdjMatrix(&myGraph);
     printAdjLists(&listGraph, stdout);
-    l_dfs(&listGraph, stdout, stdin);
+    /*l_dfs(&listGraph, stdout, stdin);
     l_bfs(&listGraph, stdout, stdin);
 
     int source, dest;
@@ -28,6 +28,8 @@ int main() {
 
     dijkstraAlgorithm(&listGraph);
 
-    BellmanFordAlgorithm(&listGraph);
+    BellmanFordAlgorithm(&listGraph);*/
+
+    kruskalAlgorithm(&listGraph);
     return 0;
 }

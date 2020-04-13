@@ -33,4 +33,6 @@ void dijkstraAlgorithm(lGraph *myGraph);
 
 void BellmanFordAlgorithm(lGraph* myGraph);
 
+void kruskalAlgorithm(lGraph* myGraph);
+
 #endif //ASSIGNMENT5_GRAPHS_LISTGRAPH_H

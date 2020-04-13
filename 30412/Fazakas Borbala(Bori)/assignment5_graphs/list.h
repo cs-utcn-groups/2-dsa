@@ -10,6 +10,7 @@
 #include <stdio.h>
 
 typedef struct {
+    int size;
     edge *first, *last;
 } list;
 
