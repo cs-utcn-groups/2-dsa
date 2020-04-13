@@ -11,7 +11,7 @@ list createList() {
     list newList;
     newList.first = NULL;
     newList.last = NULL;
-    newList.size=0;
+    newList.size = 0;
     return newList;
 }
 
@@ -60,7 +60,7 @@ void deleteLast(list *myList) {
 }
 
 void deleteAll(list *myList) {
-    myList->size=0;
+    myList->size = 0;
     edge *curFirst;
     while (myList->first != NULL) {
         curFirst = myList->first;

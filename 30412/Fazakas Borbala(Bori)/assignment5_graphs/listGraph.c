@@ -9,6 +9,7 @@
 #include "edge.h"
 #include "deEdge.h"
 #include "UnionFind.h"
+#include <time.h>
 
 static void allocateMatrix(mGraph *myGraph) {
     myGraph->edges = (int **) malloc(sizeof(int *) * (myGraph->noNodes + 1));
@@ -119,14 +120,13 @@ void l_bfs(lGraph *myGraph, FILE *outFile, FILE *inFile) {
     fprintf(outFile, "\n");
 }
 
-int* getIntArray(int size, int INIT_VALUE){
-    int* array = (int*) malloc(sizeof(int)*size);
-    for(int i=1; i<size; i++){
-        array[i]=INIT_VALUE;
+int *getIntArray(int size, int INIT_VALUE) {
+    int *array = (int *) malloc(sizeof(int) * size);
+    for (int i = 1; i < size; i++) {
+        array[i] = INIT_VALUE;
     }
     return array;
 }
-
 
 
 /*with a modified dfs I simply check all the siple paths in the graph starting at the given root
@@ -137,13 +137,15 @@ modifications with respect to the general dfs: I don't generate a tree --> I may
  */
 
 
-void longest_path_dfs(lGraph *myGraph, int node, int dest, int* distances, bool *nowVisited, list *currPath, int currPathLength,
+void longest_path_dfs(lGraph *myGraph, int node, int dest, int *distances, bool *nowVisited, list *currPath,
+                      int currPathLength,
                       int *longestPathLegth, list *longestPath) {
     if (node != dest) {
         nowVisited[node] = true;
         edge *iterator = myGraph->lists[node].first;
         while (iterator != NULL) {
-            if (!nowVisited[iterator->endPoint] && distances[iterator->endPoint]>distances[node]+iterator->length) { //otherwise, it's not worth visiting it again
+            if (!nowVisited[iterator->endPoint] && distances[iterator->endPoint] > distances[node] +
+                                                                                   iterator->length) { //otherwise, it's not worth visiting it again
                 addLast(currPath, iterator->endPoint, iterator->length);
                 longest_path_dfs(myGraph, iterator->endPoint, dest, distances, nowVisited, currPath,
                                  currPathLength + iterator->length, longestPathLegth, longestPath);
@@ -170,104 +172,104 @@ list findLongestPath(lGraph *myGraph, int source, int dest) {
     list currPath = createList();
     addLast(&currPath, source, 0);
     bool *nowVisited = l_getVisitedArray(myGraph);
-    int* distances = getIntArray(myGraph->noNodes+1, INT_MAX);
-    distances[source]=0;
+    int *distances = getIntArray(myGraph->noNodes + 1, INT_MAX);
+    distances[source] = 0;
     int longestPathLength = 0;
     longest_path_dfs(myGraph, source, dest, distances, nowVisited, &currPath, 0, &longestPathLength, &longestPath);
     return longestPath;
 }
 
-deEdge* findMinimumFrontierEdge(lGraph* myGraph, bool* visited){ //!!! runs in e, not log e, as it would mi optimal
+deEdge *findMinimumFrontierEdge(lGraph *myGraph, bool *visited) { //!!! runs in e, not log e, as it would mi optimal
     int minCost = INT_MAX;
-    deEdge* minEdge = NULL;
-    for(int i=1; i<=myGraph->noNodes; i++){
-        if(visited[i]){
-            edge* iterator = myGraph->lists[i].first;
-            while(iterator!=NULL){
-                if(!visited[iterator->endPoint] && iterator->length<minCost) {
+    deEdge *minEdge = NULL;
+    for (int i = 1; i <= myGraph->noNodes; i++) {
+        if (visited[i]) {
+            edge *iterator = myGraph->lists[i].first;
+            while (iterator != NULL) {
+                if (!visited[iterator->endPoint] && iterator->length < minCost) {
                     free(minEdge);
                     minEdge = createDeEdge(i, iterator->endPoint, iterator->length);
                     minCost = iterator->length;
                 }
-                iterator=iterator->next;
+                iterator = iterator->next;
             }
         }
     }
     return minEdge;
 }
 
-void primsAlgorithm(lGraph *myGraph){ //O(ve), not O(vloge)
-    printf("Prims algorithms for this graph:\n");
+void primsAlgorithm(lGraph *myGraph) { //O(ve), not O(vloge)
+    printf("-------Prim's algorithm--------\n");
     int startNode;
     printf("Which is the root of the Prim-tree?");
     fscanf(stdin, "%d", &startNode);
-    bool* visited = l_getVisitedArray(myGraph);
-    visited[startNode]=true;
+    bool *visited = l_getVisitedArray(myGraph);
+    visited[startNode] = true;
     int noVisitedNodes = 1;
     int minCost = 0;
-    deEdge* frontierEdge;
+    deEdge *frontierEdge;
     printf("the edges in the prim tree are:\n");
-    while(noVisitedNodes<myGraph->noNodes){
+    while (noVisitedNodes < myGraph->noNodes) {
         frontierEdge = findMinimumFrontierEdge(myGraph, visited);
-        printf("(%d, %d, %d)\n",  frontierEdge->endp1, frontierEdge->endp2,  frontierEdge->length);
-        visited[frontierEdge->endp2]=true;
+        printf("(%d, %d, %d)\n", frontierEdge->endp1, frontierEdge->endp2, frontierEdge->length);
+        visited[frontierEdge->endp2] = true;
         noVisitedNodes++;
     }
 }
 
-deEdge* findMinDistanceEdge(lGraph* myGraph, bool* visited, int* distances, int* prevs){ //O(v)
+deEdge *findMinDistanceEdge(lGraph *myGraph, bool *visited, int *distances, int *prevs) { //O(v)
     int minDist = INT_MAX;
-    deEdge* minEdge = NULL;
-    for(int i=1; i<=myGraph->noNodes; i++){
-        if(!visited[i] && distances[i]<minDist){
-            minEdge = createDeEdge(prevs[i], i, distances[i]-distances[prevs[i]]);
+    deEdge *minEdge = NULL;
+    for (int i = 1; i <= myGraph->noNodes; i++) {
+        if (!visited[i] && distances[i] < minDist) {
+            minEdge = createDeEdge(prevs[i], i, distances[i] - distances[prevs[i]]);
             minDist = distances[i];
         }
     }
     return minEdge;
 }
 
-void updateDistances(lGraph* myGraph, int addedNode,  bool* visited, int* distances, int* prevs){ //O(v)
-    edge* iterator = myGraph->lists[addedNode].first;
-    while(iterator!=NULL){
-        if(!visited[iterator->endPoint] && distances[iterator->endPoint]>distances[addedNode]+iterator->length){
-            distances[iterator->endPoint]=distances[addedNode]+iterator->length;
-            prevs[iterator->endPoint]=addedNode;
+void updateDistances(lGraph *myGraph, int addedNode, bool *visited, int *distances, int *prevs) { //O(v)
+    edge *iterator = myGraph->lists[addedNode].first;
+    while (iterator != NULL) {
+        if (!visited[iterator->endPoint] && distances[iterator->endPoint] > distances[addedNode] + iterator->length) {
+            distances[iterator->endPoint] = distances[addedNode] + iterator->length;
+            prevs[iterator->endPoint] = addedNode;
         }
-        iterator=iterator->next;
+        iterator = iterator->next;
     }
 }
 
-void printDistances(lGraph* myGraph, int root, int* distances, char* algorithm){
+void printDistances(lGraph *myGraph, int root, int *distances, char *algorithm) {
     printf("The distances obtained with %s's algorithm are:\n", algorithm);
-    for(int i=1; i<=myGraph->noNodes; i++) {
+    for (int i = 1; i <= myGraph->noNodes; i++) {
         printf("From node %d to %d the distance is %d\n", root, i, distances[i]);
     }
 }
 
-void dijkstraAlgorithm(lGraph *myGraph){
-    printf("Dijkstra algorithm for this graph: \n");
+void dijkstraAlgorithm(lGraph *myGraph) {
+    printf("-------Dijkstra algorithm--------\n");
     int startNode;
     printf("Which is the root of the Dijkstra-tree?");
     fscanf(stdin, "%d", &startNode);
 
-    bool* visited = l_getVisitedArray(myGraph);
-    int* distances = getIntArray(myGraph->noNodes+1, INT_MAX);
-    int* prevs = getIntArray(myGraph->noNodes+1, -1);
+    bool *visited = l_getVisitedArray(myGraph);
+    int *distances = getIntArray(myGraph->noNodes + 1, INT_MAX);
+    int *prevs = getIntArray(myGraph->noNodes + 1, -1);
 
-    distances[startNode]=0;
-    prevs[startNode]=0;
-    visited[startNode]=true;
+    distances[startNode] = 0;
+    prevs[startNode] = 0;
+    visited[startNode] = true;
     updateDistances(myGraph, startNode, visited, distances, prevs);
 
     int noVisitedNodes = 1;
-    deEdge* frontierEdge;
+    deEdge *frontierEdge;
     printf("the edges in the Dijsktra tree are:\n");
-    while(noVisitedNodes<myGraph->noNodes){
+    while (noVisitedNodes < myGraph->noNodes) {
         frontierEdge = findMinDistanceEdge(myGraph, visited, distances, prevs);
-        printf("New edge: (%d, %d, %d)\n",  frontierEdge->endp1, frontierEdge->endp2,  frontierEdge->length);
+        printf("New edge: (%d, %d, %d)\n", frontierEdge->endp1, frontierEdge->endp2, frontierEdge->length);
         printf("--> the distance to node %d is %d\n", frontierEdge->endp2, distances[frontierEdge->endp2]);
-        visited[frontierEdge->endp2]=true;
+        visited[frontierEdge->endp2] = true;
         updateDistances(myGraph, frontierEdge->endp2, visited, distances, prevs);
         noVisitedNodes++;
     }
@@ -275,14 +277,15 @@ void dijkstraAlgorithm(lGraph *myGraph){
     printDistances(myGraph, startNode, distances, "Dijkstra");
 }
 
-void BellmanFordAlgorithm(lGraph* myGraph){
+void BellmanFordAlgorithm(lGraph *myGraph) {
+    printf("-------Bellman-Ford algorithm--------\n");
     int startNode;
     printf("Which is the root of the Bellman_Ford-tree?");
     fscanf(stdin, "%d", &startNode);
-    int* distances = getIntArray(myGraph->noNodes+1, INT_MAX);
-    distances[startNode]=0;
-    edge* iterator;
-    for(int i=1; i<=myGraph->noNodes-1; i++) { //iterate v-1 times
+    int *distances = getIntArray(myGraph->noNodes + 1, INT_MAX);
+    distances[startNode] = 0;
+    edge *iterator;
+    for (int i = 1; i <= myGraph->noNodes - 1; i++) { //iterate v-1 times
         for (int j = 1; j <= myGraph->noNodes; j++) {//through all the edges{
             iterator = myGraph->lists[j].first;
             if (distances[j] != INT_MAX) {
@@ -299,52 +302,99 @@ void BellmanFordAlgorithm(lGraph* myGraph){
     printDistances(myGraph, startNode, distances, "Bellman-Ford");
 }
 
-int noEdges(lGraph* myGraph){
+int noEdges(lGraph *myGraph) {
     int result = 0;
-    for(int i=1; i<=myGraph->noNodes; i++){
-        result+=myGraph->lists[i].size;
+    for (int i = 1; i <= myGraph->noNodes; i++) {
+        result += myGraph->lists[i].size;
     }
-    return result/2;
+    return result / 2;
 }
 
-deEdge* getEdgesArray(lGraph* myGraph, int noEdgesInGraph){
-    deEdge* edges = (deEdge*) malloc(sizeof(deEdge)*noEdgesInGraph);
-    int index=0;
-    for(int i=1; i<=myGraph->noNodes; i++){
-        edge* iterator = myGraph->lists[i].first;
-        while(iterator!=NULL){
-            if(iterator->endPoint>i) { //otherwise, it was counted before
+deEdge *getEdgesArray(lGraph *myGraph, int noEdgesInGraph) {
+    //it is guaranteed, that for any edge added to the array,
+    // its first endpoint is smaller than the second one
+    deEdge *edges = (deEdge *) malloc(sizeof(deEdge) * noEdgesInGraph);
+    int index = 0;
+    for (int i = 1; i <= myGraph->noNodes; i++) {
+        edge *iterator = myGraph->lists[i].first;
+        while (iterator != NULL) {
+            if (iterator->endPoint > i) { //otherwise, it was counted before
                 edges[index] = *createDeEdge(i, iterator->endPoint, iterator->length);
                 index++;
             }
-            iterator=iterator->next;
+            iterator = iterator->next;
         }
     }
     return edges;
 }
 
-int compareEdges(const void* a, const void* b){
-    deEdge* edgeA = (deEdge*) a;
-    deEdge* edgeB = (deEdge*) b;
-    return edgeA->length-edgeB->length;
+int compareEdges(const void *a, const void *b) {
+    deEdge *edgeA = (deEdge *) a;
+    deEdge *edgeB = (deEdge *) b;
+    return edgeA->length - edgeB->length;
 }
 
-void kruskalAlgorithm(lGraph* myGraph){
+void kruskalAlgorithm(lGraph *myGraph) {
     printf("-------Kruskal algorithm--------\n");
     UnionFind myUF = createUnionFind(myGraph->noNodes);
     int noEdgesInGraph = noEdges(myGraph);
-    deEdge* edges = getEdgesArray(myGraph, noEdgesInGraph);
+    deEdge *edges = getEdgesArray(myGraph, noEdgesInGraph);
     qsort(edges, noEdgesInGraph, sizeof(deEdge), compareEdges);
     printf("The edges in the minimum spanning tree are\n");
 
-    int sumOfLengths=0;
-    int noFoundEdges=0;
-    for(int i=0; i<noEdgesInGraph && noFoundEdges<myGraph->noNodes-1; i++){
-        if(!find(&myUF, edges[i].endp1, edges[i].endp2)){
+    int sumOfLengths = 0;
+    int noFoundEdges = 0;
+    for (int i = 0; i < noEdgesInGraph && noFoundEdges < myGraph->noNodes - 1; i++) {
+        if (!find(&myUF, edges[i].endp1, edges[i].endp2)) {
             union_f(&myUF, edges[i].endp1, edges[i].endp2);
             printf("(%d, %d) with length %d\n", edges[i].endp1, edges[i].endp2, edges[i].length);
-            sumOfLengths+=edges[i].length;
+            sumOfLengths += edges[i].length;
             noFoundEdges++;
         }
     }
+}
+
+void swap(deEdge* a, deEdge* b){
+    deEdge helper = *b;
+    *b = *a;
+    *a = helper;
+}
+
+void deleteElementFromArray(int index, deEdge* array, int noElements) {
+    swap(&array[index], &array[noElements - 1]);
+}
+
+void printEdgesArray(deEdge* array, int noElements){
+    for(int i=0; i<noElements; i++){
+        printf("(%d, %d, %d)  ", array[i].endp1, array[i].endp2, array[i].length);
+    }
+}
+
+void vertexCoverApproximation(lGraph* myGraph){ //approximation ratio = 2
+    printf("-------Vertex Cover approximation algorithm--------\n");
+    int noEdgesInGraph = noEdges(myGraph);
+    deEdge *unCoveredEdges = getEdgesArray(myGraph, noEdgesInGraph);
+    int noUncoveredEdges = noEdgesInGraph;
+    srand(time(0));
+    int endp1, endp2;
+    int randIndex;
+    printf("The edges added to the verted cover are: ");
+    //instead of deleting edges from the array, which would be very time consuming, I will just swap the deleted elements with the ones at the end
+    while(noUncoveredEdges>0){
+        randIndex = rand()%noUncoveredEdges;
+        endp1 = unCoveredEdges[randIndex].endp1;
+        endp2 = unCoveredEdges[randIndex].endp2;
+        printf("%d and %d, which cover edges:\n", endp1, endp2);
+        for(int i=0; i<noUncoveredEdges; i++){
+            if(unCoveredEdges[i].endp1==endp1 || unCoveredEdges[i].endp2==endp1 ||
+            unCoveredEdges[i].endp1==endp2 || unCoveredEdges[i].endp2==endp2){
+                printf("(%d, %d) ", unCoveredEdges[i].endp1, unCoveredEdges[i].endp2);
+                deleteElementFromArray(i, unCoveredEdges, noUncoveredEdges);
+                noUncoveredEdges--;
+                i--; //I need to check the edge newly placed here too
+            }
+        }
+        printf("\n");
+    }
+
 }

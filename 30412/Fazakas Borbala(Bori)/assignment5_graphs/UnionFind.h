@@ -9,13 +9,13 @@
 
 typedef struct {
     int size;
-    int* roots;
-}UnionFind;
+    int *roots;
+} UnionFind;
 
 UnionFind createUnionFind(int noElements);
 
-void union_f(UnionFind* myUF, int a, int b);
+void union_f(UnionFind *myUF, int a, int b);
 
-bool find(UnionFind* myUf, int a, int b);
+bool find(UnionFind *myUf, int a, int b);
 
 #endif //ASSIGNMENT5_GRAPHS_UNIONFIND_H
