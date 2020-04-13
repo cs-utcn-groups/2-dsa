@@ -12,6 +12,8 @@ typedef struct {
     int* roots;
 }UnionFind;
 
+UnionFind createUnionFind(int noElements);
+
 void union_f(UnionFind* myUF, int a, int b);
 
 bool find(UnionFind* myUf, int a, int b);

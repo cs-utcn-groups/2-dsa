@@ -31,4 +31,6 @@ void primsAlgorithm(lGraph *myGraph); //prints out the chosen edges
 
 void dijkstraAlgorithm(lGraph *myGraph);
 
+void BellmanFordAlgorithm(lGraph* myGraph);
+
 #endif //ASSIGNMENT5_GRAPHS_LISTGRAPH_H

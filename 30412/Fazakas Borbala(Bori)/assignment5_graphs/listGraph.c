@@ -8,6 +8,7 @@
 #include "Queue.h"
 #include "edge.h"
 #include "deEdge.h"
+#include "UnionFind.h"
 
 static void allocateMatrix(mGraph *myGraph) {
     myGraph->edges = (int **) malloc(sizeof(int *) * (myGraph->noNodes + 1));
@@ -196,6 +197,7 @@ deEdge* findMinimumFrontierEdge(lGraph* myGraph, bool* visited){ //!!! runs in e
 }
 
 void primsAlgorithm(lGraph *myGraph){ //O(ve), not O(vloge)
+    printf("Prims algorithms for this graph:\n");
     int startNode;
     printf("Which is the root of the Prim-tree?");
     fscanf(stdin, "%d", &startNode);
@@ -234,10 +236,17 @@ void updateDistances(lGraph* myGraph, int addedNode,  bool* visited, int* distan
         }
         iterator=iterator->next;
     }
+}
 
+void printDistances(lGraph* myGraph, int root, int* distances, char* algorithm){
+    printf("The distances obtained with %s's algorithm are:\n", algorithm);
+    for(int i=1; i<=myGraph->noNodes; i++) {
+        printf("From node %d to %d the distance is %d\n", root, i, distances[i]);
+    }
 }
 
 void dijkstraAlgorithm(lGraph *myGraph){
+    printf("Dijkstra algorithm for this graph: \n");
     int startNode;
     printf("Which is the root of the Dijkstra-tree?");
     fscanf(stdin, "%d", &startNode);
@@ -262,4 +271,35 @@ void dijkstraAlgorithm(lGraph *myGraph){
         updateDistances(myGraph, frontierEdge->endp2, visited, distances, prevs);
         noVisitedNodes++;
     }
+
+    printDistances(myGraph, startNode, distances, "Dijkstra");
+}
+
+void BellmanFordAlgorithm(lGraph* myGraph){
+    int startNode;
+    printf("Which is the root of the Bellman_Ford-tree?");
+    fscanf(stdin, "%d", &startNode);
+    int* distances = getIntArray(myGraph->noNodes+1, INT_MAX);
+    distances[startNode]=0;
+    edge* iterator;
+    for(int i=1; i<=myGraph->noNodes-1; i++) { //iterate v-1 times
+        for (int j = 1; j <= myGraph->noNodes; j++) {//through all the edges{
+            iterator = myGraph->lists[j].first;
+            if (distances[j] != INT_MAX) {
+                while (iterator != NULL) {
+                    if (distances[iterator->endPoint] > distances[j] + iterator->length) {
+                        distances[iterator->endPoint] = distances[j] + iterator->length;
+                    }
+                    iterator = iterator->next;
+                }
+            }
+        }
+    }
+
+    printDistances(myGraph, startNode, distances, "Bellman-Ford");
+}
+
+void kruskalalgorithm(lGraph* myGraph){
+    UnionFind myUF = createUnionFind(myGraph->noNodes);
+
 }
