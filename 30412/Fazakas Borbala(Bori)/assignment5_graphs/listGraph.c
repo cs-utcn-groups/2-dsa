@@ -323,12 +323,10 @@ deEdge* getEdgesArray(lGraph* myGraph, int noEdgesInGraph){
     return edges;
 }
 
-int compareEdges_nonVoid(deEdge* a, deEdge* b){
-    return a->length-b->length;
-}
-
 int compareEdges(const void* a, const void* b){
-    return compareEdges_nonVoid(a, b);
+    deEdge* edgeA = (deEdge*) a;
+    deEdge* edgeB = (deEdge*) b;
+    return edgeA->length-edgeB->length;
 }
 
 void kruskalAlgorithm(lGraph* myGraph){
