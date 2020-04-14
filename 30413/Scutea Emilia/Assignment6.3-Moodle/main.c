@@ -3,9 +3,38 @@
 #include <stdbool.h>
 #include <limits.h>
 #define INFTY 1000
+#define UNVISITED 0
+#define VISITED 1
+#define UNDEFINED 0
+typedef struct node
+{
+    int content;
+    struct node * next;
+} NodeT;
+NodeT * stack;
 int ** cost;
 int nrOfVertixes;
 
+void push(int key)
+{
+    NodeT * p=(NodeT*)malloc(sizeof(NodeT));
+    p->next=stack;
+    p->content=key;
+    stack=p;
+}
+void pop()
+{
+    if (stack != NULL)
+        stack = stack->next;
+}
+NodeT * peekStack()
+{
+    return stack;
+}
+int isEmptyStack()
+{
+    return stack==NULL;
+}
 void readFile(FILE * f)
 {
     int n,i,j;
@@ -20,88 +49,106 @@ void readFile(FILE * f)
     fclose(f);
 }
 
-void printCost()
+int getMinDistanceVertex(int * distances,int * visited)
 {
-    int i,j;
-    printf("The matrix is:\n");
-    printf("   ");
+    int minim=INFTY,i,minV=0;
     for(i=0; i<nrOfVertixes; i++)
-        printf("%c   ",'A'+i);
-    printf("\n");
+        if(distances[i]<minim && visited[i]==UNVISITED)
+        {
+            minim=distances[i];
+            minV=i;
+        }
+    return minV;
+}
+int getNrOfNeighbours(int node)
+{
+    if(node<nrOfVertixes)
+    {
+        int count=0;
+        for(int i=0; i<nrOfVertixes; i++)
+            if(cost[node][i]>0 && i!=node)
+                count++;
+        return count;
+    }
+    else
+        return 0;
+
+}
+int * getNeighbours(int node)
+{
+    if(node<nrOfVertixes)
+    {
+        int nrOfNeighbours=getNrOfNeighbours(node);
+        int * neighbours=(int*)malloc(sizeof(int)*nrOfNeighbours);
+        int j=0;
+        for(int i=0; i<nrOfVertixes; i++)
+            if(cost[node][i]>0 && i!=node)
+            {
+                neighbours[j]=i;
+                j++;
+            }
+        return neighbours;
+    }
+    else
+        return NULL;
+}
+
+void Dijkstra(int startNode)
+{
+    printf("Dijkstra algorithm:\n");
+    int * distances=(int*)malloc(sizeof(int)*nrOfVertixes);
+    int * visited=(int*)malloc(sizeof(int)*nrOfVertixes);
+    int * previous=(int*)malloc(sizeof(int)*nrOfVertixes);
+    int nrOfVisitedVertex=0,i;
     for(i=0; i<nrOfVertixes; i++)
     {
-        printf("%c ",'A'+i);
-        for(j=0; j<nrOfVertixes; j++)
-            printf("%3d ",cost[i][j]);
-        printf("\n");
+        distances[i]=INFTY;
+        previous[i]=UNDEFINED;
+        visited[i]=UNVISITED;
     }
-    printf("\n");
-}
-int minDistance(int dist[], bool sptSet[])
-{
-    // Initialize min value
-    int min = INT_MAX, min_index;
-
-    for (int v = 0; v < nrOfVertixes; v++)
-        if (sptSet[v] == false && dist[v] <= min)
-            min = dist[v], min_index = v;
-
-    return min_index;
-}
-
-// A utility function to print the constructed distance array
-void printSolution(int dist[])
-{
-    printf("Vertex \t\t Distance from Source\n");
-    for (int i = 0; i < nrOfVertixes; i++)
-        printf("%d \t\t %d\n", i, dist[i]);
-}
-
-// Function that implements Dijkstra's single source shortest path algorithm
-// for a graph represented using adjacency matrix representation
-void dijkstra(int src)
-{
-    int dist[nrOfVertixes]; // The output array.  dist[i] will hold the shortest
-    // distance from src to i
-
-    bool sptSet[nrOfVertixes]; // sptSet[i] will be true if vertex i is included in shortest
-    // path tree or shortest distance from src to i is finalized
-
-    // Initialize all distances as INFINITE and stpSet[] as false
-    for (int i = 0; i < nrOfVertixes; i++)
-        dist[i] = INT_MAX, sptSet[i] = false;
-
-    // Distance of source vertex from itself is always 0
-    dist[src] = 0;
-
-    // Find shortest path for all vertices
-    for (int count = 0; count < nrOfVertixes - 1; count++) {
-        // Pick the minimum distance vertex from the set of vertices not
-        // yet processed. u is always equal to src in the first iteration.
-        int u = minDistance(dist, sptSet);
-
-        // Mark the picked vertex as processed
-        sptSet[u] = true;
-
-        // Update dist value of the adjacent vertices of the picked vertex.
-        for (int v = 0; v < nrOfVertixes; v++)
-
-            // Update dist[v] only if is not in sptSet, there is an edge from
-            // u to v, and total weight of path from src to  v through u is
-            // smaller than current value of dist[v]
-            if (!sptSet[v] && cost[u][v] && dist[u] != INT_MAX
-                && dist[u] + cost[u][v] < dist[v])
-                dist[v] = dist[u] + cost[u][v];
+    distances[startNode]=0;
+    while(nrOfVisitedVertex<nrOfVertixes)
+    {
+        int u=getMinDistanceVertex(distances,visited);
+        visited[u]=VISITED;
+        int nrOfNeighbours=getNrOfNeighbours(u);
+        int * neighbours=getNeighbours(u);
+        for(i=0; i<nrOfNeighbours; i++)
+        {
+            int w=neighbours[i];
+            int dist=distances[u]+cost[u][w];
+            if(dist<distances[w])
+            {
+                distances[w]=dist;
+                previous[w]=u;
+            }
+        }
+        nrOfVisitedVertex++;
     }
+    for(i=0; i<nrOfVertixes; i++)
+    {
+        int u=i;
+        if(i!=startNode)
+        {
+            while(previous[u]!=UNDEFINED)
+            {
+                push(u);
+                u=previous[u];
+            }
+            printf("Path from %c to %c is %c",startNode+'A',i+'A',startNode+'A');
+            while(!isEmptyStack())
+            {
+                printf("-> %c",peekStack()->content+'A');
+                pop();
 
-    // print the constructed distance array
-    printSolution(dist);
+            }
+            printf("\n");
+        }
+    }
 }
 int main()
 {
     FILE * f=fopen("input.dat","r");
     readFile(f);
-    printCost();
-    printf("dijk:\n");
-    dijkstra(3);
+    Dijkstra(0);
 }
