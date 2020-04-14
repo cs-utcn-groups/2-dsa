@@ -1,0 +1,74 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/SEM 2 DSA/Assignment_5.1/edge.h
+
+E:/SEM 2 DSA/Assignment_5.1/graph.h
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+stack.h
+E:/SEM 2 DSA/Assignment_5.1/stack.h
+queue.h
+E:/SEM 2 DSA/Assignment_5.1/queue.h
+edge.h
+E:/SEM 2 DSA/Assignment_5.1/edge.h
+
+E:/SEM 2 DSA/Assignment_5.1/graphAlgorithms.c
+limits.h
+-
+graphAlgorithms.h
+E:/SEM 2 DSA/Assignment_5.1/graphAlgorithms.h
+graphRepresentation.h
+E:/SEM 2 DSA/Assignment_5.1/graphRepresentation.h
+
+E:/SEM 2 DSA/Assignment_5.1/graphAlgorithms.h
+edge.h
+E:/SEM 2 DSA/Assignment_5.1/edge.h
+
+E:/SEM 2 DSA/Assignment_5.1/graphRepresentation.h
+graph.h
+E:/SEM 2 DSA/Assignment_5.1/graph.h
+
+E:/SEM 2 DSA/Assignment_5.1/graphTraversals.h
+graph.h
+E:/SEM 2 DSA/Assignment_5.1/graph.h
+
+E:/SEM 2 DSA/Assignment_5.1/list.h
+node.h
+E:/SEM 2 DSA/Assignment_5.1/node.h
+
+E:/SEM 2 DSA/Assignment_5.1/main.c
+stdio.h
+-
+graphRepresentation.h
+E:/SEM 2 DSA/Assignment_5.1/graphRepresentation.h
+graphTraversals.h
+E:/SEM 2 DSA/Assignment_5.1/graphTraversals.h
+list.h
+E:/SEM 2 DSA/Assignment_5.1/list.h
+graphAlgorithms.h
+E:/SEM 2 DSA/Assignment_5.1/graphAlgorithms.h
+
+E:/SEM 2 DSA/Assignment_5.1/node.h
+stdio.h
+-
+stdlib.h
+-
+
+E:/SEM 2 DSA/Assignment_5.1/queue.h
+node.h
+E:/SEM 2 DSA/Assignment_5.1/node.h
+
+E:/SEM 2 DSA/Assignment_5.1/stack.h
+node.h
+E:/SEM 2 DSA/Assignment_5.1/node.h
+
