@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "representGraph.h"
 #include "graphAlgorithms.h"
+#include "vertexCover.h"
 
 #define  ERR_OPEN_FILE "Error opening file"
 #define INPUT_FILE_NAME "../inGraph.txt"
@@ -15,9 +16,13 @@ int main() {
     printMatrix(N, A);
     // Kruskal's algorithm
     kruskal(N,A);
+    // vertex cover approximation
+    vertexCover(N,A);
+    // optimized vertex cover approximation
+    vertexCoverOpt(N,A);
     freeMatrix(N,A);
     fclose(inFile);
-    inFile = openFile(INPUT_FILE_D_NAME, "r");
+     inFile = openFile(INPUT_FILE_D_NAME, "r");
     A = readMatrix(inFile, &N);
     printMatrix(N, A);
     // Bellman-Ford's algorithm
