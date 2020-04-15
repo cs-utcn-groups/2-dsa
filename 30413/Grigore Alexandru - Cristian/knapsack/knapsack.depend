@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1586962169 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\knapsack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"knap.h"
+
+1586962473 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\knapsack\knap.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1586962416 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\knapsack\knap.c
+	"knap.h"
+
