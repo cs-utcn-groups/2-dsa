@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1586987470 source:d:\info\c facultate\dsastoicatudor\lab 8\prim algorithm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
