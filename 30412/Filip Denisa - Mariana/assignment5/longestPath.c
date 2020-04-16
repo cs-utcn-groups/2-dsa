@@ -5,7 +5,7 @@
 
 void longestPathUtility(FILE *output, List *adjList, int noOfVertices, int startNode, int destinationNode) {
     fprintf(output, "\nThe search for the longest path started:\n");
-    int *visited = initializeVisitedArray(noOfVertices);
+    int *visited = initializeArrayWithValues(noOfVertices, UNVISITED);
     List *longestPath = createList(1);
     List *currentPath = createList(1);
 

@@ -8,7 +8,7 @@
 void bfsMatrix(FILE *output, int startNode, int noOfVertices, int **adjMatrix) {
     fprintf(output, "\nBFS for adjacency matrix started:\n");
     int v, w;
-    int *visited = initializeVisitedArray(noOfVertices);
+    int *visited = initializeArrayWithValues(noOfVertices, UNVISITED);
 
     Queue traversalQueue = createQueue();
     enQueue(&traversalQueue, startNode);
@@ -36,7 +36,7 @@ void bfsMatrix(FILE *output, int startNode, int noOfVertices, int **adjMatrix) {
 void bfsList(FILE *output, int startNode, int noOfVertices, List *adjList) {
     fprintf(output, "\nBFS for adjacency list started:\n");
     int v, w;
-    int *visited = initializeVisitedArray(noOfVertices);
+    int *visited = initializeArrayWithValues(noOfVertices, UNVISITED);
 
     Queue traversalQueue = createQueue();
     enQueue(&traversalQueue, startNode);
@@ -60,10 +60,10 @@ void bfsList(FILE *output, int startNode, int noOfVertices, List *adjList) {
     fprintf(output, "\nBFS for adjacency list ended.\n");
 }
 
-int *initializeVisitedArray(int noOfVertices) {
+int *initializeArrayWithValues(int noOfVertices, int value) {
     int *visited = (int *) malloc(noOfVertices * sizeof(int));
     for (int i = 0; i < noOfVertices; i++) {
-        *(visited + i) = UNVISITED;
+        *(visited + i) = value;
     }
     return visited;
 }
@@ -83,7 +83,7 @@ void dfsRecMatrix(FILE *output, int v, int *visited, int noOfVertices, int **adj
 
 void dfsRecUtilityMatrix(FILE *output, int startNode, int noOfVertices, int **adjMatrix) {
     fprintf(output, "\nDFS recursive for adjacency matrix started:\n");
-    int *visited = initializeVisitedArray(noOfVertices);
+    int *visited = initializeArrayWithValues(noOfVertices, UNVISITED);
     dfsRecMatrix(output, startNode, visited, noOfVertices, adjMatrix);
     fprintf(output, "\nDFS recursive for adjacency matrix ended.\n\n");
 }
@@ -103,7 +103,7 @@ void dfsRecList(FILE *output, int v, int *visited, int noOfVertices, List *adjLi
 
 void dfsRecUtilityList(FILE *output, int startNode, int noOfVertices, List *adjList) {
     fprintf(output, "\nDFS recursive for adjacency list started:\n");
-    int *visited = initializeVisitedArray(noOfVertices);
+    int *visited = initializeArrayWithValues(noOfVertices, UNVISITED);
     dfsRecList(output, startNode, visited, noOfVertices, adjList);
     fprintf(output, "\nDFS recursive for adjacency list ended.\n");
 }

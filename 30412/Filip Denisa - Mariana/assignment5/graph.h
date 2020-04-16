@@ -8,9 +8,13 @@
 #include <string.h>
 
 #include "queue.h"
+#include "stack.h"
+#include "edge.h"
 
 #define VISITED 1
 #define UNVISITED 0
+#define MAX 9999
+#define UNDEFINED -1
 
 #define ASSIGNMENT5_GRAPH_H
 

@@ -6,7 +6,7 @@
 
 #include "graphRepresentation.h"
 
-int *initializeVisitedArray(int noOfVertices);
+int *initializeArrayWithValues(int noOfVertices, int value);
 
 void bfsMatrix(FILE *output, int startNode, int noOfVertices, int **adjMatrix);
 

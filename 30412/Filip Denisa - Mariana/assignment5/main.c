@@ -1,4 +1,5 @@
 #include "graphTraversals.h"
+#include "graphAlgorithms.h"
 #include "longestPath.h"
 
 #define INPUT_FILE_PATH "../input.txt"
@@ -28,6 +29,12 @@ int main() {
 
     adjMatrix = fromListToMatrix(noOfVertices, adjList);
     printAdjMatrix(output, noOfVertices, adjMatrix);
+
+    prim(output, 'E' - 'A', noOfVertices, adjMatrix);
+    dijkstra(output, 'E' - 'A', noOfVertices, adjMatrix);
+    kruskal(output, noOfVertices, adjMatrix);
+    bellmanFord(output, 'E' - 'A', noOfVertices, adjMatrix);
+    vertexCover(output, noOfVertices, adjMatrix);
     fclose(output);
     return 0;
 }
