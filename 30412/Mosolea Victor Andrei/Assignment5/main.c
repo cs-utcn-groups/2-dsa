@@ -204,6 +204,45 @@ int **createMatrixFromList(int noOfVertices, List *adjList) {
     return newAdjMatrix;
 }
 
+void recDFSLongestPath(int *visited, int v, int **adjMatrix, int noOfVertices, int currentLength,int endNode,int *path,int *resultedPath, int *maxLength) {
+    visited[v] = VISITED;
+    path[currentLength]=v;
+    if(v==endNode) {
+        if(*maxLength<currentLength){
+            *maxLength=currentLength;
+            for(int i=0;i<=currentLength;i++)
+                resultedPath[i]=path[i];
+        }
+    }
+    else {
+        int *neighbors = getNeighbors(v, adjMatrix, noOfVertices);
+        for (int i = 0; i < getNoOfNeighbors(v, adjMatrix, noOfVertices); i++)
+            if (visited[neighbors[i]] == UNVISITED) {
+                visited[neighbors[i]] = VISITED;
+                recDFSLongestPath(visited, neighbors[i], adjMatrix, noOfVertices, currentLength + 1, endNode,path,resultedPath,maxLength);
+                visited[neighbors[i]] = UNVISITED;
+            }
+    }
+}
+
+void DFSLongestPath(int startNode, int noOfVertices, int **adjMatrix, int endNode) {
+    printf("DFS for finding Longest Path started\n");
+    int *visited = (int *) malloc(noOfVertices * sizeof(int));
+    for (int i = 0; i < noOfVertices; i++)
+        visited[i] = UNVISITED;
+    int *path = (int *) malloc(noOfVertices * sizeof(int));
+    for (int i = 0; i < noOfVertices; i++)
+        path[i] = -1;
+    int *resultPath=(int *)malloc(noOfVertices*sizeof(int));
+    int maxLength=0;
+    recDFSLongestPath(visited, startNode, adjMatrix, noOfVertices,0, endNode,path,resultPath,&maxLength);
+    for(int i=0;path[i]!=-1&& i<=maxLength;i++)
+        printf("%d",resultPath[i]);
+    printf("\nDFS for finding Longest Path ended\n");
+
+}
+
+
 int main() {
     FILE *f = fopen("../input.dat", "r");
     int noOfVertices;
@@ -217,5 +256,7 @@ int main() {
     int **newAdjMatrix = createMatrixFromList(noOfVertices, adjList);
     BFS(0, noOfVertices, newAdjMatrix);
     DFS(0, noOfVertices, newAdjMatrix);
+    DFSLongestPath(2,noOfVertices,newAdjMatrix,4);
+
     return 0;
 }
