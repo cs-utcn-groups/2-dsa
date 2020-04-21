@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1587491529 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment6.1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
