@@ -140,6 +140,25 @@ void bellmanFord(int noOfVertices, int src, EdgeList list){
     printf("\n");
 }
 
+void vertexCover(EdgeList list, int noOfVertices){
+    bool *visited=(bool*)malloc(noOfVertices*sizeof(bool));
+    for(int i=0;i<noOfVertices;i++)
+            visited[i]=false;
+    Edge *currentEdge=list.first;
+    while(currentEdge!=NULL){
+        if(visited[currentEdge->startNode]==false && visited[currentEdge->endNode]==false) {
+            visited[currentEdge->startNode] = true;
+            visited[currentEdge->endNode]=true;
+        }
+        currentEdge=currentEdge->next;
+    }
+    printf("The cover set is:\n");
+    for(int i=0;i<noOfVertices;i++)
+        if(visited[i]==true)
+            printf("%d ",i);
+    printf("\n");
+}
+
 int main() {
     int noOfVerticesK;
     FILE *f=fopen("../input.dat","r");
@@ -174,5 +193,20 @@ int main() {
                 addLastEdge(i,j,adjMatrixBF[i][j],&edgListBF);
     bellmanFord(noOfVerticesBF,0,edgListBF);
 
+    int noOfVerticesVC;
+    fscanf(f,"%d",&noOfVerticesVC);
+    EdgeList edgListVC;
+    initEdgeList(&edgListVC);
+    int **adjMatrixVC=(int**)malloc(noOfVerticesVC*sizeof(int*));
+    for(int i=0;i<noOfVerticesVC;i++)
+        adjMatrixVC[i]=(int*)malloc(noOfVerticesVC*sizeof(int));
+    for(int i=0;i<noOfVerticesVC;i++)
+        for(int j=0;j<noOfVerticesVC;j++)
+            fscanf(f,"%d",&adjMatrixVC[i][j]);
+    for(int i=0;i<noOfVerticesVC-1;i++)
+        for(int j=i+1;j<noOfVerticesVC;j++)
+            if(adjMatrixVC[i][j]>0)
+                addLastEdge(i,j,adjMatrixVC[i][j],&edgListVC);
+    vertexCover(edgListVC,noOfVerticesVC);
     return 0;
 }
