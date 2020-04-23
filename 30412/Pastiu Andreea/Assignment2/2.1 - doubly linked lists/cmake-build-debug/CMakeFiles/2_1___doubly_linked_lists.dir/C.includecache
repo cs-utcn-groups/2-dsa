@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/main.c
+stdio.h
+-
+

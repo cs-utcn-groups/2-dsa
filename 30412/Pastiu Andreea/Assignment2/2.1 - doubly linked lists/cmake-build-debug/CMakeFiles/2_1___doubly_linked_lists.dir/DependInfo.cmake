@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/DLL.c" "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/2_1___doubly_linked_lists.dir/DLL.c.obj"
   "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/main.c" "D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/2_1___doubly_linked_lists.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

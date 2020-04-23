@@ -122,33 +122,6 @@ depend:
 	$(MAKE) -f CMakeFiles\2_1___doubly_linked_lists.dir\build.make CMakeFiles/2_1___doubly_linked_lists.dir/build
 .PHONY : 2_1___doubly_linked_lists/fast
 
-DLL.obj: DLL.c.obj
-
-.PHONY : DLL.obj
-
-# target to build an object file
-DLL.c.obj:
-	$(MAKE) -f CMakeFiles\2_1___doubly_linked_lists.dir\build.make CMakeFiles/2_1___doubly_linked_lists.dir/DLL.c.obj
-.PHONY : DLL.c.obj
-
-DLL.i: DLL.c.i
-
-.PHONY : DLL.i
-
-# target to preprocess a source file
-DLL.c.i:
-	$(MAKE) -f CMakeFiles\2_1___doubly_linked_lists.dir\build.make CMakeFiles/2_1___doubly_linked_lists.dir/DLL.c.i
-.PHONY : DLL.c.i
-
-DLL.s: DLL.c.s
-
-.PHONY : DLL.s
-
-# target to generate assembly for a file
-DLL.c.s:
-	$(MAKE) -f CMakeFiles\2_1___doubly_linked_lists.dir\build.make CMakeFiles/2_1___doubly_linked_lists.dir/DLL.c.s
-.PHONY : DLL.c.s
-
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -185,9 +158,6 @@ help:
 	@echo ... 2_1___doubly_linked_lists
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... DLL.obj
-	@echo ... DLL.i
-	@echo ... DLL.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
