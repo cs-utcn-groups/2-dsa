@@ -74,12 +74,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/DLL.c">
-			<Option target="2_1___doubly_linked_lists"/>
-		</Unit>
-		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/DLL.h">
-			<Option target="2_1___doubly_linked_lists"/>
-		</Unit>
 		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/main.c">
 			<Option target="2_1___doubly_linked_lists"/>
 		</Unit>

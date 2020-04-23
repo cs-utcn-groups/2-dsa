@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Kruskal_and_Bellman_Ford"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Kruskal_and_Bellman_Ford">
+				<Option output="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Kruskal_and_Bellman_Ford.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/include"/>
+					<Add directory="c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include"/>
+					<Add directory="c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 Kruskal_and_Bellman_Ford"/>
+					<CompileFile command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Kruskal_and_Bellman_Ford/fast">
+				<Option output="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Kruskal_and_Bellman_Ford.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/include"/>
+					<Add directory="c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include"/>
+					<Add directory="c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 Kruskal_and_Bellman_Ford/fast"/>
+					<CompileFile command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f &quot;D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/edge.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graph.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graphAlgorithms.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graphAlgorithms.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graphRepresentation.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graphRepresentation.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graphTraversals.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/graphTraversals.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/main.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/node.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/node.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/queue.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/queue.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/stack.c">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/stack.h">
+			<Option target="Kruskal_and_Bellman_Ford"/>
+		</Unit>
+		<Unit filename="D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment 6/Kruskal and Bellman Ford/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

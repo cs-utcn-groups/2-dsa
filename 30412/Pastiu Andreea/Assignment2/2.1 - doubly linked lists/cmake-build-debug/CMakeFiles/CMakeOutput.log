@@ -15,15 +15,15 @@ The C compiler identification is GNU, found in "D:/documente scoala/Facultate/SE
 Determining if the C compiler works passed with the following output:
 Change Dir: D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe cmTC_b6369/fast && C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b6369.dir\build.make CMakeFiles/cmTC_b6369.dir/build
+Run Build Command(s):C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe cmTC_12c59/fast && C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_12c59.dir\build.make CMakeFiles/cmTC_12c59.dir/build
 mingw32-make.exe[1]: Entering directory `D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b6369.dir/testCCompiler.c.obj
-C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_b6369.dir\testCCompiler.c.obj   -c "D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.1 - doubly linked lists\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c"
-Linking C executable cmTC_b6369.exe
-"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b6369.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_b6369.dir/objects.a
-C:\Users\Andreea\.CLion2019.2\MinGW\bin\ar.exe cr CMakeFiles\cmTC_b6369.dir/objects.a @CMakeFiles\cmTC_b6369.dir\objects1.rsp
-C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_b6369.dir/objects.a -Wl,--no-whole-archive  -o cmTC_b6369.exe -Wl,--out-implib,libcmTC_b6369.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b6369.dir\linklibs.rsp
+Building C object CMakeFiles/cmTC_12c59.dir/testCCompiler.c.obj
+C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_12c59.dir\testCCompiler.c.obj   -c "D:\documente scoala\Facultate\SEM2\CP\DSA\2-dsa\30412\Pastiu Andreea\Assignment2\2.1 - doubly linked lists\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c"
+Linking C executable cmTC_12c59.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_12c59.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_12c59.dir/objects.a
+C:\Users\Andreea\.CLion2019.2\MinGW\bin\ar.exe cr CMakeFiles\cmTC_12c59.dir/objects.a @CMakeFiles\cmTC_12c59.dir\objects1.rsp
+C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_12c59.dir/objects.a -Wl,--no-whole-archive  -o cmTC_12c59.exe -Wl,--out-implib,libcmTC_12c59.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_12c59.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory `D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -31,18 +31,18 @@ mingw32-make.exe[1]: Leaving directory `D:/documente scoala/Facultate/SEM2/CP/DS
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe cmTC_be057/fast && C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_be057.dir\build.make CMakeFiles/cmTC_be057.dir/build
+Run Build Command(s):C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe cmTC_267ef/fast && C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_267ef.dir\build.make CMakeFiles/cmTC_267ef.dir/build
 mingw32-make.exe[1]: Entering directory `D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_be057.dir/CMakeCCompilerABI.c.obj
-C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c"
+Building C object CMakeFiles/cmTC_267ef.dir/CMakeCCompilerABI.c.obj
+C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c"
 Using built-in specs.
 COLLECT_GCC=C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe
 Target: mingw32
 Configured with: ../../src/gcc-4.7.1/configure --build=mingw32 --enable-languages=c,c++,ada,fortran,objc,obj-c++ --enable-threads=win32 --enable-libgomp --enable-lto --enable-fully-dynamic-string --enable-libstdcxx-debug --enable-version-specific-runtime-libs --with-gnu-ld --disable-nls --disable-win32-registry --disable-symvers --disable-build-poststage1-with-cxx --disable-werror --prefix=/mingw32tdm --with-local-prefix=/mingw32tdm --enable-cxx-flags='-fno-function-sections -fno-data-sections' --with-pkgversion=tdm-1 --enable-sjlj-exceptions --with-bugurl=http://tdm-gcc.tdragon.net/bugs
 Thread model: win32
 gcc version 4.7.1 (tdm-1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386'
- c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/cc1.exe -quiet -v -iprefix c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/ C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=i386 -march=i386 -auxbase-strip CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\Andreea\AppData\Local\Temp\ccx4ywIj.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386'
+ c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/cc1.exe -quiet -v -iprefix c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/ C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=i386 -march=i386 -auxbase-strip CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\Andreea\AppData\Local\Temp\ccS9nWok.s
 GNU C (tdm-1) version 4.7.1 (mingw32)
 	compiled by GNU C version 4.7.1, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.2
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -61,17 +61,17 @@ GNU C (tdm-1) version 4.7.1 (mingw32)
 	compiled by GNU C version 4.7.1, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.2
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 1223bc4d7eaab64b9220d8272e21f753
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386'
- c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/as.exe -v -o CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj C:\Users\Andreea\AppData\Local\Temp\ccx4ywIj.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386'
+ c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/as.exe -v -o CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj C:\Users\Andreea\AppData\Local\Temp\ccS9nWok.s
 GNU assembler version 2.22 (mingw32) using BFD version (GNU Binutils) 2.22
 COMPILER_PATH=c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/;c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/
 LIBRARY_PATH=c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386'
-Linking C executable cmTC_be057.exe
-"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_be057.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_be057.dir/objects.a
-C:\Users\Andreea\.CLion2019.2\MinGW\bin\ar.exe cr CMakeFiles\cmTC_be057.dir/objects.a @CMakeFiles\cmTC_be057.dir\objects1.rsp
-C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_be057.dir/objects.a -Wl,--no-whole-archive  -o cmTC_be057.exe -Wl,--out-implib,libcmTC_be057.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386'
+Linking C executable cmTC_267ef.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_267ef.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_267ef.dir/objects.a
+C:\Users\Andreea\.CLion2019.2\MinGW\bin\ar.exe cr CMakeFiles\cmTC_267ef.dir/objects.a @CMakeFiles\cmTC_267ef.dir\objects1.rsp
+C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_267ef.dir/objects.a -Wl,--no-whole-archive  -o cmTC_267ef.exe -Wl,--out-implib,libcmTC_267ef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe
 COLLECT_LTO_WRAPPER=c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/lto-wrapper.exe
@@ -81,8 +81,8 @@ Thread model: win32
 gcc version 4.7.1 (tdm-1) 
 COMPILER_PATH=c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/;c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/
 LIBRARY_PATH=c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib/;c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_be057.exe' '-mtune=i386' '-march=i386'
- c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/collect2.exe -Bdynamic -o cmTC_be057.exe c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../crt2.o c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtbegin.o -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1 -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../.. --whole-archive CMakeFiles\cmTC_be057.dir/objects.a --no-whole-archive --out-implib libcmTC_be057.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_267ef.exe' '-mtune=i386' '-march=i386'
+ c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/collect2.exe -Bdynamic -o cmTC_267ef.exe c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../crt2.o c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtbegin.o -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1 -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../.. --whole-archive CMakeFiles\cmTC_267ef.dir/objects.a --no-whole-archive --out-implib libcmTC_267ef.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtend.o
 mingw32-make.exe[1]: Leaving directory `D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -104,18 +104,18 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe cmTC_be057/fast && C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_be057.dir\build.make CMakeFiles/cmTC_be057.dir/build]
+  ignore line: [Run Build Command(s):C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe cmTC_267ef/fast && C:/OJI/CodeBlocks/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_267ef.dir\build.make CMakeFiles/cmTC_267ef.dir/build]
   ignore line: [mingw32-make.exe[1]: Entering directory `D:/documente scoala/Facultate/SEM2/CP/DSA/2-dsa/30412/Pastiu Andreea/Assignment2/2.1 - doubly linked lists/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_be057.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Building C object CMakeFiles/cmTC_267ef.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c"]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe]
   ignore line: [Target: mingw32]
   ignore line: [Configured with: ../../src/gcc-4.7.1/configure --build=mingw32 --enable-languages=c,c++,ada,fortran,objc,obj-c++ --enable-threads=win32 --enable-libgomp --enable-lto --enable-fully-dynamic-string --enable-libstdcxx-debug --enable-version-specific-runtime-libs --with-gnu-ld --disable-nls --disable-win32-registry --disable-symvers --disable-build-poststage1-with-cxx --disable-werror --prefix=/mingw32tdm --with-local-prefix=/mingw32tdm --enable-cxx-flags='-fno-function-sections -fno-data-sections' --with-pkgversion=tdm-1 --enable-sjlj-exceptions --with-bugurl=http://tdm-gcc.tdragon.net/bugs]
   ignore line: [Thread model: win32]
   ignore line: [gcc version 4.7.1 (tdm-1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386']
-  ignore line: [ c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/cc1.exe -quiet -v -iprefix c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/ C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=i386 -march=i386 -auxbase-strip CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\Andreea\AppData\Local\Temp\ccx4ywIj.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386']
+  ignore line: [ c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/cc1.exe -quiet -v -iprefix c:\users\andreea\.clion2019.2\mingw\bin\../lib/gcc/mingw32/4.7.1/ C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=i386 -march=i386 -auxbase-strip CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\Andreea\AppData\Local\Temp\ccS9nWok.s]
   ignore line: [GNU C (tdm-1) version 4.7.1 (mingw32)]
   ignore line: [	compiled by GNU C version 4.7.1, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.2]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -134,8 +134,8 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 4.7.1, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.2]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 1223bc4d7eaab64b9220d8272e21f753]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386']
-  ignore line: [ c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/as.exe -v -o CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj C:\Users\Andreea\AppData\Local\Temp\ccx4ywIj.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386']
+  ignore line: [ c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/bin/as.exe -v -o CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj C:\Users\Andreea\AppData\Local\Temp\ccS9nWok.s]
   ignore line: [GNU assembler version 2.22 (mingw32) using BFD version (GNU Binutils) 2.22]
   ignore line: [COMPILER_PATH=c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/]
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/]
@@ -144,12 +144,12 @@ Parsed C implicit link information from above output:
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/]
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib/]
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_be057.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386']
-  ignore line: [Linking C executable cmTC_be057.exe]
-  ignore line: ["C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_be057.dir\link.txt --verbose=1]
-  ignore line: ["C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_be057.dir/objects.a]
-  ignore line: [C:\Users\Andreea\.CLion2019.2\MinGW\bin\ar.exe cr CMakeFiles\cmTC_be057.dir/objects.a @CMakeFiles\cmTC_be057.dir\objects1.rsp]
-  ignore line: [C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_be057.dir/objects.a -Wl,--no-whole-archive  -o cmTC_be057.exe -Wl,--out-implib,libcmTC_be057.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_267ef.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=i386' '-march=i386']
+  ignore line: [Linking C executable cmTC_267ef.exe]
+  ignore line: ["C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_267ef.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_267ef.dir/objects.a]
+  ignore line: [C:\Users\Andreea\.CLion2019.2\MinGW\bin\ar.exe cr CMakeFiles\cmTC_267ef.dir/objects.a @CMakeFiles\cmTC_267ef.dir\objects1.rsp]
+  ignore line: [C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_267ef.dir/objects.a -Wl,--no-whole-archive  -o cmTC_267ef.exe -Wl,--out-implib,libcmTC_267ef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\Users\Andreea\.CLion2019.2\MinGW\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/lto-wrapper.exe]
@@ -164,12 +164,12 @@ Parsed C implicit link information from above output:
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/]
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib/]
   ignore line: [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_be057.exe' '-mtune=i386' '-march=i386']
-  link line: [ c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/collect2.exe -Bdynamic -o cmTC_be057.exe c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../crt2.o c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtbegin.o -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1 -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../.. --whole-archive CMakeFiles\cmTC_be057.dir/objects.a --no-whole-archive --out-implib libcmTC_be057.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_267ef.exe' '-mtune=i386' '-march=i386']
+  link line: [ c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/collect2.exe -Bdynamic -o cmTC_267ef.exe c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../crt2.o c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtbegin.o -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1 -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib -Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../.. --whole-archive CMakeFiles\cmTC_267ef.dir/objects.a --no-whole-archive --out-implib libcmTC_267ef.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtend.o]
     arg [c:/users/andreea/.clion2019.2/mingw/bin/../libexec/gcc/mingw32/4.7.1/collect2.exe] ==> ignore
     arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_be057.exe] ==> ignore
+    arg [cmTC_267ef.exe] ==> ignore
     arg [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../crt2.o] ==> ignore
     arg [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/crtbegin.o] ==> ignore
     arg [-Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1] ==> dir [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1]
@@ -177,10 +177,10 @@ Parsed C implicit link information from above output:
     arg [-Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib] ==> dir [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../../../mingw32/lib]
     arg [-Lc:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../..] ==> dir [c:/users/andreea/.clion2019.2/mingw/bin/../lib/gcc/mingw32/4.7.1/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_be057.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_267ef.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_be057.dll.a] ==> ignore
+    arg [libcmTC_267ef.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
