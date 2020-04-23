@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/2-dsa/30412/Giurgiu Razvan - Florin/Assignment_3.1/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
