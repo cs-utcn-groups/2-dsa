@@ -7,19 +7,31 @@
 
 #include "list.h"
 
-static const float INITIAL_HT_SIZE_FACTOR = .33;
+static float INITIAL_HT_SIZE_FACTOR=100;
 
 listT * hashTable;
 int size;
+int hashFunctionNr;
 
+void setInitialSizeFactor(float factor);
 
-int hashFunction(char * content, int i);
+int hashFunction0(char * content);
 
-void initHashTable(int N);
+int hashFunction1(char * content);
+
+int hashFunction2(char * content);
+
+int hashFunction3(char * content);
+
+int hashFunction4(char * content);
+
+void initHashTable(int N, int functionNr);
 
 void insertElement(char * element);
 
-void computeDistributionsPerBucket();
+void computeDistributionsPerBucket(int n);
+
+double standartDeviationOfBucketLengths();
 
 
 #endif //ASSIGNMENT6_HT_CHAINING_HASHTABLE_H

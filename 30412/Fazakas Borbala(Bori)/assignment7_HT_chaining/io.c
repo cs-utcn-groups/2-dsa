@@ -1,7 +1,3 @@
-//
-// Created by Bori on 4/29/2020.
-//
-
 #include "io.h"
 
 void writeToFile(int N)
@@ -23,7 +19,7 @@ char ** readFromFile(int N)
 
     for(i=0; i<N; i++)
     {
-        *(contents + i) = (char*) malloc(sizeof(char) * (MAX_STRING_LENGTH +1) );
+        *(contents + i) = (char*) malloc(sizeof(char) * (MAX_STRING_LENGTH +2) );
     }
 
     FILE * f = getFileForInt(N);
@@ -63,6 +59,6 @@ char * randString()
 
 FILE * getFileForInt(int N)
 {
-    char * filename = (char*) malloc(sizeof(char)*8);
+    char * filename = (char*) malloc(sizeof(char)*20);
     return fopen(strcat(itoa(N,filename,10),".data"), "rw");
 }

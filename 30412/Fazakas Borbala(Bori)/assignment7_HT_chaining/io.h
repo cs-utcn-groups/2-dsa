@@ -10,6 +10,7 @@
 #include <time.h>
 #include <string.h>
 
+
 static const int MAX_STRING_LENGTH = 64;
 
 char * randString();
