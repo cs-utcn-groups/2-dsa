@@ -37,6 +37,9 @@ void insertElement(char * element)
             break;
         case 3: index = hashFunction3(element);
             break;
+        case 4:
+            index = hashFunction4(element);
+            break;
     }
     addToList(&hashTable[index], element);
 }
@@ -78,6 +81,17 @@ int hashFunction3(char * content){
         hash ^= content[i];
     }
     return hash%size;
+}
+
+int hashFunction4(char *content) {
+    int fnvPrime = 16777619u;
+    int fnv_offset_basis = 2166136261u;
+    unsigned int hash = fnv_offset_basis;
+    for (int i = 0; i < strlen(content); i++) {
+        hash ^= content[i];
+        hash *= fnvPrime;
+    }
+    return hash % size;
 }
 
 
