@@ -30,21 +30,21 @@ void insertElement(char * element)
     int index;
     switch(hashFunctionNr) {
         case 0: index = hashFunction0(element);
-        break;
+            break;
         case 1: index = hashFunction1(element);
-        break;
+            break;
         case 2: index = hashFunction2(element);
             break;
         case 3: index = hashFunction3(element);
-            break;
-        case 4: index = hashFunction4(element);
             break;
     }
     addToList(&hashTable[index], element);
 }
 
 int hashFunction0(char * content){ //really bad
-    return content[0]%2%size;
+    int result = 0;
+    result = content[0]%2;
+    return result%size;
 }
 
 int hashFunction1(char * content){
@@ -76,22 +76,6 @@ int hashFunction3(char * content){
     {
         hash *= fnvPrime;
         hash ^= content[i];
-    }
-    return hash%size;
-}
-
-int hashFunction4(char * content){
-    int fnvPrime = 16777619u;
-    int fnv_offset_basis = 2166136261u;
-    unsigned int hash = fnv_offset_basis;
-    for(int i=0; i<strlen(content); i++)
-    {
-        hash *= fnvPrime;
-        hash ^= content[i];
-        hash ^= content[i]*((int)pow(2, 8));
-        hash ^= content[i]*((int)pow(2, 16));
-        hash ^= content[i]*((int)pow(2, 24));
-
     }
     return hash%size;
 }
