@@ -8,29 +8,33 @@
 int main()
 {
     FILE *tableFile = fopen("table.txt", "w");
-    int noFunctions = 5, noPossibleSizeFactors = 6, noPossibleSizes = 8, functionNr, N;
-    int noStrings[8]={100, 500, 100, 5000, 10000, 25000, 50000, 100000};
+    int noFunctions = 5, noPossibleSizeFactors = 6, noPossibleSizes = 8, N;
+    int noStrings[8] = {100, 500, 1000, 5000, 10000, 25000, 50000, 100000};
     float sizeFactor;
     double avgSD[MAX_FUNCTIONS + 1] = {0}, SD;
-    for(int i=0; i<noPossibleSizes; i++){
-        N = noStrings[i];
-        fprintf(tableFile, "-----------------------------------For %d strings--------------------------------------\n",
-                N);
-        char** content = readFromFile(N);
-        FILE* inputs = fopen("inputs.txt", "r");
-        for(int j=1; j<=noFunctions*noPossibleSizeFactors; j++){
-            fscanf(inputs, "%d %f", &functionNr, &sizeFactor);
-            setInitialSizeFactor(sizeFactor);
-            initHashTable(N, functionNr);
-            for(int k=0; k<N; k++) {
-                insertElement(content[k]);
+    for (int functionNr = 0; functionNr < noFunctions; functionNr++) {
+        fprintf(tableFile,
+                "-----------------------------------------------------For hashFunction nr %d-------------------------------------------------\n",
+                functionNr);
+        for (int i = 0; i < noPossibleSizes; i++) {
+            N = noStrings[i];
+            fprintf(tableFile, "------------------------------For %d strings-------------------------------\n", N);
+            char **content = readFromFile(N);
+            FILE *inputs = fopen("inputs.txt", "r");
+            for (int j = 1; j <= noPossibleSizeFactors; j++) {
+                fscanf(inputs, "%f", &sizeFactor);
+                setInitialSizeFactor(sizeFactor);
+                initHashTable(N, functionNr);
+                for (int k = 0; k < N; k++) {
+                    insertElement(content[k]);
+                }
+                SD = standartDeviationOfBucketLengths();
+                avgSD[functionNr] += SD;
+                fprintf(tableFile, "ISF = %.2f --> standard deviation of buckets sizes = %lf\n",
+                        sizeFactor, SD);
             }
-            SD = standartDeviationOfBucketLengths();
-            avgSD[functionNr]+=SD;
-            fprintf(tableFile, "HashFunction nr.%d, ISF = %.2f --> standard deviation of buckets sizes = %lf\n",
-                    functionNr, sizeFactor, SD);
+            fclose(inputs);
         }
-        fclose(inputs);
     }
 
     fprintf(tableFile, "-----------------------------------Average SDs--------------------------------------\n", N);
