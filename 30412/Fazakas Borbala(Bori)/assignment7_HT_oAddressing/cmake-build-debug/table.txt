@@ -1,0 +1,233 @@
+-----------------------------------------------------For hashFunction nr 1-------------------------------------------------
+----------------------------For 100 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 9, Avg.collisions = 1.00, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 19, Avg.collisions = 1.39, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 19, Avg.collisions = 1.56, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 16, Avg.collisions = 1.62, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 16, Avg.collisions = 1.84, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 16, Avg.collisions = 1.77, No. resizes = 2
+----------------------------For 500 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 16, Avg.collisions = 1.25, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 17, Avg.collisions = 1.60, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 17, Avg.collisions = 1.80, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 27, Avg.collisions = 2.03, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 27, Avg.collisions = 2.19, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 49, Avg.collisions = 2.51, No. resizes = 2
+----------------------------For 1000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 30, Avg.collisions = 6.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 30, Avg.collisions = 7.00, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 30, Avg.collisions = 7.13, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 38, Avg.collisions = 7.31, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 38, Avg.collisions = 7.33, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 62, Avg.collisions = 7.35, No. resizes = 2
+----------------------------For 5000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 71, Avg.collisions = 38.20, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 71, Avg.collisions = 38.19, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 71, Avg.collisions = 38.20, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 71, Avg.collisions = 38.22, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 70, Avg.collisions = 38.23, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 70, Avg.collisions = 38.20, No. resizes = 2
+----------------------------For 10000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 101, Avg.collisions = 59.68, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 100, Avg.collisions = 59.69, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 100, Avg.collisions = 59.70, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 101, Avg.collisions = 59.69, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 101, Avg.collisions = 59.70, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 101, Avg.collisions = 59.69, No. resizes = 2
+----------------------------For 25000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 159, Avg.collisions = 100.11, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 160, Avg.collisions = 100.11, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 159, Avg.collisions = 100.11, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 160, Avg.collisions = 100.12, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 160, Avg.collisions = 100.12, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 161, Avg.collisions = 100.11, No. resizes = 2
+----------------------------For 50000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 235, Avg.collisions = 144.95, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 235, Avg.collisions = 144.95, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 234, Avg.collisions = 144.95, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 235, Avg.collisions = 144.95, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 233, Avg.collisions = 144.95, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 229, Avg.collisions = 144.94, No. resizes = 2
+----------------------------For 100000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 345, Avg.collisions = 207.61, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 344, Avg.collisions = 207.61, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 343, Avg.collisions = 207.60, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 344, Avg.collisions = 207.60, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 342, Avg.collisions = 207.60, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 436, Avg.collisions = 207.62, No. resizes = 2
+-----------------------------------------------------For hashFunction nr 2-------------------------------------------------
+----------------------------For 100 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 7, Avg.collisions = 0.95, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 19, Avg.collisions = 1.36, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 19, Avg.collisions = 1.68, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 11, Avg.collisions = 1.66, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 11, Avg.collisions = 1.84, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 21, Avg.collisions = 1.98, No. resizes = 2
+----------------------------For 500 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 9, Avg.collisions = 0.89, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 17, Avg.collisions = 1.39, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 19, Avg.collisions = 1.67, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 24, Avg.collisions = 1.82, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 24, Avg.collisions = 1.99, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 24, Avg.collisions = 2.22, No. resizes = 2
+----------------------------For 1000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 7, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 33, Avg.collisions = 1.24, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 33, Avg.collisions = 1.45, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 18, Avg.collisions = 1.73, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 28, Avg.collisions = 1.93, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 29, Avg.collisions = 2.13, No. resizes = 2
+----------------------------For 5000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 13, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 19, Avg.collisions = 1.34, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 31, Avg.collisions = 1.58, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 32, Avg.collisions = 1.87, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 43, Avg.collisions = 2.06, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 71, Avg.collisions = 2.38, No. resizes = 2
+----------------------------For 10000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 14, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 25, Avg.collisions = 1.31, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 38, Avg.collisions = 1.56, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 42, Avg.collisions = 1.76, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 42, Avg.collisions = 1.93, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 48, Avg.collisions = 2.23, No. resizes = 2
+----------------------------For 25000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 22, Avg.collisions = 0.85, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 31, Avg.collisions = 1.36, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 39, Avg.collisions = 1.60, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 49, Avg.collisions = 1.89, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 49, Avg.collisions = 2.08, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 61, Avg.collisions = 2.42, No. resizes = 2
+----------------------------For 50000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 18, Avg.collisions = 0.83, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 31, Avg.collisions = 1.36, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 39, Avg.collisions = 1.59, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 58, Avg.collisions = 1.84, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 58, Avg.collisions = 2.02, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 76, Avg.collisions = 2.35, No. resizes = 2
+----------------------------For 100000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 19, Avg.collisions = 0.84, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 32, Avg.collisions = 1.37, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 36, Avg.collisions = 1.59, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 45, Avg.collisions = 1.86, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 51, Avg.collisions = 2.05, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 80, Avg.collisions = 2.38, No. resizes = 2
+-----------------------------------------------------For hashFunction nr 3-------------------------------------------------
+----------------------------For 100 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 8, Avg.collisions = 0.93, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 7, Avg.collisions = 0.93, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 34, Avg.collisions = 1.45, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 11, Avg.collisions = 1.55, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 15, Avg.collisions = 1.65, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 15, Avg.collisions = 1.56, No. resizes = 2
+----------------------------For 500 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 7, Avg.collisions = 0.73, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 20, Avg.collisions = 1.25, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 20, Avg.collisions = 1.37, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 18, Avg.collisions = 1.70, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 18, Avg.collisions = 1.81, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 25, Avg.collisions = 2.04, No. resizes = 2
+----------------------------For 1000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 12, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 17, Avg.collisions = 1.31, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 20, Avg.collisions = 1.54, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 20, Avg.collisions = 1.65, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 25, Avg.collisions = 1.83, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 38, Avg.collisions = 2.19, No. resizes = 2
+----------------------------For 5000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 16, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 22, Avg.collisions = 1.36, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 22, Avg.collisions = 1.58, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 33, Avg.collisions = 1.78, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 37, Avg.collisions = 1.96, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 49, Avg.collisions = 2.27, No. resizes = 2
+----------------------------For 10000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 19, Avg.collisions = 0.80, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 22, Avg.collisions = 1.34, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 47, Avg.collisions = 1.56, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 38, Avg.collisions = 1.84, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 32, Avg.collisions = 2.01, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 50, Avg.collisions = 2.32, No. resizes = 2
+----------------------------For 25000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 15, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 27, Avg.collisions = 1.34, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 31, Avg.collisions = 1.55, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 44, Avg.collisions = 1.81, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 67, Avg.collisions = 1.99, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 86, Avg.collisions = 2.31, No. resizes = 2
+----------------------------For 50000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 17, Avg.collisions = 0.83, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 30, Avg.collisions = 1.34, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 40, Avg.collisions = 1.56, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 45, Avg.collisions = 1.81, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 50, Avg.collisions = 2.00, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 65, Avg.collisions = 2.34, No. resizes = 2
+----------------------------For 100000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 18, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 33, Avg.collisions = 1.33, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 37, Avg.collisions = 1.55, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 49, Avg.collisions = 1.81, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 49, Avg.collisions = 2.00, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 65, Avg.collisions = 2.32, No. resizes = 2
+-----------------------------------------------------For hashFunction nr 4-------------------------------------------------
+----------------------------For 100 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 8, Avg.collisions = 0.98, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 31, Avg.collisions = 1.38, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 31, Avg.collisions = 1.70, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 11, Avg.collisions = 1.98, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 14, Avg.collisions = 2.31, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 15, Avg.collisions = 2.49, No. resizes = 2
+----------------------------For 500 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 8, Avg.collisions = 0.74, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 13, Avg.collisions = 1.29, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 16, Avg.collisions = 1.49, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 25, Avg.collisions = 1.77, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 25, Avg.collisions = 1.93, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 36, Avg.collisions = 2.13, No. resizes = 2
+----------------------------For 1000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 13, Avg.collisions = 0.84, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 16, Avg.collisions = 1.31, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 43, Avg.collisions = 1.61, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 23, Avg.collisions = 1.80, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 27, Avg.collisions = 2.00, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 61, Avg.collisions = 2.50, No. resizes = 2
+----------------------------For 5000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 13, Avg.collisions = 0.85, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 22, Avg.collisions = 1.31, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 23, Avg.collisions = 1.50, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 31, Avg.collisions = 1.86, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 45, Avg.collisions = 2.05, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 47, Avg.collisions = 2.43, No. resizes = 2
+----------------------------For 10000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 12, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 27, Avg.collisions = 1.36, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 42, Avg.collisions = 1.60, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 40, Avg.collisions = 1.81, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 40, Avg.collisions = 1.98, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 46, Avg.collisions = 2.32, No. resizes = 2
+----------------------------For 25000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 21, Avg.collisions = 0.82, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 26, Avg.collisions = 1.35, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 36, Avg.collisions = 1.57, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 37, Avg.collisions = 1.78, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 54, Avg.collisions = 1.97, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 81, Avg.collisions = 2.30, No. resizes = 2
+----------------------------For 50000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 29, Avg.collisions = 0.83, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 22, Avg.collisions = 1.34, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 39, Avg.collisions = 1.58, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 47, Avg.collisions = 1.80, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 47, Avg.collisions = 1.97, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 87, Avg.collisions = 2.28, No. resizes = 2
+----------------------------For 100000 strings-----------------------------
+ISF = 0.250000 and MFF = 0.600000 --> Max.collisions = 18, Avg.collisions = 0.83, No. resizes = 3
+ISF = 0.200000 and MFF = 0.750000 --> Max.collisions = 31, Avg.collisions = 1.33, No. resizes = 3
+ISF = 0.200000 and MFF = 0.800000 --> Max.collisions = 34, Avg.collisions = 1.56, No. resizes = 3
+ISF = 0.250000 and MFF = 0.830000 --> Max.collisions = 42, Avg.collisions = 1.82, No. resizes = 3
+ISF = 0.250000 and MFF = 0.850000 --> Max.collisions = 48, Avg.collisions = 1.99, No. resizes = 3
+ISF = 0.500000 and MFF = 0.900000 --> Max.collisions = 95, Avg.collisions = 2.31, No. resizes = 2
+-----------------------------------------------------Average collisions for functions-------------------------------------------------
+Avg collision/no inserted elements for hashFunction nr.1 is 70.144
+Avg collision/no inserted elements for hashFunction nr.2 is 1.639
+Avg collision/no inserted elements for hashFunction nr.3 is 1.572
+Avg collision/no inserted elements for hashFunction nr.4 is 1.658

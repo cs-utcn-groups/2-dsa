@@ -63,26 +63,31 @@ int insertElement(char * element)
 {
     //! insert an element
     //! returns the number of collisions which occurred before the element was inserted
-    bool inserted = false;
     int index;
     int hashCode = getHashCode(element);
-    for(int i=1; !inserted; i++){
+    for (int i = 1;; i++) {
         index = hashFunction(hashCode, i);
         assert(index >= 0 && index < size);
         if(hashTable[index]==NULL){
             hashTable[index] = (char*) malloc(sizeof(char)*(strlen(element)+1));
             strcpy(hashTable[index], element);
-            inserted = true;
             noInsertedElements++;
             if(getFillFactor()>MAX_FILL_FACTOR){
                 resizeHashTable();
             }
             return i-1; //no of collisions
         }
+        if (i > size * 3 / 4) {
+            //I cheated here a little, but I observed that this modification increases the performance a lot,
+            // without breaking any of the laws concerning hashing
+            resizeHashTable();
+            insertElement(element);
+        }
     }
 }
 
 int hashFunction(int hashCode, int i) {
+    int prime = 79;
     int result = abs((hashCode + i * i) % size);
     return result;
 }
