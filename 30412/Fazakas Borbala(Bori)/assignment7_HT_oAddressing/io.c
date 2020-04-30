@@ -63,6 +63,6 @@ char * randString()
 
 FILE * getFileForInt(int N)
 {
-    char * filename = (char*) malloc(sizeof(char)*8);
+    char *filename = (char *) malloc(sizeof(char) * 15);
     return fopen(strcat(itoa(N,filename,10),".data"), "rw");
 }

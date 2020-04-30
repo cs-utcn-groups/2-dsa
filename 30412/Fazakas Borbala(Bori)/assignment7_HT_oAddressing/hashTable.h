@@ -12,8 +12,10 @@ int size, noInsertedElements, noResizes;
 int hashFunctionNr;
 
 
-int hashFunction(char * content, int i);
+int hashFunction(int hashCode, int i);
 void initHashTable(int N, int functionNr);
+
+void freeHashTable();
 void resizeHashTable();
 int insertElement(char * element);
 int noResizesNeeded();
@@ -22,6 +24,7 @@ float getFillFactor();
 void setInitialSizeFactor(float sizeFactor);
 void setMaxFillFactor(float maxFillFactor);
 
+int getHashCode(char *content);
 int hashCode0(char *content);
 int hashCode1(char *content);
 int hashCode2(char *content);

@@ -8,6 +8,7 @@
 #include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <assert.h>
 
 
 void initHashTable(int N, int functionNr)
@@ -52,6 +53,7 @@ void resizeHashTable()
         if(oldHashTable[i]!=NULL){
             noInsertedElements--;
             insertElement(oldHashTable[i]);
+            free(oldHashTable[i]);
         }
     }
     free(oldHashTable);
@@ -63,8 +65,10 @@ int insertElement(char * element)
     //! returns the number of collisions which occurred before the element was inserted
     bool inserted = false;
     int index;
+    int hashCode = getHashCode(element);
     for(int i=1; !inserted; i++){
-        index = hashFunction(element, i);
+        index = hashFunction(hashCode, i);
+        assert(index >= 0 && index < size);
         if(hashTable[index]==NULL){
             hashTable[index] = (char*) malloc(sizeof(char)*(strlen(element)+1));
             strcpy(hashTable[index], element);
@@ -75,24 +79,30 @@ int insertElement(char * element)
             }
             return i-1; //no of collisions
         }
-        if(i==100000){
-            printf("10000");
-        }
     }
 }
 
-int hashFunction(char* content, int i){
-    int prime = 997;
-    switch(hashFunctionNr) {
-        case 0: return (abs(hashCode0(content)*(int)pow(i, 2) + prime*i))%size;
+int hashFunction(int hashCode, int i) {
+    int result = abs((hashCode + i * i) % size);
+    return result;
+}
+
+int getHashCode(char *content) {
+    switch (hashFunctionNr) {
+        case 0:
+            return hashCode0(content);
             break;
-        case 1: return (abs(hashCode1(content)*(int)pow(i, 2) + prime*i))%size;
+        case 1:
+            return hashCode1(content);
             break;
-        case 2: return (abs(hashCode2(content)*(int)pow(i, 2) + prime*i))%size;
+        case 2:
+            return hashCode2(content);
             break;
-        case 3: return (abs(hashCode3(content)*(int)pow(i, 2) + prime*i))%size;
+        case 3:
+            return hashCode3(content);
             break;
-        case 4: return (abs(hashCode4(content)*(int)pow(i, 2) + prime*i))%size;
+        case 4:
+            return hashCode4(content);
             break;
     }
 }
@@ -128,7 +138,7 @@ int hashCode2(char* content)
 int hashCode3(char * content){
     int fnvPrime = 16777619u;
     int fnv_offset_basis = 2166136261u;
-    unsigned int hash = fnv_offset_basis;
+    int hash = fnv_offset_basis;
     for(int i=0; i<strlen(content); i++)
     {
         hash *= fnvPrime;
@@ -140,7 +150,7 @@ int hashCode3(char * content){
 int hashCode4(char *content) {
     int fnvPrime = 16777619u;
     int fnv_offset_basis = 2166136261u;
-    unsigned int hash = fnv_offset_basis;
+    int hash = fnv_offset_basis;
     for (int i = 0; i < strlen(content); i++) {
         hash ^= content[i];
         hash *= fnvPrime;
@@ -155,4 +165,11 @@ void setInitialSizeFactor(float sizeFactor){
 
 void setMaxFillFactor(float maxFillFactor){
     MAX_FILL_FACTOR = maxFillFactor;
+}
+
+void freeHashTable() {
+    for (int i = 0; i < size; i++) {
+        free(hashTable[i]);
+    }
+    free(hashTable);
 }
