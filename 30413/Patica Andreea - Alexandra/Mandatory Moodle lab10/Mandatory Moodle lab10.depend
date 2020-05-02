@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588423489 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory moodle lab10\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
