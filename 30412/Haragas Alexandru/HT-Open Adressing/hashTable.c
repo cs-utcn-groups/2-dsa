@@ -19,7 +19,7 @@ float getFillFactor(int size) {
         if (hashTable[i] != NULL)
             fillFactor++;
     }
-    fillFactor = (fillFactor / size) * 100;
+    fillFactor = (fillFactor / size);
     return fillFactor;
 }
 

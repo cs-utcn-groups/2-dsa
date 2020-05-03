@@ -67,7 +67,7 @@ FILE * getFileForInt(int N)
     itoa(N,filename,10);
     strcat(filename,".data");
     char *string=(char*)malloc(sizeof(char)*255);
-    strcpy(string,"D:\\DSA\\2-dsa\\30412\\Haragas Alexandru\\Hash Tables - Open Addressing\\");
+    strcpy(string,"D:\\DSA\\2-dsa\\30412\\Haragas Alexandru\\HT-Open Addressing\\");
     strcat(string,filename);
     return fopen(string, "rw");
 }
