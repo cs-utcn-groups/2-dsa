@@ -1,0 +1,4 @@
+Kruskal algorithm started:
+B -> G	C -> E	C -> D	E -> F	A -> F	C -> G	
+Cost: 24
+Kruskal algorithm ended

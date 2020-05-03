@@ -1,0 +1,8 @@
+BellmanFord algorithm started:
+Path from A to B is: A -> B, cost 12
+Path from A to C is: A -> E -> C, cost 9
+Path from A to D is: A -> D, cost 9
+Path from A to E is: A -> E, cost 7
+Path from A to F is: A -> F, cost 6
+Path from A to G is: A -> B -> G, cost 14
+BellmanFord algorithm ended
