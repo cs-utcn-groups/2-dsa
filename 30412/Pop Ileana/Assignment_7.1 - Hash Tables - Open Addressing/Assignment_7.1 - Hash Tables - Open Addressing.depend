@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1588521939 source:d:\dsa_lab\assignment_7.1 - hash tables - open addressing\io.c
+	"io.h"
+
+1588522145 d:\dsa_lab\assignment_7.1 - hash tables - open addressing\io.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1588534578 source:d:\dsa_lab\assignment_7.1 - hash tables - open addressing\hashtable.c
+	"hashTable.h"
+
+1588616306 d:\dsa_lab\assignment_7.1 - hash tables - open addressing\hashtable.h
+	"io.h"
+	<stdlib.h>
+	<stdio.h>
+
+1588616278 source:d:\dsa_lab\assignment_7.1 - hash tables - open addressing\main.c
+	"files.h"
+	"hashTable.h"
+
+1588521939 d:\dsa_lab\assignment_7.1 - hash tables - open addressing\files.h
+
