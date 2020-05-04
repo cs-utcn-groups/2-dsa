@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/SEM 2 DSA/Chained/files.h
+
+E:/SEM 2 DSA/Chained/hashTable.h
+list.h
+E:/SEM 2 DSA/Chained/list.h
+
+E:/SEM 2 DSA/Chained/io.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+
+E:/SEM 2 DSA/Chained/list.h
+
+E:/SEM 2 DSA/Chained/main.c
+io.h
+E:/SEM 2 DSA/Chained/io.h
+files.h
+E:/SEM 2 DSA/Chained/files.h
+hashTable.h
+E:/SEM 2 DSA/Chained/hashTable.h
+
