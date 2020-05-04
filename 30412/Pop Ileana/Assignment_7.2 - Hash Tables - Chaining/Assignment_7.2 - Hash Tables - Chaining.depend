@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1588542050 source:d:\dsa_lab\assignment_7.2 - hash tables - chaining\hashtable.c
+	"hashTable.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<math.h>
+
+1588610750 d:\dsa_lab\assignment_7.2 - hash tables - chaining\hashtable.h
+	"list.h"
+
+1588518592 d:\dsa_lab\assignment_7.2 - hash tables - chaining\list.h
+
+1588429410 source:d:\dsa_lab\assignment_7.2 - hash tables - chaining\io.c
+	"io.h"
+
+1588437762 d:\dsa_lab\assignment_7.2 - hash tables - chaining\io.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1588518597 source:d:\dsa_lab\assignment_7.2 - hash tables - chaining\list.c
+	"list.h"
+	"io.h"
+	<string.h>
+
+1588610684 source:d:\dsa_lab\assignment_7.2 - hash tables - chaining\main.c
+	"io.h"
+	"hashTable.h"
+	"files.h"
+
+1588429154 d:\dsa_lab\assignment_7.2 - hash tables - chaining\files.h
+
