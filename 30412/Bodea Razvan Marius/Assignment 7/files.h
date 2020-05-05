@@ -1,6 +1,4 @@
-//
-// Created by razvi on 5/3/2020.
-//
+
 
 #ifndef HASH_TABLES_FILES_H
 enum FILE
