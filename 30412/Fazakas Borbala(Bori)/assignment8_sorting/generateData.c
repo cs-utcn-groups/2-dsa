@@ -7,7 +7,7 @@
 #include <time.h>
 
 
-#define MAX_ELEMENTS 10000
+#define MAX_ELEMENTS 100000
 
 void writeRandomArraysToFile(int noArrays) {
     FILE *outFile = fopen("data.in", "w");
@@ -16,7 +16,7 @@ void writeRandomArraysToFile(int noArrays) {
         int noElements = rand() % MAX_ELEMENTS;
         fprintf(outFile, "%d\n", noElements);
         for (int j = 1; j <= noElements; j++) {
-            fprintf(outFile, "%d ", rand());
+            fprintf(outFile, "%d ", rand() % INT_MAX);
         }
         fprintf(outFile, "\n");
     }
@@ -34,7 +34,7 @@ void appendSortedArrayToFile_Ascending(int noArrays) {
         fprintf(outFile, "%d\n", noElements);
         int *a = (int *) malloc(sizeof(int) * noElements);
         for (int j = 0; j < noElements; j++) {
-            a[j] = rand();
+            a[j] = rand() % INT_MAX;
         }
         qsort(a, noElements, sizeof(int), compareInt);
         for (int j = 0; j < noElements; j++) {
@@ -56,7 +56,7 @@ void appendSortedArrayToFile_Descending(int noArrays) {
         fprintf(outFile, "%d\n", noElements);
         int *a = (int *) malloc(sizeof(int) * noElements);
         for (int j = 0; j < noElements; j++) {
-            a[j] = rand();
+            a[j] = rand() % INT_MAX;
         }
         qsort(a, noElements, sizeof(int), compareIntDescending);
         for (int j = 0; j < noElements; j++) {

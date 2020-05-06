@@ -11,9 +11,9 @@
 #include <string.h>
 
 void swap(int *x, int *y) {
-    *x ^= *y;
-    *y ^= *x;
-    *x ^= *y;
+    int a = *y;
+    *y = *x;
+    *x = a;
 }
 
 bool isSorted(int *a, int noElements) {
@@ -43,8 +43,8 @@ actions insertionSort(int *a, int noElements) {
             index--;
             sortActions.comparisons++;
             //swap
-            sortActions.accesses += 4; //plus above comparison
-            sortActions.assignments += 3;
+            sortActions.accesses += 3; //plus above comparison
+            sortActions.assignments += 2;
         }
         sortActions.comparisons++;
         sortActions.accesses++;
@@ -62,87 +62,32 @@ int max(int a, int b) {
     return a < b ? b : a;
 }
 
-int getMedian(int a, int b, int c, actions *sortactions) {//returns middle element
-    //if 2 of the elements are equal, returns the bigest value out of the 3
-    int minim = min(min(a, b), c);
-    int maxim = max(max(a, b), c);
-    sortactions->comparisons += 4;
-    if (a > minim && a < maxim) {
-        sortactions->comparisons += 2;
-        return a;
-    }
-    if (b > minim && b < maxim) {
-        sortactions->comparisons += 4;
-        return b;
-    }
-    if (c > minim && c < maxim) {
-        sortactions->comparisons += 6;
-        return c;
-    }
-    if (a == b || a == c) {
-        sortactions->comparisons += 8;
-        return a;
-    }
-    return b;
-}
-
-bool validPartition(int *a, int startIndex, int endIndex, int pivot, int end1) {
-    for (int i = startIndex; i <= end1; i++) {
-        if (a[i] > pivot) return false;
-    }
-
-    for (int i = end1 + 1; i <= endIndex; i++) {
-        if (a[i] < pivot) return false;
-    }
-    return true;
-}
-
 void quickSortHelper(int *a, int startIndex, int endIndex, actions *sortActions) {
     if (startIndex + 1 < endIndex) { //at least 3 elements
-        int pivot = getMedian(a[startIndex], a[endIndex], a[(startIndex + endIndex) / 2], sortActions);
-        int i = startIndex;
-        int j = endIndex;
-
-        while (i < j) {
-            while (a[i] <= pivot && i <= endIndex) {
-                i++;
-                sortActions->comparisons++;
-            }
-            while (a[j] >= pivot && j >= startIndex) {
-                sortActions->comparisons++;
-                j--;
-            }
-
-            sortActions->comparisons += 2;
-            if (i < j) {
-                swap(&a[i], &a[j]);
-                sortActions->assignments += 3;
-                sortActions->accesses += 3;
-            }
-        }
-
-        //if all 3 given values were equal and also minimum:
-        if (i - 1 < startIndex) {
-            for (int i = startIndex + 1; i <= endIndex; i++) {
-                if (a[i] < a[startIndex]) {
-                    assert(false);
+        int pivotIndex = endIndex;
+        int noSmallerElements = 0;
+        for (int i = startIndex; i < endIndex; i++) {
+            if (a[i] < a[pivotIndex]) {
+                noSmallerElements++;
+                if (noSmallerElements <
+                    i) { //in this case, a[noSmallerElements] is for sure >= pivotvalue, I don't need to check it again
+                    swap(&a[startIndex + noSmallerElements - 1], &a[i]);
+                    sortActions->assignments += 2;
+                    sortActions->accesses += 2;
                 }
             }
-            quickSortHelper(a, startIndex + 1, endIndex,
-                            sortActions); //I cut of the first element, because I already n=know that it was minimal
-        } else {
-            assert(validPartition(a, startIndex, endIndex, pivot, i - 1));
-            quickSortHelper(a, startIndex, i - 1, sortActions);
-            assert(i - 1 >= startIndex);
-            quickSortHelper(a, i, endIndex, sortActions);
-            assert(i <= endIndex);
         }
+        sortActions->comparisons += (endIndex - startIndex);
+        sortActions->accesses += (endIndex - startIndex);
+        swap(&a[startIndex + noSmallerElements], &a[pivotIndex]); //get the pivotvalue on the right place
+        quickSortHelper(a, startIndex, startIndex + noSmallerElements - 1, sortActions);
+        quickSortHelper(a, startIndex + noSmallerElements + 1, endIndex, sortActions);
 
     } else { //1 or 2 elements
-        if (a[startIndex] > a[endIndex]) {
+        if (startIndex < endIndex && a[startIndex] > a[endIndex]) { //2 elements
             swap(&a[startIndex], &a[endIndex]);
-            sortActions->accesses += 3;
-            sortActions->assignments += 3;
+            sortActions->accesses += 2;
+            sortActions->assignments += 2;
         }
         sortActions->comparisons += 1;
         sortActions->accesses += 1;
@@ -243,16 +188,16 @@ void heapify(int *a, int noElements, int index, actions *sortActions) {
         sortActions->comparisons += 2;
         sortActions->accesses += 2;
         //swap
-        sortActions->accesses += 3;
-        sortActions->assignments += 3;
+        sortActions->accesses += 2;
+        sortActions->assignments += 2;
     } else if (noElements >= index * 2 + 1 && a[index] < a[index * 2 + 1]) {
         swap(&a[index], &a[index * 2 + 1]);
         heapify(a, noElements, index * 2 + 1, sortActions);
         sortActions->comparisons += 2;
         sortActions->accesses += 2;
         //swap
-        sortActions->accesses += 3;
-        sortActions->assignments += 3;
+        sortActions->accesses += 2;
+        sortActions->assignments += 2;
     }
 }
 
@@ -270,8 +215,8 @@ actions heapSort(int *a, int noElements) {
     //get the ith largest element and the heapify
     for (int i = 1; i <= noElements - 1; i++) {
         swap(&a[1], &a[noElements - i + 1]);
-        heapActions.accesses += 3;
-        heapActions.assignments += 3;
+        heapActions.accesses += 2;
+        heapActions.assignments += 2;
         heapify(a, noElements - i, 1, &heapActions);
     }
 

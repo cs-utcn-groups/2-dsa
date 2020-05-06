@@ -3,7 +3,10 @@
 #include "sorting.h"
 #include "generateData.h"
 #include <string.h>
+#include <time.h>
 
+
+//time comparisons are not real, due to lots of unnecessary steps(counting actions, check if sort was correct, etc.)
 
 int main() {
     int noArrays = 12;
@@ -11,15 +14,13 @@ int main() {
     writeRandomArraysToFile(10);
     appendSortedArrayToFile_Ascending(1);
     appendSortedArrayToFile_Descending(1);
-    appendRandomArraysToFile_withConstraint(10, 100);
-    appendSortedArrayToFile_Ascending_withConstraint(1, 100);
-    appendSortedArrayToFile_Descending_withConstraint(1, 100);
 
     //sorting
     int noElements;
     FILE *inFile = fopen("data.in", "r");
     FILE *outFile = fopen("conclusions.out", "w");
     actions sortActions;
+    clock_t start, end;
 
     for (int j = 1; j <= noArrays; j++) {
         fscanf(inFile, "%d", &noElements);
@@ -37,29 +38,44 @@ int main() {
         }
         fprintf(outFile, "Array size is %d\n", noElements);
 
-        fprintf(outFile, "Insertion sort:\n");
+        fprintf(outFile, "Insertion sort: ");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
+        start = clock();
         sortActions = insertionSort(aCopy, noElements);
+        end = clock();
+        fprintf(outFile, "Total time was: %lf\n", (double) (end - start) / CLOCKS_PER_SEC);
         printActions(outFile, &sortActions);
 
-        fprintf(outFile, "Merge sort:\n");
+        fprintf(outFile, "Merge sort: ");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
+        start = clock();
         sortActions = mergeSort(aCopy, noElements);
+        end = clock();
+        fprintf(outFile, "Total time was: %lf\n", (double) (end - start) / CLOCKS_PER_SEC);
         printActions(outFile, &sortActions);
 
-        fprintf(outFile, "Heap sort:\n");
+        fprintf(outFile, "Heap sort: ");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
+        start = clock();
         sortActions = heapSort(aCopy, noElements);
+        end = clock();
+        fprintf(outFile, "Total time was: %lf\n", (double) (end - start) / CLOCKS_PER_SEC);
         printActions(outFile, &sortActions);
 
-        /*fprintf(outFile, "Quicksort:\n");
+        fprintf(outFile, "Quicksort: ");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
+        start = clock();
         sortActions = quickSort(aCopy, noElements);
-        printActions(outFile, &sortActions);*/
+        end = clock();
+        fprintf(outFile, "Total time was: %lf\n", (double) (end - start) / CLOCKS_PER_SEC);
+        printActions(outFile, &sortActions);
 
-        fprintf(outFile, "Radix sort:\n");
+        fprintf(outFile, "Radix sort: ");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
+        start = clock();
         sortActions = radixSort(aCopy, noElements);
+        end = clock();
+        fprintf(outFile, "Total time was: %lf\n", (double) (end - start) / CLOCKS_PER_SEC);
         printActions(outFile, &sortActions);
     }
     return 0;
