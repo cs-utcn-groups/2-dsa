@@ -7,43 +7,60 @@
 
 int main() {
     int noArrays = 12;
+    //generating data
     writeRandomArraysToFile(10);
     appendSortedArrayToFile_Ascending(1);
     appendSortedArrayToFile_Descending(1);
+    appendRandomArraysToFile_withConstraint(10, 100);
+    appendSortedArrayToFile_Ascending_withConstraint(1, 100);
+    appendSortedArrayToFile_Descending_withConstraint(1, 100);
+
+    //sorting
     int noElements;
     FILE *inFile = fopen("data.in", "r");
+    FILE *outFile = fopen("conclusions.out", "w");
+    actions sortActions;
 
     for (int j = 1; j <= noArrays; j++) {
         fscanf(inFile, "%d", &noElements);
         int *a = (int *) malloc(sizeof(int) * (noElements + 1));
+        int *aCopy = (int *) malloc(sizeof(int) * (noElements + 1));
         for (int i = 1; i <= noElements; i++) {
             fscanf(inFile, "%d", &a[i]);
         }
 
-        int *aCopy = (int *) malloc(sizeof(int) * (noElements + 1));
+        fprintf(outFile, "--------------Array nr. %d--------------\n", j);
+        if (j == noArrays - 1) {
+            fprintf(outFile, "!!!this array was sorted in an ascending order!!!\n");
+        } else if (j == noArrays) {
+            fprintf(outFile, "!!!this array was sorted in a descending order!!!\n");
+        }
+        fprintf(outFile, "Array size is %d\n", noElements);
+
+        fprintf(outFile, "Insertion sort:\n");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
-        insertionSort(a, noElements);
+        sortActions = insertionSort(aCopy, noElements);
+        printActions(outFile, &sortActions);
 
+        fprintf(outFile, "Merge sort:\n");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
-        mergeSort(a, noElements);
+        sortActions = mergeSort(aCopy, noElements);
+        printActions(outFile, &sortActions);
 
+        fprintf(outFile, "Heap sort:\n");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
-        heapSort(a, noElements);
+        sortActions = heapSort(aCopy, noElements);
+        printActions(outFile, &sortActions);
 
+        /*fprintf(outFile, "Quicksort:\n");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
-        quickSort(a, noElements);
+        sortActions = quickSort(aCopy, noElements);
+        printActions(outFile, &sortActions);*/
 
+        fprintf(outFile, "Radix sort:\n");
         memcpy(aCopy, a, (noElements + 1) * sizeof(int));
-        radixSort(a, noElements);
-
-        memcpy(aCopy, a, noElements * sizeof(int));
-        heapSort(a, noElements);
-
-        memcpy(aCopy, a, noElements * sizeof(int));
-        heapSort(a, noElements);
+        sortActions = radixSort(aCopy, noElements);
+        printActions(outFile, &sortActions);
     }
-
-
-    // mergeSort(a, noElements);
     return 0;
 }

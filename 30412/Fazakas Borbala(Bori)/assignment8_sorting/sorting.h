@@ -5,9 +5,13 @@
 #ifndef ASSIGNMENT8_SORTING_SORTING_H
 #define ASSIGNMENT8_SORTING_SORTING_H
 
+#include <stdio.h>
+
 typedef struct {
     int comparisons, accesses, assignments, total;
 } actions;
+
+void printActions(FILE *outFile, actions *sortingActions);
 
 actions insertionSort(int *a, int noElements);
 
