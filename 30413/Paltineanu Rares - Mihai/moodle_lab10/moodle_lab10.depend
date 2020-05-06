@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588791915 source:c:\users\lepoa\desktop\dsa\2-dsa\30413\paltineanu rares - mihai\moodle_lab10\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
