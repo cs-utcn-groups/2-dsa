@@ -1,0 +1,146 @@
+--------------Array nr. 1--------------
+Array size is 13620
+Insertion sort: Total time was: 0.367000
+This sort needed 139020836 array accesses, 92671478 assignments and 46349358 comparisons, 278041672 actions in total
+Merge sort: Total time was: 0.000000
+This sort needed 563748 array accesses, 375832 assignments and 187916 comparisons, 1127496 actions in total
+Heap sort: Total time was: 0.015000
+This sort needed 672782 array accesses, 350010 assignments and 322772 comparisons, 1345564 actions in total
+Quicksort: Total time was: 0.002000
+This sort needed 441573 array accesses, 216368 assignments and 225205 comparisons, 883146 actions in total
+Radix sort: Total time was: 0.000000
+This sort needed 354120 array accesses, 136300 assignments and 0 comparisons, 490420 actions in total
+--------------Array nr. 2--------------
+Array size is 8093
+Insertion sort: Total time was: 0.115000
+This sort needed 48654844 array accesses, 32431168 assignments and 16223676 comparisons, 97309688 actions in total
+Merge sort: Total time was: 0.000000
+This sort needed 315330 array accesses, 210220 assignments and 105110 comparisons, 630660 actions in total
+Heap sort: Total time was: 0.004000
+This sort needed 375692 array accesses, 195938 assignments and 179754 comparisons, 751384 actions in total
+Quicksort: Total time was: 0.000000
+This sort needed 258395 array accesses, 130578 assignments and 127817 comparisons, 516790 actions in total
+Radix sort: Total time was: 0.000000
+This sort needed 210418 array accesses, 81030 assignments and 0 comparisons, 291448 actions in total
+--------------Array nr. 3--------------
+Array size is 7975
+Insertion sort: Total time was: 0.105000
+This sort needed 47510352 array accesses, 31668252 assignments and 15842100 comparisons, 95020704 actions in total
+Merge sort: Total time was: 0.001000
+This sort needed 310374 array accesses, 206916 assignments and 103458 comparisons, 620748 actions in total
+Heap sort: Total time was: 0.000000
+This sort needed 369492 array accesses, 192720 assignments and 176772 comparisons, 738984 actions in total
+Quicksort: Total time was: 0.004000
+This sort needed 254792 array accesses, 128900 assignments and 125892 comparisons, 509584 actions in total
+Radix sort: Total time was: 0.002000
+This sort needed 207350 array accesses, 79850 assignments and 0 comparisons, 287200 actions in total
+--------------Array nr. 4--------------
+Array size is 18636
+Insertion sort: Total time was: 0.583000
+This sort needed 261136775 array accesses, 174078760 assignments and 87058015 comparisons, 522273550 actions in total
+Merge sort: Total time was: 0.004000
+This sort needed 796224 array accesses, 530816 assignments and 265408 comparisons, 1592448 actions in total
+Heap sort: Total time was: 0.005000
+This sort needed 955118 array accesses, 496194 assignments and 458924 comparisons, 1910236 actions in total
+Quicksort: Total time was: 0.001000
+This sort needed 626186 array accesses, 309476 assignments and 316710 comparisons, 1252372 actions in total
+Radix sort: Total time was: 0.007000
+This sort needed 484536 array accesses, 186460 assignments and 0 comparisons, 670996 actions in total
+--------------Array nr. 5--------------
+Array size is 13662
+Insertion sort: Total time was: 0.310000
+This sort needed 138951743 array accesses, 92625388 assignments and 46326355 comparisons, 277903486 actions in total
+Merge sort: Total time was: 0.004000
+This sort needed 565638 array accesses, 377092 assignments and 188546 comparisons, 1131276 actions in total
+Heap sort: Total time was: 0.003000
+This sort needed 676550 array accesses, 351936 assignments and 324614 comparisons, 1353100 actions in total
+Quicksort: Total time was: 0.002000
+This sort needed 436199 array accesses, 212862 assignments and 223337 comparisons, 872398 actions in total
+Radix sort: Total time was: 0.004000
+This sort needed 355212 array accesses, 136720 assignments and 0 comparisons, 491932 actions in total
+--------------Array nr. 6--------------
+Array size is 1518
+Insertion sort: Total time was: 0.003000
+This sort needed 1725980 array accesses, 1149642 assignments and 576338 comparisons, 3451960 actions in total
+Merge sort: Total time was: 0.000000
+This sort needed 48504 array accesses, 32336 assignments and 16168 comparisons, 97008 actions in total
+Heap sort: Total time was: 0.000000
+This sort needed 55934 array accesses, 29484 assignments and 26450 comparisons, 111868 actions in total
+Quicksort: Total time was: 0.000000
+This sort needed 38636 array accesses, 20478 assignments and 18158 comparisons, 77272 actions in total
+Radix sort: Total time was: 0.000000
+This sort needed 39468 array accesses, 15280 assignments and 0 comparisons, 54748 actions in total
+--------------Array nr. 7--------------
+Array size is 18936
+Insertion sort: Total time was: 0.600000
+This sort needed 271474787 array accesses, 180970568 assignments and 90504219 comparisons, 542949574 actions in total
+Merge sort: Total time was: 0.007000
+This sort needed 810624 array accesses, 540416 assignments and 270208 comparisons, 1621248 actions in total
+Heap sort: Total time was: 0.002000
+This sort needed 972138 array accesses, 505004 assignments and 467134 comparisons, 1944276 actions in total
+Quicksort: Total time was: 0.000000
+This sort needed 683062 array accesses, 351708 assignments and 331354 comparisons, 1366124 actions in total
+Radix sort: Total time was: 0.011000
+This sort needed 492336 array accesses, 189460 assignments and 0 comparisons, 681796 actions in total
+--------------Array nr. 8--------------
+Array size is 13940
+Insertion sort: Total time was: 0.327000
+This sort needed 145553377 array accesses, 97026292 assignments and 48527085 comparisons, 291106754 actions in total
+Merge sort: Total time was: 0.001000
+This sort needed 578148 array accesses, 385432 assignments and 192716 comparisons, 1156296 actions in total
+Heap sort: Total time was: 0.006000
+This sort needed 691342 array accesses, 359610 assignments and 331732 comparisons, 1382684 actions in total
+Quicksort: Total time was: 0.003000
+This sort needed 471837 array accesses, 235976 assignments and 235861 comparisons, 943674 actions in total
+Radix sort: Total time was: 0.004000
+This sort needed 362440 array accesses, 139500 assignments and 0 comparisons, 501940 actions in total
+--------------Array nr. 9--------------
+Array size is 29121
+Insertion sort: Total time was: 1.407000
+This sort needed 635023460 array accesses, 423329560 assignments and 211693900 comparisons, 1270046920 actions in total
+Merge sort: Total time was: 0.002000
+This sort needed 1299504 array accesses, 866336 assignments and 433168 comparisons, 2599008 actions in total
+Heap sort: Total time was: 0.010000
+This sort needed 1567184 array accesses, 812712 assignments and 754472 comparisons, 3134368 actions in total
+Quicksort: Total time was: 0.009000
+This sort needed 980708 array accesses, 477886 assignments and 502822 comparisons, 1961416 actions in total
+Radix sort: Total time was: 0.002000
+This sort needed 757146 array accesses, 291310 assignments and 0 comparisons, 1048456 actions in total
+--------------Array nr. 10--------------
+Array size is 533
+Insertion sort: Total time was: 0.000000
+This sort needed 218089 array accesses, 145038 assignments and 73051 comparisons, 436178 actions in total
+Merge sort: Total time was: 0.000000
+This sort needed 14517 array accesses, 9678 assignments and 4839 comparisons, 29034 actions in total
+Heap sort: Total time was: 0.000000
+This sort needed 16324 array accesses, 8694 assignments and 7630 comparisons, 32648 actions in total
+Quicksort: Total time was: 0.000000
+This sort needed 10793 array accesses, 5450 assignments and 5343 comparisons, 21586 actions in total
+Radix sort: Total time was: 0.000000
+This sort needed 13858 array accesses, 5430 assignments and 0 comparisons, 19288 actions in total
+--------------Array nr. 11--------------
+!!!this array was sorted in an ascending order!!!
+Array size is 5334
+Insertion sort: Total time was: 0.000000
+This sort needed 5333 array accesses, 0 assignments and 5333 comparisons, 10666 actions in total
+Merge sort: Total time was: 0.009000
+This sort needed 199452 array accesses, 132968 assignments and 66484 comparisons, 398904 actions in total
+Heap sort: Total time was: 0.001000
+This sort needed 250646 array accesses, 130656 assignments and 119990 comparisons, 501292 actions in total
+Quicksort: Total time was: 0.030000
+This sort needed 13159916 array accesses, 0 assignments and 13159916 comparisons, 26319832 actions in total
+Radix sort: Total time was: 0.000000
+This sort needed 138684 array accesses, 53440 assignments and 0 comparisons, 192124 actions in total
+--------------Array nr. 12--------------
+!!!this array was sorted in a descending order!!!
+Array size is 16541
+Insertion sort: Total time was: 0.910000
+This sort needed 410386009 array accesses, 273579646 assignments and 136806363 comparisons, 820772018 actions in total
+Merge sort: Total time was: 0.009000
+This sort needed 695664 array accesses, 463776 assignments and 231888 comparisons, 1391328 actions in total
+Heap sort: Total time was: 0.000000
+This sort needed 788428 array accesses, 410754 assignments and 377674 comparisons, 1576856 actions in total
+Quicksort: Total time was: 0.647000
+This sort needed 241755367 array accesses, 120864740 assignments and 120890627 comparisons, 483510734 actions in total
+Radix sort: Total time was: 0.000000
+This sort needed 430066 array accesses, 165510 assignments and 0 comparisons, 595576 actions in total

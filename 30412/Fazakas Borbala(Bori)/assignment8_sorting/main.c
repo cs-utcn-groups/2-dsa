@@ -18,7 +18,7 @@ int main() {
     //sorting
     int noElements;
     FILE *inFile = fopen("data.in", "r");
-    FILE *outFile = fopen("conclusions.out", "w");
+    FILE *outFile = fopen("out.txt", "w");
     actions sortActions;
     clock_t start, end;
 
