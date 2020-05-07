@@ -38,3 +38,14 @@ bool isEmpty(Queue queue) {
     if (queue.first == NULL) return true;
     return false;
 }
+
+void readQueue(FILE *inputFile, Queue *queue) {
+    char *readValue = (char *) malloc(sizeof(char) * MAX_CHAR_LENGTH);
+    while (inputFile != NULL) {
+        fscanf(inputFile, "%s", readValue);
+        QueueNode* node = createNewQueueNode(readValue);
+        enqueue(node, queue);
+        if (feof(inputFile) != 0)
+            break;
+    }
+}
