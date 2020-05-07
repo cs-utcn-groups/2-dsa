@@ -16,4 +16,6 @@ Tree initializeTree();
 
 TreeNode* buildTreeFromQueue(TreeNode *currentNode, Queue *queue);
 
+void printTree(TreeNode* node, int level);
+
 #endif //ASSIGNMENT_3_EXTRA_TREE_H

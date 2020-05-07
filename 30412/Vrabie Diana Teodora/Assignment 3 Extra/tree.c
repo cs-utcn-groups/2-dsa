@@ -34,6 +34,18 @@ TreeNode* buildTreeFromQueue(TreeNode *currentNode, Queue *queue) {
     return currentNode;
 }
 
+void printTree(TreeNode* node, int level) {
+    if (node != NULL)
+    {
+        printTree(node->left, level + 1);
+        for (int i = 1; i <= level; i++) {
+            printf("   ");
+        }
+        printf("%s\n", node->value);
+        printTree(node->right, level + 1);
+    }
+}
+
 bool isLeaf(TreeNode *node) {
     // only numerical values are leaves in an expression tree; check if last character of the value is digit
     char c = node->value[strlen(node->value) - 1];

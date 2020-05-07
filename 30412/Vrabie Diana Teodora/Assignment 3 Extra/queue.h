@@ -15,7 +15,7 @@ typedef struct _queue {
     QueueNode *first, *last;
 } Queue;
 
-Queue initializeQueue();
+Queue* initializeQueue();
 
 void enqueue(QueueNode *node, Queue *queue);
 

@@ -5,18 +5,17 @@
 
 #include "queue.h"
 
-Queue initializeQueue() {
-    Queue newQueue;
-    newQueue.first = NULL;
-    newQueue.last = NULL;
+Queue* initializeQueue() {
+    Queue* newQueue = (Queue*) malloc(sizeof(Queue));
+    newQueue->first = NULL;
+    newQueue->last = NULL;
     return newQueue;
 }
 
 void enqueue(QueueNode *node, Queue *queue) {
     //empty queue, add first node
     if (queue->first == NULL) {
-        queue->first = node;
-        queue->last =  queue->first;
+        queue->first = queue->last = node;
         return;
     }
     //append node to end of queue
@@ -40,11 +39,12 @@ bool isEmpty(Queue queue) {
 }
 
 void readQueue(FILE *inputFile, Queue *queue) {
-    char *readValue = (char *) malloc(sizeof(char) * MAX_CHAR_LENGTH);
     while (inputFile != NULL) {
+        char *readValue = (char *) malloc(sizeof(char) * MAX_CHAR_LENGTH);
         fscanf(inputFile, "%s", readValue);
         QueueNode* node = createNewQueueNode(readValue);
         enqueue(node, queue);
+        free(readValue);
         if (feof(inputFile) != 0)
             break;
     }
