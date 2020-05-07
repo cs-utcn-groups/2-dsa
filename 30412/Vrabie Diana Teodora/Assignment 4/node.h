@@ -18,4 +18,8 @@ Node *insertNode(Node *node, int key);
 void printTree(Node *root, int level);
 
 
+// Extra Assignment - Deleting a node in AVL tree
+Node *deleteNode(Node *root, int key);
+
+
 #endif //ASSIGNMENT_4_NODE_H

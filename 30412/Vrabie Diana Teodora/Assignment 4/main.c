@@ -15,8 +15,17 @@ int main() {
     root = insertNode(root, 9);
     root = insertNode(root, 10);
     root = insertNode(root, 11);
-
     printTree(root, 0);
-
+    printf("End of tree\n\n");
+    root = deleteNode(root, 6);
+    printTree(root, 0);
+    printf("End of tree\n\n");
+    root = deleteNode(root, 10);
+    printTree(root, 0);
+    printf("End of tree\n\n");
+    root = deleteNode(root, 1);
+    printTree(root, 0);
+    printf("End of tree\n\n");
+     
     return 0;
 }
