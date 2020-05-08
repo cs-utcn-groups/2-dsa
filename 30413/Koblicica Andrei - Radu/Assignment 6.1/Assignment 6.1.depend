@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1588866219 source:c:\users\andrei\desktop\info\codeblocks\assignment 6.1\node.c
+	"node.h"
+
+1588866220 c:\users\andrei\desktop\info\codeblocks\assignment 6.1\node.h
+	<stdio.h>
+	<stdlib.h>
+
+1588959651 source:c:\users\andrei\desktop\info\codeblocks\assignment 6.1\graphalgorithms.c
+	"GraphAlgorithms.h"
+
+1588955885 c:\users\andrei\desktop\info\codeblocks\assignment 6.1\graphalgorithms.h
+	"graph.h"
+
+1588955868 c:\users\andrei\desktop\info\codeblocks\assignment 6.1\graph.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"edge.h"
+
+1588866220 c:\users\andrei\desktop\info\codeblocks\assignment 6.1\edge.h
+
+1588959164 source:c:\users\andrei\desktop\info\codeblocks\assignment 6.1\main.c
+	<stdio.h>
+	"graphRepresentation.h"
+	"graphAlgorithms.h"
+
+1588866220 c:\users\andrei\desktop\info\codeblocks\assignment 6.1\graphrepresentation.h
+	"graph.h"
+
+1588952099 source:c:\users\andrei\desktop\info\codeblocks\assignment 6.1\graphrepresentation.c
+	<stdlib.h>
+	"graphRepresentation.h"
+
