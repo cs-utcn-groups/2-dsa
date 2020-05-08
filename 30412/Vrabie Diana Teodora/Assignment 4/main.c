@@ -26,6 +26,6 @@ int main() {
     root = deleteNode(root, 1);
     printTree(root, 0);
     printf("End of tree\n\n");
-     
+
     return 0;
 }
