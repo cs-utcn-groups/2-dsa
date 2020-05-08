@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588967480 source:d:\info\c facultate\dsastoicatudor\lab11\mandatory assignement\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
