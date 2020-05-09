@@ -1,6 +1,36 @@
 #include <stdio.h>
+#include "adj-matrix.h"
+#include "adj-list-graph.h"
+
+#define NR_VERTICES 5
 
 int main() {
-    printf("Hello, World!\n");
+    setbuf(stdout, 0);
+    AdjMatrix *myMatrix = createAdjMatrix(NR_VERTICES);
+    addEdgeToMatrix(myMatrix, 1, 2, 1);
+    addEdgeToMatrix(myMatrix, 2, 1, 1);
+    addEdgeToMatrix(myMatrix, 2, 3, 1);
+    addEdgeToMatrix(myMatrix, 3, 2, 1);
+    addEdgeToMatrix(myMatrix, 0, 4, 1);
+    addEdgeToMatrix(myMatrix, 4, 0, 1);
+    addEdgeToMatrix(myMatrix, 4, 3, 1);
+    addEdgeToMatrix(myMatrix, 3, 4, 1);
+    printAdjMatrix(myMatrix, stdout);
+
+    Graph *myGraph = createNewGraph(NR_VERTICES);
+    addEdgeToGraph(myGraph, 1, 2, 1);
+    addEdgeToGraph(myGraph, 2, 1, 1);
+    addEdgeToGraph(myGraph, 2, 3, 1);
+    addEdgeToGraph(myGraph, 3, 2, 1);
+    addEdgeToGraph(myGraph, 0, 4, 1);
+    addEdgeToGraph(myGraph, 4, 0, 1);
+    addEdgeToGraph(myGraph, 4, 3, 1);
+    addEdgeToGraph(myGraph, 3, 4, 1);
+    printGraph(myGraph, stdout);
+
+
+
+    freeAdjMatrix(&myMatrix);
+    freeGraph(&myGraph);
     return 0;
 }

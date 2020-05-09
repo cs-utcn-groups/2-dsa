@@ -11,6 +11,11 @@ AdjMatrix *createAdjMatrix(int nrOfVertices) {
     for (int i = 0; i < nrOfVertices; ++i) {
         newMatrix->matrix[i] = (int*) malloc(nrOfVertices* sizeof(int));
     }
+    for (int j = 0; j < nrOfVertices; ++j) {
+        for (int i = 0; i < nrOfVertices; ++i) {
+            newMatrix->matrix[j][i] = 0;
+        }
+    }
     return newMatrix;
 }
 
@@ -28,4 +33,17 @@ void readAdjMatrix(AdjMatrix *adjMatrix, struct _iobuf *buffer) {
             fscanf(buffer, "%d", &adjMatrix->matrix[i][j]);
         }
     }
+}
+
+void printAdjMatrix(AdjMatrix *adjMatrix, struct _iobuf *buffer) {
+    for (int i = 0; i < adjMatrix->nrOfVertices; ++i) {
+        for (int j = 0; j < adjMatrix->nrOfVertices; ++j) {
+            fprintf(buffer, "%d ", adjMatrix->matrix[i][j]);
+        }
+        fprintf(buffer, "\n");
+    }
+}
+
+void addEdgeToMatrix(AdjMatrix *adjMatrix, int source, int dest, int weight) {
+    adjMatrix->matrix[source][dest] = weight;
 }
