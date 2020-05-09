@@ -1,0 +1,22 @@
+//
+// Created by diana on 09/05/2020.
+//
+
+#ifndef EVERYTHING_GRAPHS_GRAPH_TRAVERSALS_H
+#define EVERYTHING_GRAPHS_GRAPH_TRAVERSALS_H
+
+#include "queue.h"
+#include "adj-matrix.h"
+#include "adj-list-graph.h"
+
+bool *visited;
+
+// DFS for adjacency matrix representation
+void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer);
+
+// BFS for adjacency list representation
+
+// DFS for adjacency matrix representation
+// DFS for adjacency list representation
+
+#endif //EVERYTHING_GRAPHS_GRAPH_TRAVERSALS_H

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "adj-matrix.h"
 #include "adj-list-graph.h"
+#include "graph-traversals.h"
 
 #define NR_VERTICES 5
 
@@ -28,6 +29,7 @@ int main() {
     addEdgeToGraph(myGraph, 3, 4, 1);
     printGraph(myGraph, stdout);
 
+    matrixDFS(myMatrix, 2, stdout);
 
 
     freeAdjMatrix(&myMatrix);
