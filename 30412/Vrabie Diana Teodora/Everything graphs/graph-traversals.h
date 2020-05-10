@@ -17,6 +17,9 @@ void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer);
 // DFS for adjacency list representation
 void listDFS(Graph *graph, int startVertex, struct _iobuf *buffer);
 
+// iterative DFS for adjacency list representation
+void iterativeListDFS(Graph *graph, int startVertex, struct _iobuf *buffer);
+
 // BFS for adjacency matrix representation
 // BFS for adjacency list representation
 

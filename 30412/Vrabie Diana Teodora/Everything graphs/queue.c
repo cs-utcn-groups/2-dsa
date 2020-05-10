@@ -5,14 +5,14 @@
 #include "queue.h"
 
 QueueNode *createNewQueueNode(int value) {
-    QueueNode *node = (QueueNode*) malloc(sizeof(QueueNode));
+    QueueNode *node = (QueueNode *) malloc(sizeof(QueueNode));
     node->value = value;
     node->next = NULL;
     return node;
 }
 
-Queue* initializeQueue() {
-    Queue* newQueue = (Queue*) malloc(sizeof(Queue));
+Queue *initializeQueue() {
+    Queue *newQueue = (Queue *) malloc(sizeof(Queue));
     newQueue->first = NULL;
     newQueue->last = NULL;
     return newQueue;
@@ -39,8 +39,8 @@ QueueNode *dequeue(Queue *queue) {
     return node;
 }
 
-bool isEmpty(Queue queue) {
-    if (queue.first == NULL) return true;
+bool isEmpty(Queue *queue) {
+    if (queue->first == NULL) return true;
     return false;
 }
 
@@ -48,7 +48,7 @@ void readQueue(FILE *inputFile, Queue *queue) {
     while (inputFile != NULL) {
         int readValue;
         fscanf(inputFile, "%d", &readValue);
-        QueueNode* node = createNewQueueNode(readValue);
+        QueueNode *node = createNewQueueNode(readValue);
         enqueue(node, queue);
         if (feof(inputFile) != 0)
             break;

@@ -25,7 +25,7 @@ void enqueue(QueueNode *node, Queue *queue);
 
 QueueNode *dequeue (Queue *queue);
 
-bool isEmpty (Queue queue);
+bool isEmpty (Queue *queue);
 
 void readQueue(FILE *inputFile, Queue *queue);
 
