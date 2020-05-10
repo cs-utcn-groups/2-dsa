@@ -22,7 +22,27 @@ void doMatrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer) {
 }
 
 void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer) {
-    fprintf(buffer, "DFS on adjacency matrix:\n");
+    fprintf(buffer, "\nDFS on adjacency matrix:\n");
     fillVisited(adjMatrix->nrOfVertices);
     doMatrixDFS(adjMatrix, startVertex, buffer);
 }
+
+void doListDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
+    fprintf(buffer, "%d ", startVertex);
+    visited[startVertex] = true;
+    ListNode *crawl = graph->nodesArray[startVertex].head;
+    while (crawl != NULL) {
+        if (visited[crawl->key] == false) {
+            doListDFS(graph, crawl->key, buffer);
+        }
+        crawl = crawl->next;
+    }
+}
+
+void listDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
+    fprintf(buffer, "\nDFS on adjacency list: \n");
+    fillVisited(graph->nrOfVertices);
+    doListDFS(graph, startVertex, buffer);
+}
+
+

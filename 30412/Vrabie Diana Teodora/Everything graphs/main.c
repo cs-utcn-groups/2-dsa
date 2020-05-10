@@ -30,7 +30,7 @@ int main() {
     printGraph(myGraph, stdout);
 
     matrixDFS(myMatrix, 2, stdout);
-
+    listDFS(myGraph, 2, stdout);
 
     freeAdjMatrix(&myMatrix);
     freeGraph(&myGraph);

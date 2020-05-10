@@ -14,9 +14,10 @@ bool *visited;
 // DFS for adjacency matrix representation
 void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer);
 
-// BFS for adjacency list representation
-
-// DFS for adjacency matrix representation
 // DFS for adjacency list representation
+void listDFS(Graph *graph, int startVertex, struct _iobuf *buffer);
+
+// BFS for adjacency matrix representation
+// BFS for adjacency list representation
 
 #endif //EVERYTHING_GRAPHS_GRAPH_TRAVERSALS_H
