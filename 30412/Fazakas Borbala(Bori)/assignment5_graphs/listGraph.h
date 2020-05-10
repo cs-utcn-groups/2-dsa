@@ -35,6 +35,6 @@ void BellmanFordAlgorithm(lGraph *myGraph);
 
 void kruskalAlgorithm(lGraph *myGraph);
 
-void vertexCoverApproximation(lGraph* myGraph);;
+void vertexCoverApproximation(lGraph *myGraph);;
 
 #endif //ASSIGNMENT5_GRAPHS_LISTGRAPH_H
