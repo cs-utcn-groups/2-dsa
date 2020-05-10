@@ -1,0 +1,78 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+Hash Function 1:
+For ISF = 0.25 and MMF = 0.60
+No of collisions:852
+No of resizes:3
+
+For ISF = 0.20 and MMF = 0.75
+No of collisions:852
+No of resizes:3
+
+For ISF = 0.20 and MMF = 0.80
+No of collisions:852
+No of resizes:3
+
+For ISF = 0.25 and MMF = 0.83
+No of collisions:852
+No of resizes:3
+
+For ISF = 0.25 and MMF = 0.85
+No of collisions:852
+No of resizes:3
+
+For ISF = 0.50 and MMF = 0.90
+No of collisions:852
+No of resizes:2
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Hash Function 2:
+For ISF = 0.25 and MMF = 0.60
+No of collisions:23
+No of resizes:3
+
+For ISF = 0.20 and MMF = 0.75
+No of collisions:40
+No of resizes:3
+
+For ISF = 0.20 and MMF = 0.80
+No of collisions:40
+No of resizes:3
+
+For ISF = 0.25 and MMF = 0.83
+No of collisions:54
+No of resizes:3
+
+For ISF = 0.25 and MMF = 0.85
+No of collisions:54
+No of resizes:3
+
+For ISF = 0.50 and MMF = 0.90
+No of collisions:67
+No of resizes:2
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Hash Function 3:
+For ISF = 0.25 and MMF = 0.60
+No of collisions:11
+No of resizes:3
+
+For ISF = 0.20 and MMF = 0.75
+No of collisions:18
+No of resizes:3
+
+For ISF = 0.20 and MMF = 0.80
+No of collisions:18
+No of resizes:3
+
+For ISF = 0.25 and MMF = 0.83
+No of collisions:21
+No of resizes:3
+
+For ISF = 0.25 and MMF = 0.85
+No of collisions:36
+No of resizes:3
+
+For ISF = 0.50 and MMF = 0.90
+No of collisions:43
+No of resizes:2
+
