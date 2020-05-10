@@ -58,4 +58,26 @@ void freeGraph(Graph **graph) {
     free(*graph);
 }
 
+void addEdgeToEndOfList(AdjList *adjList, int destination, int weight) {
+    ListNode *node = createNewListNode(destination, weight);
+    if (adjList->head == NULL) {
+        adjList->head = node;
+        return;
+    }
+    ListNode *crawl = adjList->head;
+    while (crawl->next != NULL) {
+        crawl = crawl->next;
+    }
+    crawl->next = node;
+}
+
+void deleteList(AdjList **pAdjList) {
+    while ((*pAdjList)->head != NULL) {
+        ListNode *crawl = (*pAdjList)->head;
+        (*pAdjList)->head = (*pAdjList)->head->next;
+        free(crawl);
+    }
+    free(*pAdjList);
+}
+
 

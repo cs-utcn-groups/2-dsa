@@ -12,6 +12,8 @@
 
 bool *visited;
 
+void fillVisited(int nrOfElements);
+
 // recursive DFS for adjacency matrix representation
 void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer);
 

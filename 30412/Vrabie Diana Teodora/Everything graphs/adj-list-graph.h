@@ -27,6 +27,10 @@ typedef struct _graph {
     AdjList *nodesArray;
 } Graph;
 
+void addEdgeToEndOfList (AdjList *adjList, int destination, int weight);
+
+void deleteList(AdjList **pAdjList);
+
 Graph *createNewGraph(int nrOfVertices);
 
 void addEdgeToGraph (Graph* graph, int source, int destination, int weight);

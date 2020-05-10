@@ -2,6 +2,7 @@
 #include "adj-matrix.h"
 #include "adj-list-graph.h"
 #include "graph-traversals.h"
+#include "longest-path.h"
 
 #define NR_VERTICES 5
 
@@ -36,6 +37,7 @@ int main() {
     iterativeMatrixBFS(myMatrix, 2, stdout);
     iterativeListBFS(myGraph, 2, stdout);
 
+    findLongestPath(myGraph, 1, 4, stdout);
 
     freeAdjMatrix(&myMatrix);
     freeGraph(&myGraph);
