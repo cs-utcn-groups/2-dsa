@@ -12,16 +12,19 @@
 
 bool *visited;
 
-// DFS for adjacency matrix representation
+// recursive DFS for adjacency matrix representation
 void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer);
 
-// DFS for adjacency list representation
+// recursive DFS for adjacency list representation
 void listDFS(Graph *graph, int startVertex, struct _iobuf *buffer);
 
 // iterative DFS for adjacency list representation
 void iterativeListDFS(Graph *graph, int startVertex, struct _iobuf *buffer);
 
 // BFS for adjacency matrix representation
-// BFS for adjacency list representation
+
+// iterative BFS for adjacency list representation
+void iterativeListBFS(Graph *graph, int startVertex, struct _iobuf *buffer);
+
 
 #endif //EVERYTHING_GRAPHS_GRAPH_TRAVERSALS_H

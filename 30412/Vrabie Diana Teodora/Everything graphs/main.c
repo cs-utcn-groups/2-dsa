@@ -33,6 +33,8 @@ int main() {
     listDFS(myGraph, 2, stdout);
     iterativeListDFS(myGraph, 2, stdout);
 
+    iterativeListBFS(myGraph, 2, stdout);
+
     freeAdjMatrix(&myMatrix);
     freeGraph(&myGraph);
     return 0;

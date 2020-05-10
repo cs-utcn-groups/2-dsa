@@ -67,3 +67,26 @@ void iterativeListDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
         }
     }
 }
+
+void iterativeListBFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
+    fprintf(buffer, "\nIterative BFS on adjacency list: \n");
+    fillVisited(graph->nrOfVertices);
+    Queue *queue = initializeQueue();
+
+    visited[startVertex] = true;
+    enqueue(startVertex, queue);
+
+    while (!isQueueEmpty(queue)) {
+        startVertex = dequeue(queue)->value;
+        fprintf(buffer, "%d ", startVertex);
+
+        ListNode *crawl = graph->nodesArray[startVertex].head;
+        while (crawl!= NULL) {
+            if (!visited[crawl->key]) {
+                visited[crawl->key] = true;
+                enqueue(crawl->key, queue);
+            }
+            crawl = crawl->next;
+        }
+    }
+}
