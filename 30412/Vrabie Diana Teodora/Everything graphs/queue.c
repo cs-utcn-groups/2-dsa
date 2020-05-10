@@ -18,7 +18,8 @@ Queue *initializeQueue() {
     return newQueue;
 }
 
-void enqueue(QueueNode *node, Queue *queue) {
+void enqueue(int value, Queue *queue) {
+    QueueNode *node = createNewQueueNode(value);
     //empty queue, add first node
     if (queue->first == NULL) {
         queue->first = queue->last = node;
@@ -39,7 +40,7 @@ QueueNode *dequeue(Queue *queue) {
     return node;
 }
 
-bool isEmpty(Queue *queue) {
+bool isQueueEmpty(Queue *queue) {
     if (queue->first == NULL) return true;
     return false;
 }
@@ -48,8 +49,7 @@ void readQueue(FILE *inputFile, Queue *queue) {
     while (inputFile != NULL) {
         int readValue;
         fscanf(inputFile, "%d", &readValue);
-        QueueNode *node = createNewQueueNode(readValue);
-        enqueue(node, queue);
+        enqueue(readValue, queue);
         if (feof(inputFile) != 0)
             break;
     }

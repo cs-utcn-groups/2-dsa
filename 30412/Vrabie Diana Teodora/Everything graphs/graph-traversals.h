@@ -6,6 +6,7 @@
 #define EVERYTHING_GRAPHS_GRAPH_TRAVERSALS_H
 
 #include "queue.h"
+#include "stack.h"
 #include "adj-matrix.h"
 #include "adj-list-graph.h"
 

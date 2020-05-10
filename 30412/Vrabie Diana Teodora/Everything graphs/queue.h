@@ -19,13 +19,15 @@ typedef struct _queue {
     QueueNode *first, *last;
 } Queue;
 
+QueueNode *createNewQueueNode(int value);
+
 Queue* initializeQueue();
 
-void enqueue(QueueNode *node, Queue *queue);
+void enqueue(int value, Queue *queue);
 
 QueueNode *dequeue (Queue *queue);
 
-bool isEmpty (Queue *queue);
+bool isQueueEmpty (Queue *queue);
 
 void readQueue(FILE *inputFile, Queue *queue);
 

@@ -20,6 +20,7 @@ void doMatrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer) {
         }
     }
 }
+
 void matrixDFS(AdjMatrix *adjMatrix, int startVertex, struct _iobuf *buffer) {
     fprintf(buffer, "\nDFS on adjacency matrix:\n");
     fillVisited(adjMatrix->nrOfVertices);
@@ -37,6 +38,7 @@ void doListDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
         crawl = crawl->next;
     }
 }
+
 void listDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
     fprintf(buffer, "\nDFS on adjacency list: \n");
     fillVisited(graph->nrOfVertices);
@@ -44,5 +46,24 @@ void listDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
 }
 
 void iterativeListDFS(Graph *graph, int startVertex, struct _iobuf *buffer) {
+    fprintf(buffer, "\nIterative DFS on adjacency list: \n");
+    fillVisited(graph->nrOfVertices);
+    Stack *stack = initializeStack();
+    push(startVertex, stack);
 
+    while (!isStackEmpty(stack)) {
+        startVertex = pop(stack)->value;
+        if (!visited[startVertex]) {
+            fprintf(buffer, "%d ", startVertex);
+            visited[startVertex] = true;
+        }
+
+        ListNode *crawl = graph->nodesArray[startVertex].head;
+        while (crawl != NULL) {
+            if (!visited[crawl->key]) {
+                push(crawl->key, stack);
+            }
+            crawl = crawl->next;
+        }
+    }
 }

@@ -17,13 +17,15 @@ typedef struct _stack {
     StackNode *first;
 } Stack;
 
+StackNode *createNewStackNode(int value);
+
 Stack *initializeStack();
 
-void push(StackNode *node, Stack *stack);
+void push(int value, Stack *stack);
 
 StackNode *pop(Stack *stack);
 
-bool isEmpty(Stack *stack);
+bool isStackEmpty(Stack *stack);
 
 
 

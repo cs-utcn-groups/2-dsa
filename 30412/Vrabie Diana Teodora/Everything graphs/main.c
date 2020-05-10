@@ -31,6 +31,7 @@ int main() {
 
     matrixDFS(myMatrix, 2, stdout);
     listDFS(myGraph, 2, stdout);
+    iterativeListDFS(myGraph, 2, stdout);
 
     freeAdjMatrix(&myMatrix);
     freeGraph(&myGraph);

@@ -17,7 +17,8 @@ Stack *initializeStack() {
     return newStack;
 }
 
-void push(StackNode *node, Stack *stack) {
+void push(int value, Stack *stack) {
+    StackNode *node = createNewStackNode(value);
     // empty stack, add first node
     if (stack->first == NULL) {
         stack->first = node;
@@ -38,7 +39,7 @@ StackNode *pop(Stack *stack) {
     return node;
 }
 
-bool isEmpty(Stack *stack) {
+bool isStackEmpty(Stack *stack) {
     if (stack->first == NULL)
         return true;
     return false;
