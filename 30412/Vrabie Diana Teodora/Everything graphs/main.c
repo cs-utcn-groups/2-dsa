@@ -4,6 +4,7 @@
 #include "graph-traversals.h"
 #include "longest-path.h"
 #include "prim.h"
+#include "dijkstra.h"
 
 #define NR_VERTICES 5
 
@@ -58,6 +59,8 @@ int main() {
 
     printGraph(weightedGraph, stdout);
     prim(weightedGraph, 1, stdout);
+
+    dijkstra(weightedGraph, 1, stdout);
 
     freeGraph(&weightedGraph);
     freeAdjMatrix(&myMatrix);
