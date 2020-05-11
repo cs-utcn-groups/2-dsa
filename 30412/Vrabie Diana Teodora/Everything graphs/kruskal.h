@@ -1,0 +1,8 @@
+//
+// Created by diana on 10/05/2020.
+//
+
+#ifndef EVERYTHING_GRAPHS_KRUSKAL_H
+#define EVERYTHING_GRAPHS_KRUSKAL_H
+
+#endif //EVERYTHING_GRAPHS_KRUSKAL_H

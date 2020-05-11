@@ -80,4 +80,18 @@ void deleteList(AdjList **pAdjList) {
     free(*pAdjList);
 }
 
+Edge createNewEdge() {
+    Edge newEdge;
+    newEdge.source = newEdge.destination = newEdge.weight = 0;
+    return newEdge;
+}
+
+Edge *createEdgesArray(int size) {
+    Edge *edges = (Edge*) malloc(sizeof(Edge) * size);
+    for (int i = 0; i < size; ++i) {
+        edges[i] = createNewEdge();
+    }
+    return edges;
+}
+
 
