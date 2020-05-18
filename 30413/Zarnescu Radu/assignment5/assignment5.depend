@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1589802627 source:c:\users\zradu\desktop\dsa lab\2-dsa\30413\zarnescu radu\assignment5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
