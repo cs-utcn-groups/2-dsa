@@ -1,0 +1,10 @@
+//
+// Created by Diana on 04/05/2020.
+//
+
+#ifndef GRAPH_ALGORITHMS_GRAPH_REPRESENTATION_H
+void readFromAdjMatrix (FILE*f);
+void printAdjMatrix();
+#define GRAPH_ALGORITHMS_GRAPH_REPRESENTATION_H
+
+#endif //GRAPH_ALGORITHMS_GRAPH_REPRESENTATION_H
