@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/SEM 2 DSA/Open-Addressing/files.h
+
+E:/SEM 2 DSA/Open-Addressing/hashTable.h
+
+E:/SEM 2 DSA/Open-Addressing/io.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+
+E:/SEM 2 DSA/Open-Addressing/main.c
+io.h
+E:/SEM 2 DSA/Open-Addressing/io.h
+files.h
+E:/SEM 2 DSA/Open-Addressing/files.h
+hashTable.h
+E:/SEM 2 DSA/Open-Addressing/hashTable.h
+
