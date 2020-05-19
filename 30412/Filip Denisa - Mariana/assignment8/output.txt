@@ -1,0 +1,32 @@
+Bubble sort started:
+0 2 6 21 21 23 30 32 50 54 100 101 132 199 324 400 423 500 665 788 3425 4546 
+The required data for bubble sort is:
+noOfAccesses: 332
+noOfComparisons: 83
+noOfAssignments: 166
+Total number of actions: 581
+
+Quick sort started:
+0 2 6 21 21 23 30 32 50 54 100 101 132 199 324 400 423 500 665 788 3425 4546 
+The required data for quick sort is:
+noOfAccesses: 199
+noOfComparisons: 40
+noOfAssignments: 106
+Total number of actions: 345
+
+Counting sort started:
+0 2 6 21 21 23 30 32 50 54 100 101 132 199 324 400 423 500 665 788 3425 4546 
+The required data for counting sort is:
+noOfAccesses: 66
+noOfComparisons: 0
+noOfAssignments: 22
+Total number of actions: 88
+
+Radix Sort started:
+0 2 6 21 21 23 30 32 50 54 100 101 132 199 324 400 423 500 665 788 3425 4546 
+The required data for radix sort is:
+noOfAccesses: 462
+noOfComparisons: 0
+noOfAssignments: 88
+Total number of actions: 550
+
