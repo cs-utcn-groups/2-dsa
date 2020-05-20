@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1586969300 source:c:\labcp\2-dsa\30413\muth andrei - dorin\assigmen6\bellmanford.c
+	<stdio.h>
+	<stdlib.h>
+
+1586973356 source:c:\labcp\2-dsa\30413\muth andrei - dorin\assigmen6\kruskal.c
+	<stdio.h>
+	<stdlib.h>
+
