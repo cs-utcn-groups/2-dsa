@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1586100335 source:c:\users\andre\desktop\semestrul 2\dsa\dsa\lab04\avl_trees\avl_trees\avl.c
+	"head.h"
+
+1586105691 c:\users\andre\desktop\semestrul 2\dsa\dsa\lab04\avl_trees\avl_trees\head.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1586106279 source:c:\users\andre\desktop\semestrul 2\dsa\dsa\lab04\avl_trees\avl_trees\main.c
+	"head.h"
+

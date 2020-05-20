@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1584548206 source:c:\users\andre\desktop\dsa\doubly-linked lists\a2.2\queue.c
+	"head.h"
+
+1584548012 c:\users\andre\desktop\dsa\doubly-linked lists\a2.2\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1584548162 source:c:\users\andre\desktop\dsa\doubly-linked lists\a2.2\main.c
+	"head.h"
+	<string.h>
+

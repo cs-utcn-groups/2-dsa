@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1584536165 source:c:\users\andre\desktop\dsa\doubly-linked lists\a2.1_sentinel\main.c
+	"head.h"
+	<string.h>
+
+1584537044 c:\users\andre\desktop\dsa\doubly-linked lists\a2.1_sentinel\head.h
+	<stdlib.h>
+	<stdio.h>
+
+1584537146 source:c:\users\andre\desktop\dsa\doubly-linked lists\a2.1_sentinel\dll.c
+	"head.h"
+

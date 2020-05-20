@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1584557383 source:c:\users\andre\desktop\dsa\binary trees\a3.1\main.c
+	"head.h"
+
+1584557267 c:\users\andre\desktop\dsa\binary trees\a3.1\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1584557582 source:c:\users\andre\desktop\dsa\binary trees\a3.1\bin_tree.c
+	"head.h"
+
