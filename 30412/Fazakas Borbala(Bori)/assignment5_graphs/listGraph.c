@@ -137,17 +137,16 @@ modifications with respect to the general dfs: I don't generate a tree --> I may
  */
 
 
-void longest_path_dfs(lGraph *myGraph, int node, int dest, int *distances, bool *nowVisited, list *currPath,
+void longest_path_dfs(lGraph *myGraph, int node, int dest, bool *nowVisited, list *currPath,
                       int currPathLength,
                       int *longestPathLegth, list *longestPath) {
     if (node != dest) {
         nowVisited[node] = true;
         edge *iterator = myGraph->lists[node].first;
         while (iterator != NULL) {
-            if (!nowVisited[iterator->endPoint] && distances[iterator->endPoint] > distances[node] +
-                                                                                   iterator->length) { //otherwise, it's not worth visiting it again
-                addLast(currPath, iterator->endPoint, iterator->length);
-                longest_path_dfs(myGraph, iterator->endPoint, dest, distances, nowVisited, currPath,
+            if (!nowVisited[iterator->endPoint]) {
+               addLast(currPath, iterator->endPoint, iterator->length);
+                longest_path_dfs(myGraph, iterator->endPoint, dest,  nowVisited, currPath,
                                  currPathLength + iterator->length, longestPathLegth, longestPath);
                 deleteLast(currPath);
             }
@@ -172,10 +171,8 @@ list findLongestPath(lGraph *myGraph, int source, int dest) {
     list currPath = createList();
     addLast(&currPath, source, 0);
     bool *nowVisited = l_getVisitedArray(myGraph);
-    int *distances = getIntArray(myGraph->noNodes + 1, INT_MAX);
-    distances[source] = 0;
     int longestPathLength = 0;
-    longest_path_dfs(myGraph, source, dest, distances, nowVisited, &currPath, 0, &longestPathLength, &longestPath);
+    longest_path_dfs(myGraph, source, dest, nowVisited, &currPath, 0, &longestPathLength, &longestPath);
     return longestPath;
 }
 
@@ -354,23 +351,23 @@ void kruskalAlgorithm(lGraph *myGraph) {
     }
 }
 
-void swap(deEdge* a, deEdge* b){
+void swap(deEdge *a, deEdge *b) {
     deEdge helper = *b;
     *b = *a;
     *a = helper;
 }
 
-void deleteElementFromArray(int index, deEdge* array, int noElements) {
+void deleteElementFromArray(int index, deEdge *array, int noElements) {
     swap(&array[index], &array[noElements - 1]);
 }
 
-void printEdgesArray(deEdge* array, int noElements){
-    for(int i=0; i<noElements; i++){
+void printEdgesArray(deEdge *array, int noElements) {
+    for (int i = 0; i < noElements; i++) {
         printf("(%d, %d, %d)  ", array[i].endp1, array[i].endp2, array[i].length);
     }
 }
 
-void vertexCoverApproximation(lGraph* myGraph){ //approximation ratio = 2
+void vertexCoverApproximation(lGraph *myGraph) { //approximation ratio = 2
     printf("-------Vertex Cover approximation algorithm--------\n");
     int noEdgesInGraph = noEdges(myGraph);
     deEdge *unCoveredEdges = getEdgesArray(myGraph, noEdgesInGraph);
@@ -380,14 +377,14 @@ void vertexCoverApproximation(lGraph* myGraph){ //approximation ratio = 2
     int randIndex;
     printf("The edges added to the verted cover are: ");
     //instead of deleting edges from the array, which would be very time consuming, I will just swap the deleted elements with the ones at the end
-    while(noUncoveredEdges>0){
-        randIndex = rand()%noUncoveredEdges;
+    while (noUncoveredEdges > 0) {
+        randIndex = rand() % noUncoveredEdges;
         endp1 = unCoveredEdges[randIndex].endp1;
         endp2 = unCoveredEdges[randIndex].endp2;
         printf("%d and %d, which cover edges:\n", endp1, endp2);
-        for(int i=0; i<noUncoveredEdges; i++){
-            if(unCoveredEdges[i].endp1==endp1 || unCoveredEdges[i].endp2==endp1 ||
-            unCoveredEdges[i].endp1==endp2 || unCoveredEdges[i].endp2==endp2){
+        for (int i = 0; i < noUncoveredEdges; i++) {
+            if (unCoveredEdges[i].endp1 == endp1 || unCoveredEdges[i].endp2 == endp1 ||
+                unCoveredEdges[i].endp1 == endp2 || unCoveredEdges[i].endp2 == endp2) {
                 printf("(%d, %d) ", unCoveredEdges[i].endp1, unCoveredEdges[i].endp2);
                 deleteElementFromArray(i, unCoveredEdges, noUncoveredEdges);
                 noUncoveredEdges--;

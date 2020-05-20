@@ -1,0 +1,291 @@
+-----------------------------------------------------For hashFunction nr 0-------------------------------------------------
+------------------------------For 100 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 20.044949
+ISF = 0.20 --> standard deviation of buckets sizes = 15.029970
+ISF = 0.35 --> standard deviation of buckets sizes = 11.787184
+ISF = 0.50 --> standard deviation of buckets sizes = 9.816313
+ISF = 0.75 --> standard deviation of buckets sizes = 8.070247
+ISF = 0.85 --> standard deviation of buckets sizes = 7.592839
+------------------------------For 500 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 49.004490
+ISF = 0.20 --> standard deviation of buckets sizes = 35.010284
+ISF = 0.35 --> standard deviation of buckets sizes = 26.656092
+ISF = 0.50 --> standard deviation of buckets sizes = 22.277522
+ISF = 0.75 --> standard deviation of buckets sizes = 18.213938
+ISF = 0.85 --> standard deviation of buckets sizes = 17.114408
+------------------------------For 1000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 70.024139
+ISF = 0.20 --> standard deviation of buckets sizes = 49.766354
+ISF = 0.35 --> standard deviation of buckets sizes = 37.754776
+ISF = 0.50 --> standard deviation of buckets sizes = 31.570176
+ISF = 0.75 --> standard deviation of buckets sizes = 25.794177
+ISF = 0.85 --> standard deviation of buckets sizes = 24.233218
+------------------------------For 5000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 157.818643
+ISF = 0.20 --> standard deviation of buckets sizes = 111.706589
+ISF = 0.35 --> standard deviation of buckets sizes = 84.502608
+ISF = 0.50 --> standard deviation of buckets sizes = 70.691901
+ISF = 0.75 --> standard deviation of buckets sizes = 57.727395
+ISF = 0.85 --> standard deviation of buckets sizes = 54.227147
+------------------------------For 10000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 223.441250
+ISF = 0.20 --> standard deviation of buckets sizes = 158.075918
+ISF = 0.35 --> standard deviation of buckets sizes = 119.536846
+ISF = 0.50 --> standard deviation of buckets sizes = 100.005992
+ISF = 0.75 --> standard deviation of buckets sizes = 81.659993
+ISF = 0.85 --> standard deviation of buckets sizes = 76.707410
+------------------------------For 25000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 353.443884
+ISF = 0.20 --> standard deviation of buckets sizes = 249.972578
+ISF = 0.35 --> standard deviation of buckets sizes = 188.988504
+ISF = 0.50 --> standard deviation of buckets sizes = 158.115514
+ISF = 0.75 --> standard deviation of buckets sizes = 129.104219
+ISF = 0.85 --> standard deviation of buckets sizes = 121.273058
+------------------------------For 50000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 500.035488
+ISF = 0.20 --> standard deviation of buckets sizes = 353.613836
+ISF = 0.35 --> standard deviation of buckets sizes = 267.326023
+ISF = 0.50 --> standard deviation of buckets sizes = 223.658440
+ISF = 0.75 --> standard deviation of buckets sizes = 182.618786
+ISF = 0.85 --> standard deviation of buckets sizes = 171.541017
+------------------------------For 100000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 707.204704
+ISF = 0.20 --> standard deviation of buckets sizes = 500.094238
+ISF = 0.35 --> standard deviation of buckets sizes = 378.049208
+ISF = 0.50 --> standard deviation of buckets sizes = 316.296852
+ISF = 0.75 --> standard deviation of buckets sizes = 258.257019
+ISF = 0.85 --> standard deviation of buckets sizes = 242.590608
+-----------------------------------------------------For hashFunction nr 1-------------------------------------------------
+------------------------------For 100 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.660601
+ISF = 0.20 --> standard deviation of buckets sizes = 2.720294
+ISF = 0.35 --> standard deviation of buckets sizes = 1.747960
+ISF = 0.50 --> standard deviation of buckets sizes = 1.509967
+ISF = 0.75 --> standard deviation of buckets sizes = 1.169995
+ISF = 0.85 --> standard deviation of buckets sizes = 1.097339
+------------------------------For 500 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.322650
+ISF = 0.20 --> standard deviation of buckets sizes = 2.244994
+ISF = 0.35 --> standard deviation of buckets sizes = 1.763647
+ISF = 0.50 --> standard deviation of buckets sizes = 1.488624
+ISF = 0.75 --> standard deviation of buckets sizes = 1.174545
+ISF = 0.85 --> standard deviation of buckets sizes = 1.193871
+------------------------------For 1000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.006659
+ISF = 0.20 --> standard deviation of buckets sizes = 2.142429
+ISF = 0.35 --> standard deviation of buckets sizes = 1.759681
+ISF = 0.50 --> standard deviation of buckets sizes = 1.389964
+ISF = 0.75 --> standard deviation of buckets sizes = 1.245079
+ISF = 0.85 --> standard deviation of buckets sizes = 1.205638
+------------------------------For 5000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.061372
+ISF = 0.20 --> standard deviation of buckets sizes = 3.572674
+ISF = 0.35 --> standard deviation of buckets sizes = 3.642400
+ISF = 0.50 --> standard deviation of buckets sizes = 3.316504
+ISF = 0.75 --> standard deviation of buckets sizes = 2.867349
+ISF = 0.85 --> standard deviation of buckets sizes = 2.727449
+------------------------------For 10000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 6.572519
+ISF = 0.20 --> standard deviation of buckets sizes = 6.793306
+ISF = 0.35 --> standard deviation of buckets sizes = 5.700900
+ISF = 0.50 --> standard deviation of buckets sizes = 4.945665
+ISF = 0.75 --> standard deviation of buckets sizes = 4.146720
+ISF = 0.85 --> standard deviation of buckets sizes = 3.918783
+------------------------------For 25000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 15.472117
+ISF = 0.20 --> standard deviation of buckets sizes = 12.028849
+ISF = 0.35 --> standard deviation of buckets sizes = 9.424091
+ISF = 0.50 --> standard deviation of buckets sizes = 7.992326
+ISF = 0.75 --> standard deviation of buckets sizes = 6.593462
+ISF = 0.85 --> standard deviation of buckets sizes = 6.208360
+------------------------------For 50000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 23.797891
+ISF = 0.20 --> standard deviation of buckets sizes = 17.554766
+ISF = 0.35 --> standard deviation of buckets sizes = 13.499238
+ISF = 0.50 --> standard deviation of buckets sizes = 11.369605
+ISF = 0.75 --> standard deviation of buckets sizes = 9.330997
+ISF = 0.85 --> standard deviation of buckets sizes = 8.775466
+------------------------------For 100000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 34.992582
+ISF = 0.20 --> standard deviation of buckets sizes = 25.243621
+ISF = 0.35 --> standard deviation of buckets sizes = 19.242405
+ISF = 0.50 --> standard deviation of buckets sizes = 16.152280
+ISF = 0.75 --> standard deviation of buckets sizes = 13.221939
+ISF = 0.85 --> standard deviation of buckets sizes = 12.427276
+-----------------------------------------------------For hashFunction nr 2-------------------------------------------------
+------------------------------For 100 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.000000
+ISF = 0.20 --> standard deviation of buckets sizes = 2.449490
+ISF = 0.35 --> standard deviation of buckets sizes = 1.570709
+ISF = 0.50 --> standard deviation of buckets sizes = 1.600000
+ISF = 0.75 --> standard deviation of buckets sizes = 1.278888
+ISF = 0.85 --> standard deviation of buckets sizes = 1.108008
+------------------------------For 500 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 4.000000
+ISF = 0.20 --> standard deviation of buckets sizes = 2.619160
+ISF = 0.35 --> standard deviation of buckets sizes = 1.596005
+ISF = 0.50 --> standard deviation of buckets sizes = 1.419859
+ISF = 0.75 --> standard deviation of buckets sizes = 1.151617
+ISF = 0.85 --> standard deviation of buckets sizes = 1.135279
+------------------------------For 1000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.289377
+ISF = 0.20 --> standard deviation of buckets sizes = 2.204541
+ISF = 0.35 --> standard deviation of buckets sizes = 1.677997
+ISF = 0.50 --> standard deviation of buckets sizes = 1.468332
+ISF = 0.75 --> standard deviation of buckets sizes = 1.174545
+ISF = 0.85 --> standard deviation of buckets sizes = 1.056926
+------------------------------For 5000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.161012
+ISF = 0.20 --> standard deviation of buckets sizes = 2.235621
+ISF = 0.35 --> standard deviation of buckets sizes = 1.691826
+ISF = 0.50 --> standard deviation of buckets sizes = 1.404564
+ISF = 0.75 --> standard deviation of buckets sizes = 1.146512
+ISF = 0.85 --> standard deviation of buckets sizes = 1.080702
+------------------------------For 10000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.164806
+ISF = 0.20 --> standard deviation of buckets sizes = 2.208619
+ISF = 0.35 --> standard deviation of buckets sizes = 1.657291
+ISF = 0.50 --> standard deviation of buckets sizes = 1.403994
+ISF = 0.75 --> standard deviation of buckets sizes = 1.145697
+ISF = 0.85 --> standard deviation of buckets sizes = 1.091642
+------------------------------For 25000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.214716
+ISF = 0.20 --> standard deviation of buckets sizes = 2.264950
+ISF = 0.35 --> standard deviation of buckets sizes = 1.693555
+ISF = 0.50 --> standard deviation of buckets sizes = 1.432983
+ISF = 0.75 --> standard deviation of buckets sizes = 1.156977
+ISF = 0.85 --> standard deviation of buckets sizes = 1.073011
+------------------------------For 50000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.185530
+ISF = 0.20 --> standard deviation of buckets sizes = 2.246019
+ISF = 0.35 --> standard deviation of buckets sizes = 1.691720
+ISF = 0.50 --> standard deviation of buckets sizes = 1.416220
+ISF = 0.75 --> standard deviation of buckets sizes = 1.149067
+ISF = 0.85 --> standard deviation of buckets sizes = 1.085286
+------------------------------For 100000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.161139
+ISF = 0.20 --> standard deviation of buckets sizes = 2.246063
+ISF = 0.35 --> standard deviation of buckets sizes = 1.681397
+ISF = 0.50 --> standard deviation of buckets sizes = 1.416686
+ISF = 0.75 --> standard deviation of buckets sizes = 1.155928
+ISF = 0.85 --> standard deviation of buckets sizes = 1.084950
+-----------------------------------------------------For hashFunction nr 3-------------------------------------------------
+------------------------------For 100 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.405877
+ISF = 0.20 --> standard deviation of buckets sizes = 2.366432
+ISF = 0.35 --> standard deviation of buckets sizes = 1.713977
+ISF = 0.50 --> standard deviation of buckets sizes = 1.624808
+ISF = 0.75 --> standard deviation of buckets sizes = 1.146977
+ISF = 0.85 --> standard deviation of buckets sizes = 1.075683
+------------------------------For 500 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.155947
+ISF = 0.20 --> standard deviation of buckets sizes = 2.209072
+ISF = 0.35 --> standard deviation of buckets sizes = 1.645646
+ISF = 0.50 --> standard deviation of buckets sizes = 1.347590
+ISF = 0.75 --> standard deviation of buckets sizes = 1.052405
+ISF = 0.85 --> standard deviation of buckets sizes = 1.051346
+------------------------------For 1000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.289377
+ISF = 0.20 --> standard deviation of buckets sizes = 2.224860
+ISF = 0.35 --> standard deviation of buckets sizes = 1.531588
+ISF = 0.50 --> standard deviation of buckets sizes = 1.436663
+ISF = 0.75 --> standard deviation of buckets sizes = 1.152774
+ISF = 0.85 --> standard deviation of buckets sizes = 1.126958
+------------------------------For 5000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.013304
+ISF = 0.20 --> standard deviation of buckets sizes = 2.152208
+ISF = 0.35 --> standard deviation of buckets sizes = 1.725621
+ISF = 0.50 --> standard deviation of buckets sizes = 1.434713
+ISF = 0.75 --> standard deviation of buckets sizes = 1.155316
+ISF = 0.85 --> standard deviation of buckets sizes = 1.086565
+------------------------------For 10000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.244380
+ISF = 0.20 --> standard deviation of buckets sizes = 2.255660
+ISF = 0.35 --> standard deviation of buckets sizes = 1.639956
+ISF = 0.50 --> standard deviation of buckets sizes = 1.426184
+ISF = 0.75 --> standard deviation of buckets sizes = 1.159233
+ISF = 0.85 --> standard deviation of buckets sizes = 1.093042
+------------------------------For 25000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.193493
+ISF = 0.20 --> standard deviation of buckets sizes = 2.256723
+ISF = 0.35 --> standard deviation of buckets sizes = 1.707134
+ISF = 0.50 --> standard deviation of buckets sizes = 1.426829
+ISF = 0.75 --> standard deviation of buckets sizes = 1.161577
+ISF = 0.85 --> standard deviation of buckets sizes = 1.089981
+------------------------------For 50000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.144392
+ISF = 0.20 --> standard deviation of buckets sizes = 2.263139
+ISF = 0.35 --> standard deviation of buckets sizes = 1.684204
+ISF = 0.50 --> standard deviation of buckets sizes = 1.417688
+ISF = 0.75 --> standard deviation of buckets sizes = 1.146698
+ISF = 0.85 --> standard deviation of buckets sizes = 1.089398
+------------------------------For 100000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.164206
+ISF = 0.20 --> standard deviation of buckets sizes = 2.233607
+ISF = 0.35 --> standard deviation of buckets sizes = 1.683707
+ISF = 0.50 --> standard deviation of buckets sizes = 1.416813
+ISF = 0.75 --> standard deviation of buckets sizes = 1.153907
+ISF = 0.85 --> standard deviation of buckets sizes = 1.087344
+-----------------------------------------------------For hashFunction nr 4-------------------------------------------------
+------------------------------For 100 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.660601
+ISF = 0.20 --> standard deviation of buckets sizes = 2.449490
+ISF = 0.35 --> standard deviation of buckets sizes = 1.731052
+ISF = 0.50 --> standard deviation of buckets sizes = 1.509967
+ISF = 0.75 --> standard deviation of buckets sizes = 1.203698
+ISF = 0.85 --> standard deviation of buckets sizes = 1.086565
+------------------------------For 500 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.231099
+ISF = 0.20 --> standard deviation of buckets sizes = 2.323790
+ISF = 0.35 --> standard deviation of buckets sizes = 1.770152
+ISF = 0.50 --> standard deviation of buckets sizes = 1.261745
+ISF = 0.75 --> standard deviation of buckets sizes = 1.106747
+ISF = 0.85 --> standard deviation of buckets sizes = 1.176000
+------------------------------For 1000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.023243
+ISF = 0.20 --> standard deviation of buckets sizes = 2.302173
+ISF = 0.35 --> standard deviation of buckets sizes = 1.676289
+ISF = 0.50 --> standard deviation of buckets sizes = 1.432480
+ISF = 0.75 --> standard deviation of buckets sizes = 1.167714
+ISF = 0.85 --> standard deviation of buckets sizes = 1.074589
+------------------------------For 5000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.023243
+ISF = 0.20 --> standard deviation of buckets sizes = 2.198181
+ISF = 0.35 --> standard deviation of buckets sizes = 1.671426
+ISF = 0.50 --> standard deviation of buckets sizes = 1.399143
+ISF = 0.75 --> standard deviation of buckets sizes = 1.165199
+ISF = 0.85 --> standard deviation of buckets sizes = 1.073931
+------------------------------For 10000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 2.954657
+ISF = 0.20 --> standard deviation of buckets sizes = 2.166102
+ISF = 0.35 --> standard deviation of buckets sizes = 1.691429
+ISF = 0.50 --> standard deviation of buckets sizes = 1.384197
+ISF = 0.75 --> standard deviation of buckets sizes = 1.156816
+ISF = 0.85 --> standard deviation of buckets sizes = 1.082442
+------------------------------For 25000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.122563
+ISF = 0.20 --> standard deviation of buckets sizes = 2.228452
+ISF = 0.35 --> standard deviation of buckets sizes = 1.696792
+ISF = 0.50 --> standard deviation of buckets sizes = 1.420085
+ISF = 0.75 --> standard deviation of buckets sizes = 1.158727
+ISF = 0.85 --> standard deviation of buckets sizes = 1.071123
+------------------------------For 50000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.177735
+ISF = 0.20 --> standard deviation of buckets sizes = 2.248110
+ISF = 0.35 --> standard deviation of buckets sizes = 1.691653
+ISF = 0.50 --> standard deviation of buckets sizes = 1.414779
+ISF = 0.75 --> standard deviation of buckets sizes = 1.151154
+ISF = 0.85 --> standard deviation of buckets sizes = 1.082355
+------------------------------For 100000 strings-------------------------------
+ISF = 0.10 --> standard deviation of buckets sizes = 3.167712
+ISF = 0.20 --> standard deviation of buckets sizes = 2.240402
+ISF = 0.35 --> standard deviation of buckets sizes = 1.695830
+ISF = 0.50 --> standard deviation of buckets sizes = 1.418351
+ISF = 0.75 --> standard deviation of buckets sizes = 1.156620
+ISF = 0.85 --> standard deviation of buckets sizes = 1.083572
+-----------------------------------Average SDs--------------------------------------
+Average standard deviation for hash function nr. 0 is 147.459
+Average standard deviation for hash function nr. 1 is 7.259
+Average standard deviation for hash function nr. 2 is 1.824
+Average standard deviation for hash function nr. 3 is 1.797
+Average standard deviation for hash function nr. 4 is 1.800

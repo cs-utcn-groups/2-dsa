@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="assignment_6"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="assignment_6">
+				<Option output="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/assignment_6.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 assignment_6"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="assignment_6/fast">
+				<Option output="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/assignment_6.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 assignment_6/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/algo_helpers.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/algo_helpers.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/graph_algorithms.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/graph_algorithms.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/graph_representation.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/graph_representation.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/graph_traversals.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/graph_traversals.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/main.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/neighbors.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/neighbors.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/node.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/node.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/queue.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/queue.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/stack.c">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/stack.h">
+			<Option target="assignment_6"/>
+		</Unit>
+		<Unit filename="C:/Users/Diana/Desktop/Faculta/an1/sem 2/dsa lab/2-dsa/30412/Enoiu Diana - Cristina/assignment_6/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
