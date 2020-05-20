@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1588157788 source:c:\users\dorian\desktop\dorian\cp - lab\2-dsa\30413\dudas dorian\2lab8.3\main.c
+	<stdio.h>
+	<stdlib.h>
+
