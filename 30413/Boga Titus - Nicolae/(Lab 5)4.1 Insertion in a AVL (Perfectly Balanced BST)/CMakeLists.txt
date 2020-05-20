@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(_Lab_5_4_1_Insertion_in_a_AVL__Perfectly_Balanced_BST_ C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(_Lab_5_4_1_Insertion_in_a_AVL__Perfectly_Balanced_BST_ main.c)

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/C++/(Lab 5)4.1 Insertion in a AVL (Perfectly Balanced BST)/main.c
+stdio.h
+-
+stdlib.h
+-
+

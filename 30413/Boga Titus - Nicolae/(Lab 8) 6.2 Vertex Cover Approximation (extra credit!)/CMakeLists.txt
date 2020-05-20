@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(_Lab_8__6_2_Vertex_Cover_Approximation__extra_credit__ C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(_Lab_8__6_2_Vertex_Cover_Approximation__extra_credit__ main.c)

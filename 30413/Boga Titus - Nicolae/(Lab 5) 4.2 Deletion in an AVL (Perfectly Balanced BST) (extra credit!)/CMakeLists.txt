@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(_Lab_5__4_2_Deletion_in_an_AVL__Perfectly_Balanced_BST___extra_credit__ C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(_Lab_5__4_2_Deletion_in_an_AVL__Perfectly_Balanced_BST___extra_credit__ main.c)

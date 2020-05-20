@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1588844966 source:d:\work\c++\moodle 11.1\main.cpp
+	<stdio.h>
+	<stdlib.h>
+

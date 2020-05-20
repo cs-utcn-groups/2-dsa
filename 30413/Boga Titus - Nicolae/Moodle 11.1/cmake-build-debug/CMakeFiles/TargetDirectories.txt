@@ -1,0 +1,3 @@
+D:/Work/C++/Moodle 11.1/cmake-build-debug/CMakeFiles/Moodle_11_1.dir
+D:/Work/C++/Moodle 11.1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Work/C++/Moodle 11.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
