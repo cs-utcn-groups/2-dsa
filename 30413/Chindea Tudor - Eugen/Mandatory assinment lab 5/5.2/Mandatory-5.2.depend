@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1585335867 source:c:\users\username\desktop\caractere\mandatory 5.2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
