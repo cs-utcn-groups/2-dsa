@@ -70,9 +70,9 @@ void appendToListCustomer(char name[NAME_SIZE], int rubles, int seconds)
         NodeCustomer* newElement = (NodeCustomer*)malloc(sizeof(NodeCustomer));
         lastC->next = newElement;
         newElement->next = NULL;
-        strcpy(firstC->name,name);
-        firstC->rubles = rubles;
-        firstC->seconds = seconds;
+        strcpy(newElement->name,name);
+        newElement->rubles = rubles;
+        newElement->seconds = seconds;
         lastC = newElement;
     }
 }
