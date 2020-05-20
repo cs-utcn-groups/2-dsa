@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1584796342 source:c:\users\andrei\desktop\info\codeblocks\assignment 3.1\main.c
+	"head.h"
+
+1584802054 c:\users\andrei\desktop\info\codeblocks\assignment 3.1\head.h
+	<stdio.h>
+	<stdlib.h>
+
+1584801631 source:c:\users\andrei\desktop\info\codeblocks\assignment 3.1\functions.c
+	"head.h"
+

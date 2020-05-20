@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1586706775 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\graphrepresentation.c
+	<stdlib.h>
+	"graphRepresentation.h"
+	"list.h"
+
+1586700335 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\graphrepresentation.h
+	"graph.h"
+
+1586700708 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\graph.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"stack.h"
+	"queue.h"
+	"edge.h"
+
+1586689165 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\stack.h
+	"node.h"
+
+1586696904 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\node.h
+	<stdio.h>
+	<stdlib.h>
+
+1586689165 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\queue.h
+	"node.h"
+
+1586692912 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\edge.h
+
+1586706352 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\main.c
+	<stdio.h>
+	"graphRepresentation.h"
+	"graphTraversals.h"
+	"list.h"
+
+1586705886 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\graphtraversals.h
+	"graph.h"
+
+1586689165 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\node.c
+	"node.h"
+
+1586689165 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\queue.c
+	"queue.h"
+
+1586689165 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\stack.c
+	"stack.h"
+
+1586706775 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\graphtraversals.c
+	"graphTraversals.h"
+	"graphRepresentation.h"
+
+1586704034 source:c:\users\andrei\desktop\info\codeblocks\assignment 5.1\list.c
+	"list.h"
+	"graphRepresentation.h"
+
+1586704474 c:\users\andrei\desktop\info\codeblocks\assignment 5.1\list.h
+	"graph.h"
+
