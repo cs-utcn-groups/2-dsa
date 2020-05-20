@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1584383357 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\assignment3.1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

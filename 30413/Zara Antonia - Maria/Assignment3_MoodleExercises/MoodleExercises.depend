@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1584367625 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\moodleexercises\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1584363091 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\moodleexercises\leaves.c
+	<stdio.h>
+	<stdlib.h>
+
+1584362603 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\moodleexercises\length.c
+	<stdio.h>
+	<stdlib.h>
+
+1584368092 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\moodleexercises\subtrees.c
+	<stdio.h>
+	<stdlib.h>
+
+1584359513 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\moodleexercises\transversals.c
+	<stdio.h>
+	<stdlib.h>
+
+1584367872 c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment3_moodleexercises\moodleexercises\functions.h
+	<stdio.h>
+	<stdlib.h>
+

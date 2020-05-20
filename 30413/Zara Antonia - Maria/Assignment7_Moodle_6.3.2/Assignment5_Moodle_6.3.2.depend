@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1586438427 source:c:\users\zaraa\desktop\2-dsa\30413\zara antonia - maria\assignment5_moodle_6.3.2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
