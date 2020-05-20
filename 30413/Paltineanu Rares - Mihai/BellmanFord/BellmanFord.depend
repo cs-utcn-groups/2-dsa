@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588174421 source:e:\codeforces problems\bellmanford\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
