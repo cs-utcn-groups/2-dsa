@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1584534883 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment3.1\main.c
+	"tree.h"
+
+1584534633 c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment3.1\tree.h
+	<stdio.h>
+	<stdlib.h>
+
+1584534931 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\assigment3.1\tree.c
+	"tree.h"
+

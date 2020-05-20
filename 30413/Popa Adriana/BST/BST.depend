@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1584611157 source:c:\users\utilizator\desktop\bst\main.c
+	"BST.h"
+
+1584611484 source:c:\users\utilizator\desktop\bst\bst.c
+	"BST.h"
+
+1584611461 c:\users\utilizator\desktop\bst\bst.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1584611484 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\bst\bst.c
+	"BST.h"
+
+1584611461 c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\bst\bst.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1584611157 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\bst\main.c
+	"BST.h"
+
