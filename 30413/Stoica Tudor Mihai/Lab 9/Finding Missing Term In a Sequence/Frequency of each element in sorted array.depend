@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588175102 source:d:\info\c facultate\dsastoicatudor\lab 9\finding missing term in a sequence\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

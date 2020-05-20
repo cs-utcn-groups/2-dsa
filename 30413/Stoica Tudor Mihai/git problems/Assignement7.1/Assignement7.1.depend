@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1586365747 source:d:\info\c facultate\dsastoicatudor\lab 7\git problems\assignement7.1\functions.c
+	"header.h"
+
+1586364893 d:\info\c facultate\dsastoicatudor\lab 7\git problems\assignement7.1\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1586431842 source:d:\info\c facultate\dsastoicatudor\lab 7\git problems\assignement7.1\main.c
+	"header.h"
+

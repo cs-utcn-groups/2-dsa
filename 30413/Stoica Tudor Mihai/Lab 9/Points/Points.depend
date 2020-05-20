@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1587116713 source:d:\info\c facultate\dsastoicatudor\lab 9\points\main.c
+	"header.h"
+
+1587121038 d:\info\c facultate\dsastoicatudor\lab 9\points\header.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1587125325 source:d:\info\c facultate\dsastoicatudor\lab 9\points\functions.c
+	"header.h"
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1588335899 source:d:\info\c facultate\dsastoicatudor\lab 10\atob\sterge.cpp
+	<fstream>
+	<iostream>
+
+1588791518 source:d:\info\c facultate\dsastoicatudor\lab 10\atob\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1588790446 source:d:\info\c facultate\dsastoicatudor\lab 10\atob\st.cpp
+

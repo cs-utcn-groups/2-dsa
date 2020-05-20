@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1586601020 source:d:\info\c facultate\dsastoicatudor\lab 8\moodle 8.1.a\main.c
+	"header.h"
+
+1586614184 d:\info\c facultate\dsastoicatudor\lab 8\moodle 8.1.a\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1586614184 source:d:\info\c facultate\dsastoicatudor\lab 8\moodle 8.1.a\functions.c
+	"header.h"
+

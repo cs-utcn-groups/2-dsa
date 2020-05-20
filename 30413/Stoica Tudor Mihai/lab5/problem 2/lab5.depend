@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1584617756 source:d:\info\c facultate\dsastoicatudor\lab5\main.c
+	"header.h"
+
+1584617756 d:\info\c facultate\dsastoicatudor\lab5\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1584614541 source:d:\info\c facultate\dsastoicatudor\lab5\functions.c
+	"header.h"
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1585855488 source:d:\info\c facultate\dsastoicatudor\lab7.dijsktra\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
