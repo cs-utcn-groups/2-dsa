@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1586968801 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\graphrepr.c
+	<stdlib.h>
+	"graphRepr.h"
+
+1586968801 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\graphrepr.h
+	"graph.h"
+
+1586968889 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\graph.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1586967447 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\stack.h
+	"node.h"
+
+1586967447 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\node.h
+	<stdio.h>
+	<stdlib.h>
+
+1586967447 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\noce.c
+	"node.h"
+
+1586967447 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\stack.c
+	"stack.h"
+
+1586967674 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\edge.c
+	"edge.h"
+
+1586972347 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\edge.h
+	"graph.h"
+
+1586973847 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\main.c
+	<stdio.h>
+	"graphRepr.h"
+	"graphalgo.h"
+	"edge.h"
+
+1586973765 c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\graphalgo.h
+	"graph.h"
+
+1586973765 source:c:\users\aa2\desktop\2-dsa-master\30413\grigore alexandru - cristian\kruskal&bf\graphalgo.c
+	"graphalgo.h"
+	"graphRepr.h"
+	"edge.h"
+
