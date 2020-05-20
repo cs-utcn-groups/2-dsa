@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1588170924 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\moodle lab9 2d closest point\main.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<math.h>
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1584742517 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory assignment lab 5.1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1584741625 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory assignment lab 5.1\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1584743439 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory assignment lab 5.1\bst.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+

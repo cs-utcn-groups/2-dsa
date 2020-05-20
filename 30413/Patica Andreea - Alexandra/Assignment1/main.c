@@ -10,7 +10,7 @@ int main()
 
     char *strBuf = (char*)malloc(sizeof(char)*MAX_LENGTH);
 
-    while (fgets(strBuf, MAX_LENGTH, f)!=NULL)
+    while (fgets(strBuf, MAX_LENGTH, f)/!=NULL)
     {
         ParseString(strBuf);
     }

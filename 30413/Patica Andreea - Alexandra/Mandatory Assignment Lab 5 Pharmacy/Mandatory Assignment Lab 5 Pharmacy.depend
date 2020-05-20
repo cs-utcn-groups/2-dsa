@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1584816258 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory assignment lab 5 pharmacy\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1584816134 c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory assignment lab 5 pharmacy\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1584816134 source:c:\users\alex\desktop\programming lab\2-dsa\2-dsa\30413\patica andreea - alexandra\mandatory assignment lab 5 pharmacy\bst.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"header.h"
+
