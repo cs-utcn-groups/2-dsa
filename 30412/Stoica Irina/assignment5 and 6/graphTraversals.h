@@ -11,12 +11,14 @@ void bfs(int startNode);
 
 void dfs(int startNode);
 
-void dfsRecurs(int startNode);
-
-void listToMatrix(NodeT ** listArray);
-
 void bfs_list(int startNode, NodeT ** listArray);
 
 void dfs_list(int startNode, NodeT ** listArray);
+
+void dfsRecurs(int startNode);
+
+void kruskal();
+
+void bellman_Ford(int startNode);
 
 #endif //ASSIGNMENT5_GRAPHTRAVERSALS_H

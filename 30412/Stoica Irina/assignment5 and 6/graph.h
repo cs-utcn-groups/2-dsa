@@ -16,8 +16,16 @@
 #define UNVISITED 0
 #define VISITED 1
 
+typedef struct graph{
+    int nrOfVertexes;
+    int nrOfEdges;
+    struct edge ** edges;
+} Graph;
+
 int **adjMatrix;
 int **adjMatrixFromList;
 int nrOfVertexes;
+
+Graph * createGraph();
 
 #endif //ASSIGNMENT5_GRAPH_H

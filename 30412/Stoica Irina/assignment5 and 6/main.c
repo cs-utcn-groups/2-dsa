@@ -19,5 +19,12 @@ int main() {
 
     bfs_list('G' - 'A', listArray);
     dfs_list('G' - 'A', listArray);
+
+    getEdges();
+    sortEdges();
+    kruskal();
+
+    bellman_Ford('A'-'A');
+
     return 0;
 }
