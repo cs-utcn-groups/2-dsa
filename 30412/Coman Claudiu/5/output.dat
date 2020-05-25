@@ -1,0 +1,25 @@
+BFS on Matrix
+0(A)1(B)2(C)5(F)4(E)3(D)
+
+DFS on Matrix
+0(A)1(B)2(C)4(E)3(D)5(F)
+
+BFS on List
+0(A)1(B)2(C)5(F)4(E)3(D)
+
+DFS on List
+0(A)1(B)2(C)4(E)3(D)5(F)
+
+BFS on Matrix
+0(A)1(B)2(C)5(F)4(E)3(D)
+
+DFS on Matrix
+0(A)1(B)2(C)4(E)3(D)5(F)
+
+The Matrix was: 
+0 1 1 0 0 1 
+1 0 1 0 0 0 
+1 1 0 0 1 0 
+0 0 0 0 1 1 
+0 0 1 1 0 1 
+1 0 0 1 1 0 
