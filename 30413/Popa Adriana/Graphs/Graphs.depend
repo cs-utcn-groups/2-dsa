@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1589986563 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\graphs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
