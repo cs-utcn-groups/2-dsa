@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1585820499 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\lab7ex2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

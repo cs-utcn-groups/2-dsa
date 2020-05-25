@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1585566221 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\hashtable\main.c
+	"hash.h"
+
+1585565863 c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\hashtable\hash.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1589978659 source:c:\users\utilizator\documents\github\2-dsa\30413\popa adriana\hashtable\hash.c
+	"hash.h"
+
