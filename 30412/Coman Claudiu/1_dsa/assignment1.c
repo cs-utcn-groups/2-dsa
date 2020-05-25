@@ -2,9 +2,6 @@
 #include<string.h>
 #include <stdio.h>
 
-#define DATA_PATH_IN "../input.dat"
-#define DATA_PATH_OUT "../output.dat"
-
 typedef struct node {
     int data;
     struct node * next;
@@ -34,21 +31,15 @@ void addFirst ( int a ) {
     if ( first != NULL ) {
         nodeN * newN; /// new node
         newN = ( nodeN * ) malloc ( sizeof ( nodeN )  );
-        last -> next = newN;
-        newN -> next = NULL;
         newN -> data = a;
-        last = newN;
+        newN -> next = first;
+        first = newN;
     } else {
         first = ( nodeN * ) malloc ( sizeof ( nodeN )  );
         first -> data = a;
         first -> next = last;
         last = first;
     }
-}
-
-void initializeSLL (  ) {
-    first = NULL;
-    last = NULL;
 }
 
 void printAll (  ) {
@@ -62,8 +53,7 @@ void printAll (  ) {
             n = n -> next;
         }
         fprintf( out ,"\n" );
-    }
-    else {
+    } else {
         fprintf( out , "The list is empty!\n" );
     }
 }
@@ -185,16 +175,21 @@ void deleteElement ( int a ) {
 }
 
 int main (  ) {
-    FILE * in;
-    in = fopen ( DATA_PATH_IN , "r" );
-    if ( in == NULL ) {
-        perror ( "Error: " );
-        exit ( EXIT_FAILURE );
+    out = fopen ( "C:/Users/coman/OneDrive/Desktop/assignments_y1_s2/output.txt" , "w" );
+    if ( out == NULL ) {
+        printf ( "Could not open the file" );
+        return 0;
     }
 
-    out = fopen ( DATA_PATH_OUT , "w" );
+    FILE * in;
+    in = fopen ( "C:/Users/coman/OneDrive/Desktop/assignments_y1_s2/input.txt" , "r" );
+    if ( in == NULL ) {
+        printf ( "Error" );
+        exit(1);
+    }
 
-    initializeSLL ();
+    first = NULL;
+    last = NULL;
 
     int a;
     char * text;
@@ -249,7 +244,6 @@ int main (  ) {
 
     return 0;
 }
-
 
 
 
