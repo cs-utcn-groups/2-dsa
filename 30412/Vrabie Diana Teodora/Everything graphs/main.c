@@ -41,6 +41,7 @@ int main() {
 
     //findLongestPath(myGraph, 1, 4, stdout);
 
+    edges = createEdgesArray(7);
     Graph *weightedGraph = createNewGraph(NR_VERTICES);
     addEdgeToGraph(weightedGraph, 0, 1, 3);
     addEdgeToGraph(weightedGraph, 1, 0, 3);
@@ -56,6 +57,8 @@ int main() {
     addEdgeToGraph(weightedGraph, 3, 2, 8);
     addEdgeToGraph(weightedGraph, 3, 4, 2);
     addEdgeToGraph(weightedGraph, 4, 3, 2);
+
+
 
     printGraph(weightedGraph, stdout);
     prim(weightedGraph, 1, stdout);

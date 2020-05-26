@@ -31,6 +31,7 @@ void addEdgeToGraph(Graph *graph, int source, int destination, int weight) {
     ListNode *newNode = createNewListNode(destination, weight);
     newNode->next = graph->nodesArray[source].head;
     graph->nodesArray[source].head = newNode;
+    placeEdge(source, destination, weight, 7);
 }
 
 void printGraph(Graph *graph, struct _iobuf *buffer) {
@@ -87,11 +88,24 @@ Edge createNewEdge() {
 }
 
 Edge *createEdgesArray(int size) {
-    Edge *edges = (Edge*) malloc(sizeof(Edge) * size);
+    Edge *edge = (Edge*) malloc(sizeof(Edge) * size);
     for (int i = 0; i < size; ++i) {
         edges[i] = createNewEdge();
     }
-    return edges;
+    return edge;
+}
+
+
+
+void placeEdge(int src, int dest, int weight, int size) {
+    for (int i = 0; i < size; ++i) {
+        if (edges[i].source == 0 && edges[i].destination == 0 && edges[i].weight == 0) {
+            edges[i].source = src;
+            edges[i].destination = dest;
+            edges[i].weight = weight;
+            return;
+        }
+    }
 }
 
 

@@ -45,9 +45,12 @@ typedef struct _edge {
     int weight;
 } Edge;
 
+Edge *edges;
+
 Edge createNewEdge();
 
 Edge *createEdgesArray(int size);
+void placeEdge(int src, int dest, int weight, int size);
 
 
 
