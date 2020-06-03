@@ -92,4 +92,4 @@ void prettyPrint(NodeT *root, int space) {
         printf("%d", root->value);
         prettyPrint(root->left, space);
     }
-} 
+}
