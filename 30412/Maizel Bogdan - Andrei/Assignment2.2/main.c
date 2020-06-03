@@ -1,75 +1,69 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+#include "sll.h"
 
-typedef struct nodetype {
-    int money;
-    int seconds;
-    struct nodetype *next;
-    struct nodetype *prev;
-} nodeT;
+#define MAX_LENGHT 300
+#define MAX_N 100
 
-nodeT *first, *last, *sentinel;
-
-void init_queue() {
-    first = NULL;
-    last = NULL;
-}
-
-void queue_push(int money, int seconds) {
-    if (first == NULL) {
-        first = last = (nodeT *) malloc(sizeof(nodeT));
-        first->money = money;
-        first->seconds = seconds;
-        first->next = last;
-        last->next = NULL;
-        first->prev = NULL;
-        last->prev = first;
-    } else {
-        nodeT *newLast = (nodeT *) malloc(sizeof(nodeT));
-        newLast->prev = last;
-        newLast->money = money;
-        newLast->seconds = seconds;
-        newLast->next = NULL;
-        last->next = newLast;
-        last = newLast;
-    }
-}
-
-void queue_pop() {
-    nodeT *newFirst = first->next;
-    free(first);
-    first = newFirst;
-}
+void readTime(int *time, FILE *fin, int *n);
 
 int main() {
-    FILE *input = fopen("..\\input.dat", "r");
-    int i = 0;
-    int *time = (int *) malloc(sizeof(int)*6);
-    for (i = 0; i < 6; ++i) {
-        fscanf(input, "%d", &time[i]);
+    FILE *fin, *fout;
+    fin = fopen("../input.dat", "r");
+    fout = fopen("../output.dat", "w");
+    if (fin == NULL)
+        perror("Input file can't be opened.");
+    if (fout == NULL)
+        perror("Output file can't be opened.");
+    initList();
+    int *time, money, seconds;
+    char *name;
+    int n, i;
+    int sumOfMoney = 0;
+    int totalSeconds = 0;
+    time = (int *) malloc(MAX_N * sizeof(int));
+    readTime(time, fin, &n);
+    name = (char *) malloc(MAX_LENGHT * sizeof(char));
+    while (!feof(fin)) {
+        fscanf(fin, "%s %d %d", name, &money, &seconds);
+        AddLastCostumer(money, seconds);
     }
-    init_queue();
-    for (i=0;i<5;++i) {
-        char * name = (char*)malloc(sizeof(char)*20);
-        int money, seconds;
-        fscanf(input, "%s %d %d", name, &money, &seconds);
-        queue_push(money, seconds);
-    }
-    FILE *output = fopen("..\\output.dat", "w");
-    int timeTotal=0, moneyTotal=0;
-    for (int i=0;i<5;++i) {
-        if (time[i]>=timeTotal+first->seconds) {
-            timeTotal+=first->seconds;
-            moneyTotal+=first->money;
-            fprintf(output, "After %d seconds: %d\n", time[i], moneyTotal);
-            queue_pop();
+    //printAllElements(fout);
+    for (i = 0; i < n; i++) {
+        if (first != NULL) {
+            if (time[i] >= totalSeconds + first->seconds) {
+                {
+                    totalSeconds = totalSeconds + first->seconds;
+                    sumOfMoney = sumOfMoney + first->money;
+                    deleteFirstCustomer();
+                }
+            }
+            fprintf(fout, "After %d seconds: %d \n", time[i], sumOfMoney);
         }
-        else {
-            timeTotal+=first->seconds;
-            fprintf(output, "after %d seconds: %d\n", time[i], moneyTotal);
-            moneyTotal+=first->money;
-            queue_pop();
-        }
     }
+    fclose(fin);
+    fclose(fout);
+    free(time);
+    free(name);
     return 0;
+}
+
+void readTime(int *time, FILE *fin, int *n) {
+    char *line, *lineCopy, *token;
+    int i = 0;
+    line = (char *) malloc(MAX_LENGHT * sizeof(char));
+    lineCopy = (char *) malloc(MAX_LENGHT * sizeof(char));
+    fgets(line, MAX_LENGHT, fin);
+    strcpy(lineCopy, line);
+    token = strtok(line, " ");
+    time[0] = atoi(token);
+    while (token != NULL) {
+        i++;
+        token = strtok(NULL, " ");
+        sscanf(token, "%d", &time[i]);
+    }
+    *n = i;
+    free(line);
+    free(lineCopy);
+
 }
