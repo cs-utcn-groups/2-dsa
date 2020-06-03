@@ -1,0 +1,9 @@
+For size factor 0.35
+Standard deviation for 100 elements: 1.68
+Standard deviation for 500 elements: 1.69
+Standard deviation for 1000 elements: 1.51
+Standard deviation for 5000 elements: 1.66
+Standard deviation for 10000 elements: 1.70
+Standard deviation for 25000 elements: 1.69
+Standard deviation for 50000 elements: 1.69
+Standard deviation for 100000 elements: 2.35
