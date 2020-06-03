@@ -1,0 +1,18 @@
+Insertion sort: 2 4 6 7 10 
+Number Of Comparisons: 4
+Number Of Assignments: 16
+Number Of Accesses: 8
+Total number of actions: 28
+
+Quick sort: 2 4 6 7 10 
+Number Of Comparisons: 9
+Number Of Assignments: 18
+Number Of Accesses: 27
+Total number of actions: 54
+
+Radix sort: 2 4 4 6 7 
+Number Of Comparisons: 4
+Number Of Assignments: 0
+Number Of Accesses: 48
+Total number of actions: 52
+
