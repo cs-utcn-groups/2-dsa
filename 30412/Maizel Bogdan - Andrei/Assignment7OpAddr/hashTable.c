@@ -13,12 +13,12 @@ void initializeHT(int N) {
 float getFillFactor() {
     //! return the fill factor of the hash table
     float fillFactor = -1;
-    int filledCount = 0;
+    int fillCount = 0;
     for (int i = 0; i < size; ++i) {
         if (hT[i] != NULL)
-            filledCount++;
+            fillCount++;
     }
-    fillFactor = filledCount / (float) size;
+    fillFactor = fillCount / (float) size;
     return fillFactor;
 }
 
